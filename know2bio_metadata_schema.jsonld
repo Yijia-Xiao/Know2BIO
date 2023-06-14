@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Know2Bio: A Comprehensive Biomedical Knowledge Graph Benchmark Harmonizing Heterogeneous Sources</title>
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org/",
+      "@type":"Dataset",
+      "name":"Know2Bio",
+      "description":"A Comprehensive Biomedical Knowledge Graph Benchmark Harmonizing Heterogeneous Sources",
+      "url":"https://github.com/Yijia-Xiao/Know2BIO",
+      "identifier": ["DOI to be released",
+                     "https://github.com/Yijia-Xiao/Know2BIO"],
+      "keywords":[
+         "biomedical knowledge graphs", 
+         "benchmark dataset", 
+         "biomedical knowledge graph representation learning", 
+         "bioinformatics", 
+         "medical informatics"
+      ],
+      "license" : "https://opensource.org/license/mit/",
+      "isAccessibleForFree" : true,
+      "hasPart" : [
+        {
+          "@type": "Dataset",
+          "name": "Know2Bio",
+          "description": "The nodes and relations representing the Know2Bio knowledge graph.",
+          "license" : "https://opensource.org/license/mit/",
+          "creator":{
+             "@type":"Organization",
+             "name": "University of California, Los Angeles Scalable Analytics Institute"
+          }
+        }
+      ],
+      "creator":{
+         "@type":"Organization",
+         "url": "https://scai.cs.ucla.edu/",
+         "name":"University of California, Los Angeles Scalable Analytics Institute",
+         "contactPoint":{
+            "@type":"ContactPoint",
+            "contactType": "Principle Investigator",
+            "email":"weiwang@cs.ucla.edu"
+         }
+      },
+      "funder":{
+         "@type": "Organization",
+         "sameAs": "https://ror.org/00tgqzw13",
+         "name": "National Weather Service"
+      },
+      "distribution":[
+         {
+            "@type":"DataDownload",
+            "encodingFormat":"CSV",
+            "contentUrl":"https://www.ncdc.noaa.gov/stormevents/ftp.jsp"
+         },
+         {
+            "@type":"DataDownload",
+            "encodingFormat":"XML",
+            "contentUrl":"https://gis.ncdc.noaa.gov/all-records/catalog/search/resource/details.page?id=gov.noaa.ncdc:C00510"
+         }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
