@@ -1,0 +1,6 @@
+5
+-is_a->	0
+-regulates->	1
+-part_of->	2
+-negatively_regulates->	3
+-positively_regulates->	4

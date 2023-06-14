@@ -1,0 +1,5 @@
+4
+isa	0
+-regulates->	1
+-positively_regulates->	2
+-negatively_regulates->	3
