@@ -16,6 +16,11 @@ We recommend using Anaconda3 to manage the environment.
 
 ## Dataset Construction
 Code for the construction of Know2BIO can be found in [dataset](./dataset).
+### Dataset Schema
+![Know2BIO Schema](./assets/Know2BIO_Schema.png)
+
+### Data Source and Relationships
+![Know2BIO Data Source](./assets/Know2BIO_Data_Source.jpg)
 
 
 ## Benchmarking
