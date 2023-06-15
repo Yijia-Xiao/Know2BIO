@@ -54,9 +54,11 @@ The ontology view, instance view and aggregate view are represented by ONTO, INS
 
 
 ## Dataset Construction
-Code and README for the construction of Know2BIO can be found in [dataset](./dataset).
 ### Dataset Schema
 ![Know2BIO Schema](./assets/Know2BIO_Schema.png)
 
 ### Data Source and Relationships
 ![Know2BIO Data Source](./assets/Know2BIO_Data_Source.jpg)
+
+### Usage and Datasheet
+Code and README for the construction of Know2BIO can be found in [dataset](./dataset).
