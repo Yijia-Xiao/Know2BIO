@@ -21,21 +21,8 @@ There are five required files and one optional file to run the benchmark evaluat
 
 
 ## Experiments
-- To run the experiments, please excute `main.py` script. Arguments are listed below.
-```
-usage: main.py [-h] [--model_name MODEL_NAME] [--split SPLIT] [--lr LR]
+Follow the guide [here](../README.md#experiments).
 
-options:
-  -h, --help            show this help message and exit
-  --model_name MODEL_NAME
-                        Name of the model to be evaluated.
-  --split SPLIT         The dataset/split to be used.
-  --lr LR               Learning rate in training process.
-```
 
-- Example: Train TransE model on Know2BIO's aggregate view
-```bash
-python main.py --model_name transe --split BMKG --lr 1e-5
-```
-
-The ontology view, instance view and aggregate view are represented by ONTO, INST and BMKG for the `split` argument.
+## Acknowledgement
+The code is adapted from OpenKE, an open toolkit for knowledge embedding. The original repository is available at https://github.com/thunlp/OpenKE/tree/OpenKE-PyTorch.

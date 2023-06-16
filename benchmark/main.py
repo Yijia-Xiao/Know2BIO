@@ -11,22 +11,27 @@ from know2bio.data import TrainDataLoader, TestDataLoader
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_name', type=str, default='TransE', help='Name of the model to be evaluated.')
 parser.add_argument('--split', type=str, default='BMKG', help='The dataset/split to be used.')
+parser.add_argument('--data_path', type=str, default='./data/', help='Path to the datasets: GO, Know2BIO\'s ontology/instance/aggregate view, etc.')
+parser.add_argument('--ckpt_path', type=str, default='./checkpoint/', help='Path to the model checkpoints storage.')
 parser.add_argument('--lr', type=float, default=5e-5, help='Learning rate in training process.')
+parser.add_argument('--batch_size', type=int, default=1024, help='Batch size of for modeling training.')
+parser.add_argument('--train_epochs', type=int, default=5000, help='Number of training epochs.')
+parser.add_argument('--opt_method', type=str, default='adam', help='Optimization method for model training.')
 
 
 args = parser.parse_args()
 model_name = args.model_name
 split = args.split
 lr = args.lr
-
-
-batch_size = 1024
-train_epochs = 5000
-opt_method = "adam"
+batch_size = args.batch_size
+train_epochs = args.train_epochs
+opt_method = args.opt_method
+data_path = args.data_path
+ckpt_path = args.ckpt_path
 
 
 train_dataloader = TrainDataLoader(
-	in_path = f"./data/{split}/", 
+	in_path = f"./{data_path}/{split}/", 
 	batch_size=batch_size, 
 	threads = 32, 
 	sampling_mode = "normal", 
@@ -34,7 +39,7 @@ train_dataloader = TrainDataLoader(
 	filter_flag = 1, 
 	neg_ent = 25,
 	neg_rel = 0)
-test_dataloader = TestDataLoader(f"./data/{split}/", "link")
+test_dataloader = TestDataLoader(f"./{data_path}/{split}/", "link")
 
 
 if model_name == 'complex':
@@ -97,13 +102,11 @@ else:
     raise NotImplementedError
 
 
-trainer = Trainer(model = model, data_loader = train_dataloader, train_times = train_epochs, save_steps=200, checkpoint_dir=f'train/{model_name}-{split}-{lr}', alpha = lr, use_gpu = True, opt_method = opt_method)
+trainer = Trainer(model = model, data_loader = train_dataloader, train_times = train_epochs, save_steps=200, checkpoint_dir=f'./{ckpt_path}/{model_name}-{split}-{lr}', alpha = lr, use_gpu = True, opt_method = opt_method)
 
 trainer.run()
-func.save_checkpoint(f'./checkpoint/{model_name}-{split}-{lr}.ckpt')
+func.save_checkpoint(f'./{ckpt_path}/{model_name}-{split}-{lr}.ckpt')
 
-
-func.load_checkpoint(f'./checkpoint/{model_name}-{split}-{lr}.ckpt')
+func.load_checkpoint(f'./{ckpt_path}/{model_name}-{split}-{lr}.ckpt')
 tester = Tester(model = func, data_loader = test_dataloader, use_gpu = True)
 tester.run_link_prediction(type_constrain = False)
-print(tester.run_triple_classification())

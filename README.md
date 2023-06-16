@@ -35,22 +35,32 @@ There are five required files and one optional file to run the benchmark evaluat
 ### Experiments
 - To run the experiments, please excute `main.py` script. Arguments are listed below.
 ```
-usage: main.py [-h] [--model_name MODEL_NAME] [--split SPLIT] [--lr LR]
+usage: main.py [-h] [--model_name MODEL_NAME] [--split SPLIT] [--data_path DATA_PATH] [--ckpt_path CKPT_PATH] [--lr LR] [--batch_size BATCH_SIZE] [--train_epochs TRAIN_EPOCHS] [--opt_method OPT_METHOD]
 
 options:
   -h, --help            show this help message and exit
   --model_name MODEL_NAME
                         Name of the model to be evaluated.
   --split SPLIT         The dataset/split to be used.
+  --data_path DATA_PATH
+                        Path to the datasets: GO, Know2BIO's ontology/instance/aggregate view, etc.
+  --ckpt_path CKPT_PATH
+                        Path to the model checkpoints storage.
   --lr LR               Learning rate in training process.
+  --batch_size BATCH_SIZE
+                        Batch size of for modeling training.
+  --train_epochs TRAIN_EPOCHS
+                        Number of training epochs.
+  --opt_method OPT_METHOD
+                        Optimization method for model training.
 ```
 
 - Example: Train TransE model on Know2BIO's aggregate view
 ```bash
-python main.py --model_name transe --split BMKG --lr 1e-5
+python main.py --model_name transe --split BMKG --lr 1e-5 --batch_size 1024 --train_epochs 3000 --opt_method adam
 ```
 
-The ontology view, instance view and aggregate view are represented by ONTO, INST and BMKG for the `split` argument.
+For the `split` argument: Know2BIO's ontology view, instance view and aggregate view are represented by `ONTO`, `INST` and `BMKG` arguments. GO's biological process, cellular component and molecular function are represented by `BP`, `CC` and `MF` arguments.
 
 
 ## Dataset Construction
