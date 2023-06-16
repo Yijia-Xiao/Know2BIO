@@ -106,15 +106,15 @@ No.
 No.
 
 ### Did you collect the data from the individuals in question directly, or obtain it via third parties or other sources (e.g., websites)?
-
+N.A.
 ### Were the individuals in question notified about the data collection?
-
+N.A.
 ### Did the individuals in question consent to the collection and use of their data?
-
+N.A.
 ### If consent was obtained, were the consenting individuals provided with a mechanism to revoke their consent in the future or for certain uses?
-
+N.A.
 ### Has an analysis of the potential impact of the dataset and its use on data subjects (e.g., a data protection impact analysis) been conducted?
-
+N.A.
 
 ## Preprocessing/cleaning/labeling
 Raw data and intermediate files downloaded from API and other sources are included with the submission. Resulting files are represented as knowledge graph triples (i.e., head, relation, tail).
