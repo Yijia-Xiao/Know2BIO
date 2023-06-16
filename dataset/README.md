@@ -1,6 +1,6 @@
 # Know2BIO Dataset Construction
 
-Scripts for constructing Know2BIO dataset. In order, run `compound_to_compound_alignment`, `compound_to_protein_compound_to_pathway`, `protein_to_pathway`, `protein_to_reaction`, `gene_to_protein`. The other scripts have no execution dependencies (files to download, intermediate files, etc.), they can be executed in any order.
+Scripts for constructing Know2BIO dataset. In order, run `compound_to_compound_alignment`, `compound_to_protein_compound_to_pathway`, `protein_to_pathway`, `protein_to_reaction`, `gene_to_protein`. The other scripts have no other execution dependencies (files to download outside of those downloaded in the notebook, intermediate files, etc.); they can be executed in any order.
 
 Below is the datasheet for Know2BIO.
 
@@ -19,7 +19,7 @@ Knowledge Graph Benchmark of Biomedical Instances and Ontologies (Know2Bio) is a
 Know2Bio was created as a general-purpose biomedical knowledge graph. It is intended to be used as a real-world benchmark dataset for knowledge graph representtion learning models.
 
 ### Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
-Know2Bio was created by a team of researchers at the Scalable Analytics (ScAi) Laboratory at University of California, Los Angeles (UCLA) and Tsinghua University.
+Know2Bio was created by a team of researchers at the labs of Professor Peipei Ping and Wei Wang at the Scalable Analytics (ScAi) Laboratory at University of California Los Angeles (UCLA), the team who also executed the benchmarking along with consultation from a researcher at Tsinghua University.
 
 ### Who funded the creation of the dataset?
 This work was supported by National Science Foundation (NSF) 1829071, 2031187, 2106859, 2119643, 2200274, 2211557 to W.W., Research Awards from Amazon and NEC to W.W., National Institutes of Health (NIH) R35 HL135772 to P.P., NIH T32 HL13945 to A.R.P. and D.S., NIH T32 EB016640 to A.R.P., NSF Research Traineeship (NRT) 1829071 to A.R.P. and D.S., and the TC Laubisch Endowment to P.P. at UCLA.
