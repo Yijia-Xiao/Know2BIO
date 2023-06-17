@@ -1,3 +1,9 @@
+<p align="center">
+  <img height="200" src="./assets/logo.svg">
+</p>
+
+------------------------------------------------
+
 # Know2BIO
 
 Know2BIO is a comprehensive biomedical knowledge graph benchmark harmonizing heterogeneous database sources.
