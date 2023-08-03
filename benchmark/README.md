@@ -23,6 +23,27 @@ There are five required files and one optional file to run the benchmark evaluat
 ## Experiments
 Follow the guide [here](../README.md#experiments).
 
+## Quick Test
+- Example: Train TransE model on Know2BIO's sampled aggregate view
+```bash
+python main.py --model_name transe --split K2BIO --lr 1e-5 --batch_size 1024 --train_epochs 3000 --opt_method adam
+```
+- Results:
+
+```
+no type constraint results:                                                                                               
+metric:                  MRR             MR              hit@10          hit@3           hit@1                            
+l(raw):                  0.146781        2710.333008     0.373404        0.271277        0.002128                         
+r(raw):                  0.224690        2179.098877     0.506383        0.425532        0.006383                         
+averaged(raw):           0.185735        2444.715820     0.439894        0.348404        0.004255                         
+                                                                                                                          
+l(filter):               0.163650        2524.646729     0.388298        0.293617        0.006383                         
+r(filter):               0.261193        1975.074463     0.569149        0.478723        0.024468                         
+averaged(filter):        0.212421        2249.860596     0.478723        0.386170        0.015426                         
+0.478723                                                                                                                  
+mrr, mr, hit10, hit3, hit1 0.21242141723632812 2249.860595703125 0.478723406791687 0.3861702084541321 0.015425531193614006
+```
+
 
 ## Acknowledgement
 The code is adapted from OpenKE, an open toolkit for knowledge embedding. The original repository is available at https://github.com/thunlp/OpenKE/tree/OpenKE-PyTorch.
