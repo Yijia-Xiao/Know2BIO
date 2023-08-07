@@ -2,6 +2,9 @@
 
 Scripts for constructing Know2BIO dataset. In order, run `compound_to_compound_alignment`, `compound_to_protein_compound_to_pathway`, `protein_to_pathway`, `protein_to_reaction`, `gene_to_protein`. The other scripts have no other execution dependencies (files to download outside of those downloaded in the notebook, intermediate files, etc.); they can be executed in any order.
 
+A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folder. For accessing the full released dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
+
+
 Below is the datasheet for Know2BIO.
 
 - [Motivation](#motivation)
