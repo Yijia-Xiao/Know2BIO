@@ -1,610 +1,860 @@
-MeSH_Tree_Disease:C23.888.821.030	isa	MeSH_Tree_Disease:C23.888.821
-MeSH_Tree_Disease:C23.888.592.612.054	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.530	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.972	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.274	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.540	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.664	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.720	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.451	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.107	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.888	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.441	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.081	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.316	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.191	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.330	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.776	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.944	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.547	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.302	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.414	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.212	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.233	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.386	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.832	isa	MeSH_Tree_Disease:C23.888.592.612
-MeSH_Tree_Disease:C23.888.592.612.832.500	isa	MeSH_Tree_Disease:C23.888.592.612.832
-MeSH_Tree_Disease:C23.550.767.700.500	isa	MeSH_Tree_Disease:C23.550.767.700
-MeSH_Tree_Disease:C23.550.767.093	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.137	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.831	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.925	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.500	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.884	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.877	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.071	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.600	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.863	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C23.550.767.879	isa	MeSH_Tree_Disease:C23.550.767
-MeSH_Tree_Disease:C06.405.469.531.492	isa	MeSH_Tree_Disease:C06.405.469.531
-MeSH_Tree_Disease:C06.405.469.531	isa	MeSH_Tree_Disease:C06.405.469
-biological_process:0002609	-positively_regulates->	biological_process:0002469
-biological_process:0002609	isa	biological_process:0002607
-cellular_component:0005654	isa	cellular_component:0031981
-cellular_component:0005656	isa	cellular_component:0005654
-cellular_component:0005654	isa	cellular_component:0110165
-cellular_component:0008023	isa	cellular_component:0005654
-cellular_component:0016591	isa	cellular_component:0005654
-cellular_component:0005673	isa	cellular_component:0016591
-Reactome_Pathway:R-HSA-977443	isa	Reactome_Pathway:R-HSA-112314
-Reactome_Pathway:R-HSA-5689880	isa	Reactome_Pathway:R-HSA-5688426
-Reactome_Pathway:R-HSA-933543	isa	Reactome_Pathway:R-HSA-168928
-Reactome_Pathway:R-HSA-936440	isa	Reactome_Pathway:R-HSA-168928
-Reactome_Pathway:R-HSA-918233	isa	Reactome_Pathway:R-HSA-168928
-Reactome_Pathway:R-HSA-933541	isa	Reactome_Pathway:R-HSA-168928
-molecular_function:0020037	isa	molecular_function:0046906
-molecular_function:0031406	isa	molecular_function:0043177
-biological_process:0010629	-negatively_regulates->	biological_process:0010467
-biological_process:0010629	isa	biological_process:0010468
-molecular_function:0106310	isa	molecular_function:0004672
-biological_process:0031396	-regulates->	biological_process:0016567
-biological_process:0051865	isa	biological_process:0016567
-biological_process:0039648	-regulates->	biological_process:0016567
-biological_process:0007014	isa	biological_process:0016567
-biological_process:0000209	isa	biological_process:0016567
-biological_process:0018276	isa	biological_process:0016567
-biological_process:0016574	isa	biological_process:0016567
-biological_process:0007088	isa	biological_process:0007346
-biological_process:0007346	isa	biological_process:0051726
-biological_process:0007346	-regulates->	biological_process:0000278
-biological_process:0045930	isa	biological_process:0007346
-molecular_function:0005509	isa	molecular_function:0046872
-biological_process:0045910	isa	biological_process:0051053
-biological_process:0045910	-negatively_regulates->	biological_process:0006310
-biological_process:0045910	isa	biological_process:0000018
-Reactome_Pathway:R-HSA-390696	isa	Reactome_Pathway:R-HSA-375280
-biological_process:0071875	isa	biological_process:0007186
-biological_process:0071882	isa	biological_process:0071875
-cellular_component:1990425	isa	cellular_component:0005891
-cellular_component:1990454	isa	cellular_component:0005891
-biological_process:0009073	isa	biological_process:1901362
-biological_process:1900569	isa	biological_process:1901362
-biological_process:1901753	isa	biological_process:1901362
-biological_process:1900554	isa	biological_process:1901362
-biological_process:1901833	isa	biological_process:1901362
-biological_process:0097290	isa	biological_process:1901362
-biological_process:0006727	isa	biological_process:1901362
-biological_process:0072528	isa	biological_process:1901362
-biological_process:0001694	isa	biological_process:1901362
-biological_process:0055129	isa	biological_process:1901362
-biological_process:1900605	isa	biological_process:1901362
-biological_process:0046189	isa	biological_process:1901362
-biological_process:1901362	isa	biological_process:1901360
-biological_process:0046252	isa	biological_process:1901362
-biological_process:0072339	isa	biological_process:1901362
-biological_process:0042435	isa	biological_process:1901362
-biological_process:0009811	isa	biological_process:1901362
-biological_process:0140652	isa	biological_process:1901362
-biological_process:2001307	isa	biological_process:1901362
-biological_process:1901012	isa	biological_process:1901362
-biological_process:1901378	isa	biological_process:1901362
-biological_process:1901378	isa	biological_process:1901376
-biological_process:1900676	-negatively_regulates->	biological_process:1900614
-biological_process:1900614	isa	biological_process:0030639
-biological_process:1900675	-regulates->	biological_process:1900614
-biological_process:1900676	isa	biological_process:1900675
-biological_process:1900732	isa	biological_process:0010566
-biological_process:1900734	isa	biological_process:1900732
-biological_process:1900637	isa	biological_process:1900732
-biological_process:1900732	isa	biological_process:1900376
-biological_process:1900670	isa	biological_process:1900732
-biological_process:1902053	isa	biological_process:1900732
-biological_process:1900732	-regulates->	biological_process:0030639
-biological_process:0140872	isa	biological_process:0030639
-biological_process:0033070	isa	biological_process:0030639
-biological_process:1901697	isa	biological_process:0030639
-biological_process:1900554	isa	biological_process:0030639
-biological_process:0140781	isa	biological_process:0030639
-biological_process:1902050	isa	biological_process:0030639
-biological_process:0140614	isa	biological_process:0030639
-biological_process:1900769	isa	biological_process:0030639
-biological_process:1900611	isa	biological_process:0030639
-biological_process:0140735	isa	biological_process:0030639
-biological_process:1900734	-positively_regulates->	biological_process:0030639
-biological_process:1901763	isa	biological_process:0030639
-biological_process:1901518	isa	biological_process:0030639
-biological_process:0140783	isa	biological_process:0030639
-biological_process:1901521	isa	biological_process:0030639
-biological_process:0140722	isa	biological_process:0030639
-biological_process:0045122	isa	biological_process:0043386
-biological_process:0106150	isa	biological_process:0043386
-biological_process:0140876	isa	biological_process:0043386
-biological_process:0140723	isa	biological_process:0043386
-biological_process:0043386	isa	biological_process:0043385
-biological_process:0140880	isa	biological_process:0043386
-biological_process:0140781	isa	biological_process:0043386
-biological_process:0140878	isa	biological_process:0043386
-biological_process:0140872	isa	biological_process:0043386
-biological_process:0140380	isa	biological_process:0043386
-biological_process:0043386	isa	biological_process:0009403
-biological_process:1901336	isa	biological_process:1901334
-biological_process:0140874	isa	biological_process:1901336
-biological_process:0140446	isa	biological_process:1901336
-biological_process:1901512	isa	biological_process:1901336
-biological_process:0090531	isa	biological_process:0019853
-biological_process:0019853	isa	biological_process:0046394
-biological_process:2000082	-regulates->	biological_process:0019853
-biological_process:2000082	isa	biological_process:0030656
-biological_process:2000082	isa	biological_process:0043255
-biological_process:1900088	isa	biological_process:0043255
-biological_process:0010110	isa	biological_process:0043255
-biological_process:0010919	isa	biological_process:0043255
-biological_process:1900091	isa	biological_process:0043255
-biological_process:0010439	isa	biological_process:0043255
-biological_process:0010439	isa	biological_process:0042762
-biological_process:0010439	isa	biological_process:0051171
-biological_process:0010439	isa	biological_process:0062012
-biological_process:0010439	isa	biological_process:0031326
-biological_process:0010439	-regulates->	biological_process:0019761
-biological_process:0010439	isa	biological_process:1900376
-biological_process:1900707	isa	biological_process:1900376
-biological_process:1900713	isa	biological_process:1900376
-biological_process:1900658	isa	biological_process:1900376
-biological_process:1900667	isa	biological_process:1900376
-biological_process:1900655	isa	biological_process:1900376
-biological_process:1900686	isa	biological_process:1900376
-biological_process:1900834	isa	biological_process:1900376
-biological_process:1901141	isa	biological_process:1900376
-biological_process:1900704	isa	biological_process:1900376
-biological_process:1900692	isa	biological_process:1900376
-biological_process:1900683	isa	biological_process:1900376
-biological_process:1900710	isa	biological_process:1900376
-biological_process:1903085	isa	biological_process:1900376
-biological_process:2000029	isa	biological_process:1900376
-biological_process:1900379	isa	biological_process:1900376
-biological_process:1900861	isa	biological_process:1900376
-biological_process:0052319	isa	biological_process:1900376
-biological_process:1900664	isa	biological_process:1900376
-biological_process:1900196	isa	biological_process:1900376
-biological_process:1900649	isa	biological_process:1900376
-biological_process:1900626	isa	biological_process:1900376
-biological_process:1900652	isa	biological_process:1900376
-biological_process:1900716	isa	biological_process:1900376
-biological_process:1900377	isa	biological_process:1900376
-biological_process:1900840	isa	biological_process:1900376
-biological_process:1900822	isa	biological_process:1900376
-biological_process:0048021	isa	biological_process:1900376
-biological_process:1900177	isa	biological_process:1900376
-biological_process:1900698	isa	biological_process:1900376
-biological_process:1900689	isa	biological_process:1900376
-biological_process:1900695	isa	biological_process:1900376
-biological_process:1900843	isa	biological_process:1900376
-biological_process:1900843	isa	biological_process:0010566
-biological_process:1900843	-regulates->	biological_process:1900815
-biological_process:1900845	isa	biological_process:1900843
-cellular_component:0000151	isa	cellular_component:1990234
-cellular_component:0097505	isa	cellular_component:0000151
-cellular_component:0000151	isa	cellular_component:0140535
-cellular_component:0000153	isa	cellular_component:0000151
-cellular_component:0034657	isa	cellular_component:0000151
-cellular_component:0044695	isa	cellular_component:0000151
-cellular_component:1990452	isa	cellular_component:0000151
-cellular_component:1990353	isa	cellular_component:0000151
-cellular_component:0070209	isa	cellular_component:0000785
-cellular_component:0000791	isa	cellular_component:0000785
-cellular_component:0032798	isa	cellular_component:0000785
-cellular_component:0070823	isa	cellular_component:0000785
-cellular_component:0000792	isa	cellular_component:0000785
-cellular_component:0046536	isa	cellular_component:0000785
-cellular_component:0070822	isa	cellular_component:0000785
-cellular_component:0000786	isa	cellular_component:0000785
-cellular_component:0061638	isa	cellular_component:0000785
-cellular_component:1990483	isa	cellular_component:0000785
-cellular_component:0070210	isa	cellular_component:0000785
-cellular_component:0070603	isa	cellular_component:0000785
-cellular_component:0030874	isa	cellular_component:0000785
-cellular_component:0097478	isa	cellular_component:0110165
-cellular_component:0010319	isa	cellular_component:0110165
-cellular_component:0002177	isa	cellular_component:0110165
-cellular_component:0071808	isa	cellular_component:0110165
-cellular_component:0090642	isa	cellular_component:0110165
-cellular_component:0061825	isa	cellular_component:0110165
-cellular_component:0120104	isa	cellular_component:0110165
-cellular_component:0000242	isa	cellular_component:0110165
-cellular_component:1990047	isa	cellular_component:0110165
-cellular_component:0005706	isa	cellular_component:0110165
-cellular_component:0005930	isa	cellular_component:0110165
-cellular_component:0036224	isa	cellular_component:0110165
-cellular_component:0062074	isa	cellular_component:0110165
-cellular_component:0098843	isa	cellular_component:0110165
-cellular_component:0140918	isa	cellular_component:0110165
-cellular_component:0120206	isa	cellular_component:0110165
-cellular_component:0009418	isa	cellular_component:0110165
-cellular_component:0000801	isa	cellular_component:0110165
-cellular_component:0097203	isa	cellular_component:0110165
-cellular_component:0045177	isa	cellular_component:0110165
-cellular_component:0090724	isa	cellular_component:0110165
-cellular_component:0043196	isa	cellular_component:0110165
-cellular_component:0106124	isa	cellular_component:0110165
-cellular_component:0005657	isa	cellular_component:0110165
-cellular_component:0097574	isa	cellular_component:0110165
-cellular_component:0018995	isa	cellular_component:0110165
-cellular_component:1990794	isa	cellular_component:0110165
-cellular_component:0097540	isa	cellular_component:0110165
-cellular_component:0043036	isa	cellular_component:0110165
-cellular_component:0120083	isa	cellular_component:0110165
-cellular_component:0030018	isa	cellular_component:0110165
-cellular_component:0009427	isa	cellular_component:0110165
-cellular_component:0032126	isa	cellular_component:0110165
-cellular_component:0000922	isa	cellular_component:0110165
-cellular_component:0009504	isa	cellular_component:0110165
-cellular_component:0012505	isa	cellular_component:0110165
-cellular_component:0048471	isa	cellular_component:0110165
-cellular_component:1990875	isa	cellular_component:0110165
-cellular_component:0044326	isa	cellular_component:0110165
-cellular_component:0043198	isa	cellular_component:0110165
-cellular_component:0097448	isa	cellular_component:0110165
-cellular_component:0043673	isa	cellular_component:0110165
-cellular_component:0097544	isa	cellular_component:0110165
-cellular_component:0060109	isa	cellular_component:0110165
-cellular_component:0120220	isa	cellular_component:0110165
-cellular_component:0005576	isa	cellular_component:0110165
-cellular_component:0098833	isa	cellular_component:0110165
-cellular_component:0031975	isa	cellular_component:0110165
-cellular_component:0005615	isa	cellular_component:0110165
-cellular_component:0060111	isa	cellular_component:0110165
-cellular_component:0042763	isa	cellular_component:0110165
-cellular_component:0020031	isa	cellular_component:0110165
-cellular_component:0031256	isa	cellular_component:0110165
-cellular_component:0090637	isa	cellular_component:0110165
-cellular_component:0005829	isa	cellular_component:0110165
-cellular_component:0044195	isa	cellular_component:0110165
-cellular_component:0097543	isa	cellular_component:0110165
-cellular_component:1990836	isa	cellular_component:0110165
-cellular_component:0043265	isa	cellular_component:0110165
-cellular_component:0061835	isa	cellular_component:0110165
-cellular_component:0097569	isa	cellular_component:0110165
-cellular_component:0019898	isa	cellular_component:0110165
-cellular_component:0009986	isa	cellular_component:0110165
-cellular_component:0090726	isa	cellular_component:0110165
-cellular_component:0044297	isa	cellular_component:0110165
-cellular_component:0033101	isa	cellular_component:0110165
-cellular_component:0120043	isa	cellular_component:0110165
-cellular_component:0045169	isa	cellular_component:0110165
-cellular_component:0043188	isa	cellular_component:0110165
-cellular_component:0009546	isa	cellular_component:0110165
-cellular_component:0009421	isa	cellular_component:0110165
-cellular_component:0120212	isa	cellular_component:0110165
-cellular_component:0120107	isa	cellular_component:0110165
-cellular_component:1990783	isa	cellular_component:0110165
-cellular_component:0097684	isa	cellular_component:0110165
-cellular_component:0097562	isa	cellular_component:0110165
-cellular_component:0043219	isa	cellular_component:0110165
-cellular_component:0070645	isa	cellular_component:0110165
-cellular_component:0097614	isa	cellular_component:0110165
-cellular_component:0033270	isa	cellular_component:0110165
-cellular_component:0033268	isa	cellular_component:0110165
-cellular_component:0031672	isa	cellular_component:0110165
-cellular_component:0001650	isa	cellular_component:0110165
-cellular_component:0044232	isa	cellular_component:0110165
-cellular_component:0005824	isa	cellular_component:0110165
-cellular_component:0009510	isa	cellular_component:0110165
-cellular_component:0000943	isa	cellular_component:0110165
-cellular_component:0005712	isa	cellular_component:0110165
-cellular_component:0140512	isa	cellular_component:0110165
-cellular_component:0033774	isa	cellular_component:0110165
-cellular_component:0016363	isa	cellular_component:0110165
-cellular_component:0048226	isa	cellular_component:0110165
-cellular_component:0005702	isa	cellular_component:0110165
-cellular_component:0001891	isa	cellular_component:0110165
-cellular_component:0090658	isa	cellular_component:0110165
-cellular_component:0005631	isa	cellular_component:0110165
-cellular_component:0043218	isa	cellular_component:0110165
-cellular_component:0060104	isa	cellular_component:0110165
-cellular_component:0014705	isa	cellular_component:0110165
-cellular_component:0020038	isa	cellular_component:0110165
-cellular_component:0055044	isa	cellular_component:0110165
-cellular_component:0097594	isa	cellular_component:0110165
-cellular_component:0072324	isa	cellular_component:0110165
-cellular_component:0020032	isa	cellular_component:0110165
-cellular_component:0044099	isa	cellular_component:0110165
-cellular_component:0001400	isa	cellular_component:0110165
-cellular_component:0070865	isa	cellular_component:0110165
-cellular_component:0061834	isa	cellular_component:0110165
-cellular_component:0032178	isa	cellular_component:0110165
-cellular_component:0099086	isa	cellular_component:0110165
-cellular_component:0035869	isa	cellular_component:0110165
-cellular_component:0044292	isa	cellular_component:0110165
-cellular_component:0140599	isa	cellular_component:0110165
-cellular_component:0020016	isa	cellular_component:0110165
-cellular_component:0070701	isa	cellular_component:0110165
-cellular_component:0090641	isa	cellular_component:0110165
-cellular_component:1990013	isa	cellular_component:0110165
-cellular_component:0043204	isa	cellular_component:0110165
-cellular_component:0031974	isa	cellular_component:0110165
-cellular_component:0044290	isa	cellular_component:0110165
-cellular_component:0120280	isa	cellular_component:0110165
-cellular_component:0009422	isa	cellular_component:0110165
-cellular_component:0097653	isa	cellular_component:0110165
-cellular_component:0120100	isa	cellular_component:0110165
-cellular_component:0090688	isa	cellular_component:0110165
-cellular_component:0005621	isa	cellular_component:0110165
-cellular_component:0009431	isa	cellular_component:0110165
-cellular_component:0031910	isa	cellular_component:0110165
-cellular_component:0020023	isa	cellular_component:0110165
-cellular_component:0033150	isa	cellular_component:0110165
-cellular_component:0046691	isa	cellular_component:0110165
-cellular_component:0005815	isa	cellular_component:0110165
-cellular_component:0031977	isa	cellular_component:0110165
-cellular_component:0043672	isa	cellular_component:0110165
-cellular_component:0031254	isa	cellular_component:0110165
-cellular_component:0035749	isa	cellular_component:0110165
-cellular_component:0044327	isa	cellular_component:0110165
-cellular_component:0090635	isa	cellular_component:0110165
-cellular_component:0090405	isa	cellular_component:0110165
-cellular_component:0030694	isa	cellular_component:0110165
-cellular_component:0097566	isa	cellular_component:0110165
-cellular_component:0070258	isa	cellular_component:0110165
-cellular_component:0098794	isa	cellular_component:0110165
-cellular_component:0097197	isa	cellular_component:0110165
-cellular_component:0043595	isa	cellular_component:0110165
-cellular_component:1990016	isa	cellular_component:0110165
-cellular_component:0030312	isa	cellular_component:0110165
-cellular_component:0005825	isa	cellular_component:0110165
-cellular_component:0061908	isa	cellular_component:0110165
-cellular_component:0042995	isa	cellular_component:0110165
-cellular_component:0001652	isa	cellular_component:0110165
-cellular_component:0090651	isa	cellular_component:0110165
-cellular_component:0010339	isa	cellular_component:0110165
-cellular_component:0032179	isa	cellular_component:0110165
-cellular_component:0097047	isa	cellular_component:0110165
-cellular_component:0120082	isa	cellular_component:0110165
-cellular_component:0120260	isa	cellular_component:0110165
-cellular_component:0042597	isa	cellular_component:0110165
-cellular_component:0000802	isa	cellular_component:0110165
-cellular_component:0005630	isa	cellular_component:0110165
-cellular_component:0070825	isa	cellular_component:0110165
-cellular_component:0035182	isa	cellular_component:0110165
-cellular_component:0001917	isa	cellular_component:0110165
-cellular_component:0032161	isa	cellular_component:0110165
-cellular_component:0005933	isa	cellular_component:0110165
-cellular_component:0009424	isa	cellular_component:0110165
-cellular_component:1990031	isa	cellular_component:0110165
-cellular_component:0005713	isa	cellular_component:0110165
-cellular_component:0061822	isa	cellular_component:0110165
-cellular_component:0020008	isa	cellular_component:0110165
-cellular_component:0043674	isa	cellular_component:0110165
-cellular_component:0097541	isa	cellular_component:0110165
-cellular_component:0120321	isa	cellular_component:0110165
-cellular_component:0036007	isa	cellular_component:0110165
-cellular_component:0005737	isa	cellular_component:0110165
-cellular_component:0044280	isa	cellular_component:0110165
-cellular_component:0043203	isa	cellular_component:0110165
-cellular_component:0035686	isa	cellular_component:0110165
-cellular_component:0030315	isa	cellular_component:0110165
-cellular_component:0071341	isa	cellular_component:0110165
-cellular_component:0009425	isa	cellular_component:0110165
-cellular_component:0032437	isa	cellular_component:0110165
-cellular_component:0048223	isa	cellular_component:0110165
-cellular_component:0030054	isa	cellular_component:0110165
-cellular_component:0097735	isa	cellular_component:0110165
-cellular_component:0030017	isa	cellular_component:0110165
-cellular_component:0032433	isa	cellular_component:0110165
-cellular_component:0005822	isa	cellular_component:0110165
-cellular_component:0032123	isa	cellular_component:0110165
-cellular_component:0071944	isa	cellular_component:0110165
-cellular_component:0097218	isa	cellular_component:0110165
-cellular_component:0071597	isa	cellular_component:0110165
-cellular_component:0031911	isa	cellular_component:0110165
-cellular_component:0072562	isa	cellular_component:0110165
-cellular_component:0097423	isa	cellular_component:0110165
-cellular_component:0090552	isa	cellular_component:0110165
-cellular_component:0090689	isa	cellular_component:0110165
-cellular_component:0009433	isa	cellular_component:0110165
-cellular_component:0097610	isa	cellular_component:0110165
-cellular_component:0097546	isa	cellular_component:0110165
-cellular_component:0009930	isa	cellular_component:0110165
-cellular_component:1990716	isa	cellular_component:0110165
-cellular_component:0005823	isa	cellular_component:0110165
-cellular_component:0034451	isa	cellular_component:0110165
-cellular_component:0020010	isa	cellular_component:0110165
-cellular_component:0000800	isa	cellular_component:0110165
-cellular_component:1990015	isa	cellular_component:0110165
-cellular_component:0009548	isa	cellular_component:0110165
-cellular_component:0001651	isa	cellular_component:0110165
-cellular_component:0048224	isa	cellular_component:0110165
-cellular_component:0044322	isa	cellular_component:0110165
-cellular_component:0097229	isa	cellular_component:0110165
-cellular_component:0097683	isa	cellular_component:0110165
-cellular_component:1990752	isa	cellular_component:0110165
-cellular_component:0043676	isa	cellular_component:0110165
-cellular_component:0005652	isa	cellular_component:0110165
-cellular_component:1990073	isa	cellular_component:0110165
-cellular_component:0098862	isa	cellular_component:0110165
-cellular_component:0120135	isa	cellular_component:0110165
-cellular_component:0097204	isa	cellular_component:0110165
-cellular_component:0097226	isa	cellular_component:0110165
-cellular_component:0009542	isa	cellular_component:0110165
-cellular_component:0097356	isa	cellular_component:0110165
-cellular_component:0009419	isa	cellular_component:0110165
-cellular_component:0016328	isa	cellular_component:0110165
-cellular_component:0002139	isa	cellular_component:0110165
-cellular_component:0097313	isa	cellular_component:0110165
-cellular_component:0097592	isa	cellular_component:0110165
-cellular_component:0044306	isa	cellular_component:0110165
-cellular_component:0120044	isa	cellular_component:0110165
-cellular_component:0090636	isa	cellular_component:0110165
-cellular_component:0042641	isa	cellular_component:0110165
-cellular_component:0030486	isa	cellular_component:0110165
-cellular_component:0030875	isa	cellular_component:0110165
-cellular_component:0043034	isa	cellular_component:0110165
-cellular_component:0043669	isa	cellular_component:0110165
-cellular_component:0044217	isa	cellular_component:0110165
-cellular_component:0090734	isa	cellular_component:0110165
-cellular_component:0044303	isa	cellular_component:0110165
-cellular_component:0042718	isa	cellular_component:0110165
-cellular_component:1990819	isa	cellular_component:0110165
-cellular_component:1990225	isa	cellular_component:0110165
-cellular_component:0110093	isa	cellular_component:0110165
-cellular_component:0061827	isa	cellular_component:0110165
-cellular_component:0097591	isa	cellular_component:0110165
-cellular_component:0036117	isa	cellular_component:0110165
-cellular_component:0060107	isa	cellular_component:0110165
-cellular_component:0097545	isa	cellular_component:0110165
-cellular_component:0045178	isa	cellular_component:0110165
-cellular_component:0044224	isa	cellular_component:0110165
-cellular_component:0030428	isa	cellular_component:0110165
-cellular_component:1990876	isa	cellular_component:0110165
-cellular_component:0031984	isa	cellular_component:0110165
-cellular_component:0097228	isa	cellular_component:0110165
-cellular_component:0106126	isa	cellular_component:0110165
-cellular_component:0031912	isa	cellular_component:0110165
-cellular_component:0035253	isa	cellular_component:0110165
-cellular_component:0060418	isa	cellular_component:0110165
-cellular_component:0120120	isa	cellular_component:0110165
-cellular_component:0097227	isa	cellular_component:0110165
-cellular_component:0097568	isa	cellular_component:0110165
-cellular_component:1990018	isa	cellular_component:0110165
-cellular_component:0097038	isa	cellular_component:0110165
-cellular_component:0090725	isa	cellular_component:0110165
-cellular_component:0031674	isa	cellular_component:0110165
-cellular_component:0140510	isa	cellular_component:0110165
-cellular_component:1990030	isa	cellular_component:0110165
-cellular_component:0032579	isa	cellular_component:0110165
-cellular_component:0044304	isa	cellular_component:0110165
-cellular_component:0120105	isa	cellular_component:0110165
-cellular_component:0097224	isa	cellular_component:0110165
-cellular_component:0030874	isa	cellular_component:0110165
-cellular_component:0005821	isa	cellular_component:0110165
-cellular_component:0001750	isa	cellular_component:0110165
-cellular_component:0020039	isa	cellular_component:0110165
-cellular_component:0043593	isa	cellular_component:0110165
-cellular_component:0036477	isa	cellular_component:0110165
-cellular_component:0031592	isa	cellular_component:0110165
-cellular_component:1990038	isa	cellular_component:0110165
-cellular_component:0000407	isa	cellular_component:0110165
-cellular_component:0043220	isa	cellular_component:0110165
-cellular_component:0060105	isa	cellular_component:0110165
-cellular_component:0042716	isa	cellular_component:0110165
-cellular_component:0033172	isa	cellular_component:0110165
-cellular_component:0070057	isa	cellular_component:0110165
-cellular_component:0030478	isa	cellular_component:0110165
-cellular_component:0048225	isa	cellular_component:0110165
-cellular_component:0031430	isa	cellular_component:0110165
-cellular_component:1990805	isa	cellular_component:0110165
-cellular_component:0097565	isa	cellular_component:0110165
-cellular_component:0120307	isa	cellular_component:0110165
-cellular_component:0043670	isa	cellular_component:0110165
-cellular_component:0030496	isa	cellular_component:0110165
-cellular_component:0009426	isa	cellular_component:0110165
-cellular_component:0085036	isa	cellular_component:0110165
-cellular_component:0097002	isa	cellular_component:0110165
-cellular_component:0097217	isa	cellular_component:0110165
-cellular_component:0070938	isa	cellular_component:0110165
-cellular_component:0009525	isa	cellular_component:0110165
-cellular_component:0070115	isa	cellular_component:0110165
-cellular_component:0097422	isa	cellular_component:0110165
-cellular_component:0043226	isa	cellular_component:0110165
-cellular_component:0099080	isa	cellular_component:0110165
-cellular_component:0048217	isa	cellular_component:0110165
-cellular_component:0090553	isa	cellular_component:0110165
-cellular_component:0120134	isa	cellular_component:0110165
-cellular_component:0060108	isa	cellular_component:0110165
-cellular_component:0097595	isa	cellular_component:0110165
-cellular_component:0097564	isa	cellular_component:0110165
-cellular_component:0043159	isa	cellular_component:0110165
-cellular_component:0009428	isa	cellular_component:0110165
-cellular_component:0098793	isa	cellular_component:0110165
-cellular_component:0099569	isa	cellular_component:0098793
-cellular_component:0043679	isa	cellular_component:0098793
-cellular_component:0043195	isa	cellular_component:0098793
-cellular_component:0098833	isa	cellular_component:0098793
-cellular_component:0099523	isa	cellular_component:0098793
-cellular_component:0042734	isa	cellular_component:0098793
-biological_process:0006826	isa	biological_process:0000041
-biological_process:1903525	-regulates->	biological_process:0097320
-biological_process:1903527	-positively_regulates->	biological_process:0097320
-biological_process:0060041	isa	biological_process:0043010
-biological_process:0003410	isa	biological_process:0043010
-biological_process:0061303	isa	biological_process:0043010
-biological_process:0062139	isa	biological_process:0043010
-biological_process:0031077	isa	biological_process:0043010
-biological_process:1990384	isa	biological_process:0043010
-biological_process:0002930	isa	biological_process:0043010
-biological_process:0002074	isa	biological_process:0043010
-biological_process:0048593	isa	biological_process:0043010
-biological_process:0061029	isa	biological_process:0043010
-biological_process:0031076	isa	biological_process:0043010
-biological_process:0048597	isa	biological_process:0048593
-biological_process:0061072	isa	biological_process:0048593
-biological_process:0061073	isa	biological_process:0048593
-biological_process:0003411	isa	biological_process:0048593
-biological_process:0003412	isa	biological_process:0048593
-biological_process:0060042	isa	biological_process:0048593
-biological_process:0002089	isa	biological_process:0048593
-biological_process:0048596	isa	biological_process:0048593
-biological_process:0048592	isa	biological_process:0090596
-biological_process:0001745	isa	biological_process:0048592
-biological_process:0048592	isa	biological_process:0001654
-biological_process:0048048	isa	biological_process:0048592
-biological_process:0048048	isa	biological_process:0048562
-biological_process:0048596	isa	biological_process:0048048
-biological_process:1902865	-positively_regulates->	biological_process:0031076
-biological_process:0031076	isa	biological_process:0048568
-biological_process:1990403	isa	biological_process:0048568
-biological_process:0060716	isa	biological_process:0048568
-biological_process:0048568	isa	biological_process:0048513
-biological_process:0048568	isa	biological_process:0009790
-biological_process:0030903	isa	biological_process:0048568
-biological_process:0060970	isa	biological_process:0035050
-biological_process:0036306	isa	biological_process:0035050
-biological_process:0003143	isa	biological_process:0035050
-biological_process:0035050	isa	biological_process:0035295
-biological_process:0072189	isa	biological_process:0035295
-biological_process:0061071	isa	biological_process:0035295
-biological_process:0072031	isa	biological_process:0035295
-biological_process:0072066	isa	biological_process:0035295
-biological_process:0072044	isa	biological_process:0035295
-biological_process:0060872	isa	biological_process:0035295
-biological_process:0061009	isa	biological_process:0035295
-biological_process:1905867	isa	biological_process:0035295
-biological_process:0035503	isa	biological_process:0035295
-biological_process:0030323	isa	biological_process:0035295
-biological_process:0072520	isa	biological_process:0035295
-biological_process:0060066	isa	biological_process:0035295
-biological_process:0072032	isa	biological_process:0035295
-biological_process:0061108	isa	biological_process:0035295
-biological_process:0072065	isa	biological_process:0035295
-biological_process:0048565	isa	biological_process:0035295
-biological_process:0021915	isa	biological_process:0035295
-biological_process:0072164	isa	biological_process:0035295
-biological_process:0071599	isa	biological_process:0035295
-biological_process:0072170	isa	biological_process:0035295
-biological_process:0061205	isa	biological_process:0035295
-biological_process:0061326	isa	biological_process:0035295
-biological_process:0072002	isa	biological_process:0061326
-biological_process:0050730	-regulates->	biological_process:0018108
-biological_process:0050732	-negatively_regulates->	biological_process:0018108
-biological_process:2001113	-negatively_regulates->	biological_process:0035729
-MeSH_Tree_Anatomy:A08.800.800.120.640	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.900	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.600	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.910	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.330	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.290	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.800	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.250	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.680	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.060	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.760	isa	MeSH_Tree_Anatomy:A08.800.800.120
-MeSH_Tree_Anatomy:A08.800.800.120.030	isa	MeSH_Tree_Anatomy:A08.800.800.120
+biological_process:0043068,isa,biological_process:0043067
+biological_process:0043068,isa,biological_process:0140639
+biological_process:0043068,isa,biological_process:0034052
+biological_process:0043068,isa,biological_process:0062100
+biological_process:0043068,isa,biological_process:0043065
+biological_process:0043068,isa,biological_process:1905717
+biological_process:0043068,isa,biological_process:1901300
+biological_process:0043068,isa,biological_process:0046670
+biological_process:0043068,isa,biological_process:0051712
+biological_process:0043068,isa,biological_process:0160020
+biological_process:0043068,isa,biological_process:0012502
+biological_process:0043068,isa,biological_process:1904094
+biological_process:0043068,isa,biological_process:0010942
+biological_process:2000771,isa,biological_process:0048522
+biological_process:0033555,isa,biological_process:0051866
+biological_process:0033555,isa,biological_process:0042596
+biological_process:0033555,isa,biological_process:0048265
+biological_process:0033555,isa,biological_process:0032501
+biological_process:0033555,isa,biological_process:0006950
+biological_process:0043475,isa,biological_process:0043476
+biological_process:0002856,-negatively_regulates->,biological_process:0002423
+biological_process:0002856,isa,biological_process:0002855
+biological_process:0060759,isa,biological_process:0048583
+biological_process:0051919,isa,biological_process:0048518
+biological_process:1905699,isa,biological_process:2001023
+biological_process:0002920,isa,biological_process:0002759
+biological_process:0051149,isa,biological_process:0045597
+biological_process:0002188,isa,biological_process:0002183
+biological_process:0046596,isa,biological_process:0046597
+biological_process:0046596,isa,biological_process:1903913
+biological_process:0046596,isa,biological_process:0046598
+biological_process:0046596,isa,biological_process:1903900
+biological_process:1902685,isa,biological_process:0048518
+biological_process:0002832,isa,biological_process:0008348
+biological_process:0002832,isa,biological_process:1904416
+biological_process:0002832,isa,biological_process:0031665
+biological_process:0002832,isa,biological_process:0048585
+biological_process:0002832,isa,biological_process:0002831
+biological_process:0002832,isa,biological_process:0070955
+biological_process:0002832,isa,biological_process:0045824
+biological_process:0002832,isa,biological_process:0010113
+biological_process:0002832,isa,biological_process:0050687
+biological_process:0002832,isa,biological_process:1900366
+biological_process:0002832,isa,biological_process:1900444
+biological_process:0002832,-negatively_regulates->,biological_process:0009607
+biological_process:0002759,isa,biological_process:0008348
+biological_process:0002759,isa,biological_process:0002784
+biological_process:0002759,isa,biological_process:0031347
+biological_process:0002759,-regulates->,biological_process:0019730
+biological_process:0002759,isa,biological_process:0032101
+biological_process:0002759,isa,biological_process:0002760
+biological_process:0014030,isa,biological_process:0048762
+biological_process:0071228,isa,biological_process:0071216
+biological_process:0071228,isa,biological_process:0002347
+biological_process:1904369,isa,biological_process:0045597
+biological_process:0001731,isa,biological_process:0002183
+biological_process:0002931,isa,biological_process:0006950
+biological_process:0140227,isa,biological_process:1990806
+biological_process:0140227,isa,biological_process:0007210
+biological_process:0001677,-positively_regulates->,biological_process:1901192
+biological_process:0001677,-negatively_regulates->,biological_process:1901191
+biological_process:0001677,-regulates->,biological_process:1901190
+biological_process:0001677,isa,biological_process:0022618
+biological_process:0001677,isa,biological_process:0006413
+biological_process:0106428,isa,biological_process:0048518
+biological_process:0010530,isa,biological_process:0048522
+biological_process:1904689,isa,biological_process:0045947
+biological_process:1904689,-negatively_regulates->,biological_process:0002183
+biological_process:1904689,isa,biological_process:1903675
+biological_process:1904689,isa,biological_process:1904688
+biological_process:1904689,isa,biological_process:1990625
+biological_process:1904689,isa,biological_process:1901194
+biological_process:1904689,isa,biological_process:1903678
+biological_process:0045633,isa,biological_process:0045666
+biological_process:1905715,isa,biological_process:0043067
+biological_process:0030307,isa,biological_process:0048522
+biological_process:0002424,isa,biological_process:0002418
+biological_process:1990858,isa,biological_process:1990840
+biological_process:1990858,isa,biological_process:0002223
+biological_process:1900518,isa,biological_process:0048583
+biological_process:1900518,isa,biological_process:1900520
+biological_process:1900518,-regulates->,biological_process:0044592
+biological_process:1900518,isa,biological_process:1900519
+biological_process:1904915,isa,biological_process:0048518
+biological_process:1905207,isa,biological_process:2000722
+biological_process:1905207,isa,biological_process:0120074
+biological_process:1905207,isa,biological_process:2000725
+biological_process:1905207,isa,biological_process:1905209
+biological_process:1905207,isa,biological_process:1905208
+biological_process:1905207,isa,biological_process:0051890
+biological_process:1905207,-regulates->,biological_process:0035051
+biological_process:1905207,isa,biological_process:0045595
+biological_process:1905207,isa,biological_process:2000043
+biological_process:0032056,isa,biological_process:0045727
+biological_process:0071456,isa,biological_process:0001666
+biological_process:0010744,isa,biological_process:0010743
+biological_process:0010744,isa,biological_process:0045597
+biological_process:0010744,-positively_regulates->,biological_process:0010742
+biological_process:0010557,isa,biological_process:0045727
+biological_process:0031930,isa,biological_process:0007165
+biological_process:2000068,isa,biological_process:0002831
+biological_process:0070947,isa,biological_process:0070943
+biological_process:0070947,-negatively_regulates->,biological_process:0070959
+biological_process:0070947,isa,biological_process:0050832
+biological_process:0070947,-regulates->,biological_process:0070953
+biological_process:0070947,-positively_regulates->,biological_process:0070965
+biological_process:0008348,isa,biological_process:0031348
+biological_process:0120132,isa,biological_process:0043065
+biological_process:0045087,-regulates->,biological_process:0045088
+biological_process:1990781,isa,biological_process:0035902
+biological_process:0044533,isa,biological_process:0043065
+biological_process:0045695,isa,biological_process:0045694
+biological_process:0006955,isa,biological_process:0002418
+biological_process:0031664,isa,biological_process:0031665
+biological_process:0031664,isa,biological_process:0031666
+biological_process:0031664,-regulates->,biological_process:0031663
+biological_process:0031664,isa,biological_process:0009966
+biological_process:0038034,isa,biological_process:0007165
+biological_process:0031667,isa,biological_process:0042594
+biological_process:2001025,isa,biological_process:2001023
+biological_process:1905176,isa,biological_process:0048522
+biological_process:0006991,isa,biological_process:0071501
+biological_process:0006991,isa,biological_process:0006950
+biological_process:1990532,isa,biological_process:0097501
+biological_process:1903226,isa,biological_process:0045597
+biological_process:0071322,isa,biological_process:0071326
+biological_process:0071322,isa,biological_process:0071324
+biological_process:0071322,isa,biological_process:0009743
+biological_process:0071322,isa,biological_process:0009756
+biological_process:0071322,isa,biological_process:0071310
+biological_process:0071322,isa,biological_process:1901701
+biological_process:0071322,isa,biological_process:0072709
+biological_process:0071322,isa,biological_process:0071325
+biological_process:0071322,isa,biological_process:0097403
+biological_process:0050728,isa,biological_process:0031348
+biological_process:1903340,isa,biological_process:0048522
+biological_process:0050867,isa,biological_process:0048522
+biological_process:0140507,isa,biological_process:0008626
+biological_process:0140507,isa,biological_process:0007165
+biological_process:0140507,isa,biological_process:0012501
+biological_process:1900152,isa,biological_process:0045727
+biological_process:2001022,isa,biological_process:0048522
+biological_process:2000243,isa,biological_process:0048518
+biological_process:2000243,isa,biological_process:0045696
+biological_process:1905772,isa,biological_process:0045597
+biological_process:2000147,isa,biological_process:0048522
+biological_process:0031665,isa,biological_process:0072573
+biological_process:0097193,isa,biological_process:0097190
+biological_process:0045787,isa,biological_process:0048522
+biological_process:0051247,isa,biological_process:0045727
+biological_process:1901706,isa,biological_process:0048762
+biological_process:2000822,-regulates->,biological_process:0001662
+biological_process:2000822,isa,biological_process:2000986
+biological_process:0045948,isa,biological_process:0070134
+biological_process:0045948,isa,biological_process:0045727
+biological_process:0045948,isa,biological_process:0006446
+biological_process:0045948,-positively_regulates->,biological_process:0006413
+biological_process:0045948,isa,biological_process:0032058
+biological_process:0045948,isa,biological_process:1904690
+biological_process:0045948,isa,biological_process:0045994
+biological_process:0002715,isa,biological_process:0002855
+biological_process:0002715,isa,biological_process:0045088
+biological_process:0045693,isa,biological_process:0045597
+biological_process:2000655,isa,biological_process:2000654
+biological_process:0001662,isa,biological_process:0042596
+biological_process:0001662,-positively_regulates->,biological_process:2000987
+biological_process:0001662,isa,biological_process:0002209
+biological_process:0051050,isa,biological_process:0048518
+biological_process:0044089,isa,biological_process:0048522
+biological_process:0075055,isa,biological_process:0075294
+biological_process:0006979,isa,biological_process:0006950
+biological_process:1900437,isa,biological_process:0048583
+biological_process:0051599,isa,biological_process:0006950
+biological_process:0048585,isa,biological_process:0048583
+biological_process:0002836,isa,biological_process:0002834
+biological_process:0006970,isa,biological_process:0006950
+biological_process:1902145,isa,biological_process:1902151
+biological_process:1902145,-regulates->,biological_process:0072396
+biological_process:1902145,isa,biological_process:0002831
+biological_process:1902145,isa,biological_process:0050794
+biological_process:1902145,isa,biological_process:1902146
+biological_process:1902145,isa,biological_process:1902147
+biological_process:2001016,isa,biological_process:0045597
+biological_process:1902151,isa,biological_process:1902153
+biological_process:1902151,-regulates->,biological_process:0072402
+biological_process:1902151,isa,biological_process:1902152
+biological_process:0070943,-negatively_regulates->,biological_process:0070955
+biological_process:0031343,isa,biological_process:0048522
+biological_process:0032105,isa,biological_process:0032102
+biological_process:0045760,isa,biological_process:0048518
+biological_process:1900521,isa,biological_process:0048583
+biological_process:1905889,isa,biological_process:0048522
+biological_process:0044414,isa,biological_process:0031348
+biological_process:2000722,isa,biological_process:1905063
+biological_process:2000722,isa,biological_process:2000724
+biological_process:2000722,isa,biological_process:2000723
+biological_process:0070949,isa,biological_process:0002831
+biological_process:2000654,isa,biological_process:0048583
+biological_process:0043067,isa,biological_process:1904092
+biological_process:0043067,isa,biological_process:0110075
+biological_process:0043067,isa,biological_process:0010363
+biological_process:0043067,isa,biological_process:0062098
+biological_process:0043067,isa,biological_process:0042981
+biological_process:0043067,isa,biological_process:1901298
+biological_process:0043067,isa,biological_process:0010941
+biological_process:0043067,isa,biological_process:0046668
+biological_process:0043067,isa,biological_process:0043069
+biological_process:0045947,isa,biological_process:0045993
+biological_process:0045947,isa,biological_process:0070133
+biological_process:0045947,isa,biological_process:0017148
+biological_process:0006983,isa,biological_process:0071216
+biological_process:2000727,isa,biological_process:1905209
+biological_process:0002423,isa,biological_process:0002420
+biological_process:0002423,isa,biological_process:0002418
+biological_process:0002423,isa,biological_process:0002228
+biological_process:0002423,-positively_regulates->,biological_process:0002857
+biological_process:0010628,isa,biological_process:0045727
+biological_process:1990910,isa,biological_process:0001666
+biological_process:0045669,-positively_regulates->,biological_process:0001649
+biological_process:0045669,isa,biological_process:0045597
+biological_process:0045669,isa,biological_process:0045667
+biological_process:0030858,isa,biological_process:0045597
+biological_process:0031349,-positively_regulates->,biological_process:0006952
+biological_process:1990359,isa,biological_process:0097501
+biological_process:0030451,isa,biological_process:0045088
+biological_process:0002355,isa,biological_process:0009595
+biological_process:0002355,isa,biological_process:0002347
+biological_process:2000028,isa,biological_process:0048583
+biological_process:2001049,isa,biological_process:2001051
+biological_process:0061880,isa,biological_process:0061881
+biological_process:1904037,isa,biological_process:1904710
+biological_process:1904037,isa,biological_process:1902174
+biological_process:1904037,isa,biological_process:0043065
+biological_process:1904037,isa,biological_process:1904635
+biological_process:1904037,isa,biological_process:2000353
+biological_process:1904037,isa,biological_process:2000676
+biological_process:1904037,isa,biological_process:1904194
+biological_process:1904037,isa,biological_process:1903945
+biological_process:1904037,isa,biological_process:1904035
+biological_process:1904340,isa,biological_process:0045666
+biological_process:0031287,isa,biological_process:0045597
+biological_process:2001055,isa,biological_process:0043065
+biological_process:1904874,isa,biological_process:0048518
+biological_process:0002191,isa,biological_process:0002183
+biological_process:0075043,isa,biological_process:0043476
+biological_process:0090551,isa,biological_process:0042594
+biological_process:0050789,isa,biological_process:0048583
+biological_process:0050789,isa,biological_process:0048518
+biological_process:1902632,isa,biological_process:0048518
+biological_process:0002357,isa,biological_process:0006952
+biological_process:0002357,isa,biological_process:0002347
+biological_process:2000210,isa,biological_process:0043065
+biological_process:0140920,isa,biological_process:0048583
+biological_process:0098928,isa,biological_process:0007165
+biological_process:0098928,isa,biological_process:0099526
+biological_process:1900409,isa,biological_process:0048522
+biological_process:1904651,isa,biological_process:0043065
+biological_process:1902458,isa,biological_process:0048522
+biological_process:1900443,isa,biological_process:1900445
+biological_process:1900443,isa,biological_process:0002831
+biological_process:1900443,-regulates->,biological_process:0036180
+biological_process:1900443,isa,biological_process:1900428
+biological_process:0045785,isa,biological_process:0048522
+biological_process:0050942,isa,biological_process:0045597
+biological_process:0050688,isa,biological_process:0002831
+biological_process:0050688,isa,biological_process:0050691
+biological_process:0060355,isa,biological_process:0048522
+biological_process:0061646,isa,biological_process:0051716
+biological_process:1905890,isa,biological_process:0048583
+biological_process:0071588,isa,biological_process:0007165
+biological_process:0009611,isa,biological_process:0006950
+biological_process:1900078,isa,biological_process:0048522
+biological_process:0043502,isa,biological_process:0048583
+biological_process:0035235,isa,biological_process:1990806
+biological_process:0070266,isa,biological_process:0097527
+biological_process:0031325,isa,biological_process:0048522
+biological_process:0035902,isa,biological_process:1990785
+biological_process:0035902,isa,biological_process:0035903
+biological_process:0035902,isa,biological_process:0006950
+biological_process:0009409,isa,biological_process:0010048
+biological_process:0009409,isa,biological_process:0050826
+biological_process:0009409,isa,biological_process:0009631
+biological_process:0009409,isa,biological_process:0006950
+biological_process:0009409,isa,biological_process:0070417
+biological_process:0009409,isa,biological_process:0009266
+biological_process:1904582,isa,biological_process:0045856
+biological_process:1904582,isa,biological_process:1904580
+biological_process:1904582,isa,biological_process:0048522
+biological_process:1904582,isa,biological_process:0045854
+biological_process:1905228,isa,biological_process:0048518
+biological_process:0052542,isa,biological_process:0052545
+biological_process:0052542,isa,biological_process:0006952
+biological_process:0052542,isa,biological_process:0052544
+biological_process:0090336,isa,biological_process:0045600
+biological_process:1900150,isa,biological_process:0002831
+biological_process:1990394,isa,biological_process:0051716
+biological_process:0032938,isa,biological_process:0032057
+biological_process:0002831,isa,biological_process:0002833
+biological_process:0002831,isa,biological_process:1904415
+biological_process:0002831,isa,biological_process:1902288
+biological_process:0002831,isa,biological_process:0010112
+biological_process:0002831,isa,biological_process:1900424
+biological_process:0033554,isa,biological_process:0006950
+biological_process:0033554,isa,biological_process:0051716
+biological_process:0140471,isa,biological_process:0048518
+biological_process:0009635,isa,biological_process:0006950
+biological_process:2001040,isa,biological_process:0048522
+biological_process:0071219,isa,biological_process:0071224
+biological_process:0071219,isa,biological_process:0071216
+biological_process:0071219,isa,biological_process:0071220
+biological_process:0071219,isa,biological_process:0002237
+biological_process:0071219,isa,biological_process:0071223
+biological_process:0071219,isa,biological_process:0071222
+biological_process:1900097,isa,biological_process:0048518
+biological_process:0008628,isa,biological_process:0097190
+biological_process:1904248,isa,biological_process:0045088
+biological_process:1905845,isa,biological_process:0048522
+biological_process:2001043,isa,biological_process:0048522
+biological_process:0002183,isa,biological_process:0002190
+biological_process:0002183,isa,biological_process:0002181
+biological_process:0002183,isa,biological_process:0001732
+biological_process:2000271,isa,biological_process:0043065
+biological_process:0032388,isa,biological_process:0048522
+biological_process:0032388,isa,biological_process:0061881
+biological_process:2000767,isa,biological_process:0045727
+biological_process:0008284,isa,biological_process:0048522
+biological_process:0048583,isa,biological_process:1905846
+biological_process:0048583,isa,biological_process:1900067
+biological_process:0048583,isa,biological_process:2001228
+biological_process:0048583,isa,biological_process:1905802
+biological_process:0048583,isa,biological_process:0050776
+biological_process:0048583,-regulates->,biological_process:0050896
+biological_process:0048583,isa,biological_process:2000030
+biological_process:0048583,isa,biological_process:2000970
+biological_process:0048583,isa,biological_process:0090287
+biological_process:0048583,isa,biological_process:1901442
+biological_process:0048583,isa,biological_process:0048584
+biological_process:0048583,isa,biological_process:1900741
+biological_process:0048583,isa,biological_process:1901460
+biological_process:0048583,isa,biological_process:1905945
+biological_process:0048583,isa,biological_process:0090328
+biological_process:0048583,isa,biological_process:1901419
+biological_process:0048583,isa,biological_process:1901431
+biological_process:0048583,isa,biological_process:1901454
+biological_process:0048583,isa,biological_process:1901457
+biological_process:0048583,isa,biological_process:1901451
+biological_process:0048583,isa,biological_process:2000683
+biological_process:0048583,isa,biological_process:1900076
+biological_process:0048583,isa,biological_process:2001023
+biological_process:0034352,isa,biological_process:0043065
+biological_process:2001234,-negatively_regulates->,biological_process:0097190
+biological_process:0031347,isa,biological_process:0010185
+biological_process:2001236,isa,biological_process:2001233
+biological_process:0097345,isa,biological_process:0097190
+biological_process:0043207,isa,biological_process:0009607
+biological_process:0060338,isa,biological_process:0045088
+biological_process:0010019,isa,biological_process:0007165
+biological_process:0062001,-negatively_regulates->,biological_process:0140074
+biological_process:0003353,isa,biological_process:0048522
+biological_process:0048762,isa,biological_process:2001012
+biological_process:0048762,isa,biological_process:0001837
+biological_process:0048762,isa,biological_process:0060485
+biological_process:0048762,isa,biological_process:0140074
+biological_process:0048762,isa,biological_process:0014031
+biological_process:0048762,isa,biological_process:0060610
+biological_process:0048762,isa,biological_process:0030154
+biological_process:0048762,isa,biological_process:0060915
+biological_process:0048762,isa,biological_process:0014033
+biological_process:0048762,isa,biological_process:0060692
+biological_process:0045612,isa,biological_process:0045597
+biological_process:0030522,isa,biological_process:0009785
+biological_process:0030522,isa,biological_process:0007165
+biological_process:0071263,isa,biological_process:0032057
+biological_process:0045639,isa,biological_process:0045597
+biological_process:1905209,isa,biological_process:0051891
+biological_process:1905209,isa,biological_process:0051240
+biological_process:1905209,isa,biological_process:0120075
+biological_process:1903679,isa,biological_process:1904690
+biological_process:0010661,isa,biological_process:0043065
+biological_process:0002855,isa,biological_process:0002837
+biological_process:0002855,isa,biological_process:0002858
+biological_process:1900036,isa,biological_process:0048522
+biological_process:1905680,isa,biological_process:0045088
+biological_process:0034764,isa,biological_process:0048522
+biological_process:0045664,isa,biological_process:0045666
+biological_process:0052545,isa,biological_process:0033037
+biological_process:0052545,isa,biological_process:0080165
+biological_process:0052545,isa,biological_process:0052543
+biological_process:0052482,isa,biological_process:0006952
+biological_process:0042595,isa,biological_process:0042594
+biological_process:0001402,isa,biological_process:0007165
+biological_process:0036267,isa,biological_process:0097317
+biological_process:0009756,isa,biological_process:0010182
+biological_process:0052386,isa,biological_process:0052543
+biological_process:0055095,isa,biological_process:0007165
+biological_process:1904181,isa,biological_process:0048518
+biological_process:0031139,isa,biological_process:0048518
+biological_process:1903620,isa,biological_process:0045597
+biological_process:0045663,isa,biological_process:0045661
+biological_process:0045663,isa,biological_process:2000700
+biological_process:0045663,-positively_regulates->,biological_process:0045445
+biological_process:0045663,isa,biological_process:0045597
+biological_process:2001242,isa,biological_process:2001233
+biological_process:1990806,isa,biological_process:0007165
+biological_process:0002839,-positively_regulates->,biological_process:0002418
+biological_process:0070955,isa,biological_process:0070956
+biological_process:0070955,isa,biological_process:0070954
+biological_process:0075203,isa,biological_process:0075294
+biological_process:0106020,isa,biological_process:0106022
+biological_process:0043482,isa,biological_process:0033059
+biological_process:0043482,isa,biological_process:0043476
+biological_process:0043482,isa,biological_process:0048757
+biological_process:0043482,isa,biological_process:0051716
+biological_process:1903974,isa,biological_process:0048522
+biological_process:0045727,isa,biological_process:0045905
+biological_process:0045727,isa,biological_process:0045903
+biological_process:0045727,isa,biological_process:0031328
+biological_process:0045727,isa,biological_process:0070131
+biological_process:0045727,isa,biological_process:0034250
+biological_process:0045727,isa,biological_process:0045901
+biological_process:0045727,isa,biological_process:0006417
+biological_process:0045727,isa,biological_process:0045975
+biological_process:0045727,isa,biological_process:0046012
+biological_process:0044337,isa,biological_process:0043065
+biological_process:0061771,isa,biological_process:0006950
+biological_process:1902027,isa,biological_process:0048522
+biological_process:1900454,isa,biological_process:0048518
+biological_process:0072399,-regulates->,biological_process:1902147
+biological_process:0045598,isa,biological_process:0045600
+biological_process:0044630,isa,biological_process:0001868
+biological_process:0061173,isa,biological_process:0048522
+biological_process:0009560,-positively_regulates->,biological_process:0045696
+biological_process:0097317,isa,biological_process:0036180
+biological_process:0002413,isa,biological_process:0002418
+biological_process:0043065,isa,biological_process:1901694
+biological_process:0043065,isa,biological_process:1904747
+biological_process:0043065,isa,biological_process:0052151
+biological_process:0043065,isa,biological_process:2001235
+biological_process:0043065,isa,biological_process:1904522
+biological_process:0043065,isa,biological_process:1900119
+biological_process:0043065,isa,biological_process:0033034
+biological_process:0043065,isa,biological_process:2000108
+biological_process:0043065,isa,biological_process:0043525
+biological_process:0051607,-negatively_regulates->,biological_process:0050687
+biological_process:0097532,isa,biological_process:0006950
+biological_process:0090550,isa,biological_process:0042594
+biological_process:0036180,isa,biological_process:0044182
+biological_process:0060134,isa,biological_process:0032102
+biological_process:0140626,isa,biological_process:0007165
+biological_process:0023056,isa,biological_process:0048518
+biological_process:1902148,isa,biological_process:1902147
+biological_process:1990641,isa,biological_process:0042594
+biological_process:0042594,isa,biological_process:0030583
+biological_process:0042594,isa,biological_process:0009267
+biological_process:0042594,isa,biological_process:0097385
+biological_process:0042594,isa,biological_process:0060275
+biological_process:0042594,isa,biological_process:0090548
+biological_process:0042594,isa,biological_process:0036170
+biological_process:0042594,isa,biological_process:0120126
+biological_process:0042594,isa,biological_process:0006950
+biological_process:0042594,isa,biological_process:0090549
+biological_process:0042594,isa,biological_process:0120127
+biological_process:0042594,isa,biological_process:1990928
+biological_process:1903902,isa,biological_process:0046598
+biological_process:0072573,isa,biological_process:0002507
+biological_process:1901191,isa,biological_process:0031333
+biological_process:1905033,isa,biological_process:0048518
+biological_process:1904912,isa,biological_process:0048518
+biological_process:0060264,isa,biological_process:0045088
+biological_process:0031668,isa,biological_process:0051716
+biological_process:0043479,isa,biological_process:0043478
+biological_process:1903666,isa,biological_process:0048518
+biological_process:0140074,-regulates->,biological_process:0061999
+biological_process:0006915,isa,biological_process:0097190
+biological_process:0051409,isa,biological_process:0006950
+biological_process:0050689,isa,biological_process:0050687
+biological_process:0120008,isa,biological_process:0045666
+biological_process:0043476,isa,biological_process:0043473
+biological_process:0043476,isa,biological_process:0043478
+biological_process:0043476,isa,biological_process:0043480
+biological_process:0006952,isa,biological_process:0098542
+biological_process:0006952,isa,biological_process:0006954
+biological_process:0006952,isa,biological_process:0002679
+biological_process:0007186,isa,biological_process:0007165
+biological_process:0044645,isa,biological_process:0045088
+biological_process:0007154,isa,biological_process:0007165
+biological_process:0080135,isa,biological_process:1900037
+biological_process:0098926,isa,biological_process:0007165
+biological_process:0071402,isa,biological_process:0051716
+biological_process:0048087,isa,biological_process:0048518
+biological_process:0048087,-positively_regulates->,biological_process:0048066
+biological_process:1905034,isa,biological_process:0045088
+biological_process:0035990,-positively_regulates->,biological_process:2001051
+biological_process:0046534,isa,biological_process:0045666
+biological_process:0071216,isa,biological_process:0071217
+biological_process:0071216,isa,biological_process:0071227
+biological_process:0071216,isa,biological_process:0071226
+biological_process:0034059,isa,biological_process:0006950
+biological_process:0030324,isa,biological_process:0060915
+biological_process:0071396,isa,biological_process:0071222
+biological_process:0001867,-regulates->,biological_process:0001868
+biological_process:1904361,isa,biological_process:0048522
+biological_process:0045089,isa,biological_process:0045088
+biological_process:1905898,isa,biological_process:0048522
+biological_process:0048518,isa,biological_process:0060148
+biological_process:0048518,isa,biological_process:0140409
+biological_process:0048518,isa,biological_process:0051094
+biological_process:0048518,isa,biological_process:0048524
+biological_process:0048518,isa,biological_process:0044149
+biological_process:0048518,isa,biological_process:1905954
+biological_process:0048518,isa,biological_process:0032849
+biological_process:0048518,isa,biological_process:0042753
+biological_process:0048518,isa,biological_process:0009893
+biological_process:0048518,isa,biological_process:1905514
+biological_process:0048518,isa,biological_process:1900048
+biological_process:0048518,isa,biological_process:0002684
+biological_process:0048518,isa,biological_process:0075294
+biological_process:0048518,isa,biological_process:0040017
+biological_process:0048518,isa,biological_process:1903781
+biological_process:0048518,isa,biological_process:0045927
+biological_process:0048518,isa,biological_process:1905339
+biological_process:0048521,isa,biological_process:2000986
+biological_process:1903116,isa,biological_process:0048522
+biological_process:0009414,isa,biological_process:0006950
+biological_process:2000594,-positively_regulates->,biological_process:0072240
+biological_process:2000594,isa,biological_process:2000592
+biological_process:2000594,isa,biological_process:0045597
+biological_process:2000522,isa,biological_process:0048522
+biological_process:1990840,isa,biological_process:0009607
+biological_process:0010718,isa,biological_process:0045597
+biological_process:0062207,isa,biological_process:0045088
+biological_process:1903532,isa,biological_process:0048522
+biological_process:0035081,isa,biological_process:0012502
+biological_process:1900037,isa,biological_process:1900038
+biological_process:1900037,isa,biological_process:1900039
+biological_process:0001869,isa,biological_process:0001868
+biological_process:0009968,-negatively_regulates->,biological_process:0007165
+biological_process:0002764,isa,biological_process:0007165
+biological_process:0032005,isa,biological_process:0007165
+biological_process:0010017,isa,biological_process:0007165
+biological_process:0061045,isa,biological_process:0032102
+biological_process:1903920,isa,biological_process:0048522
+biological_process:0007212,isa,biological_process:0007165
+biological_process:1904366,isa,biological_process:0032102
+biological_process:0106167,isa,biological_process:0007165
+biological_process:0035007,isa,biological_process:0045088
+biological_process:0038183,isa,biological_process:0007165
+biological_process:0010941,isa,biological_process:0060548
+biological_process:0010941,isa,biological_process:0010939
+biological_process:0010941,isa,biological_process:1903201
+biological_process:0010941,isa,biological_process:1901214
+biological_process:2000738,isa,biological_process:0045597
+biological_process:2000199,isa,biological_process:0048522
+biological_process:0036293,isa,biological_process:0001666
+biological_process:0001666,isa,biological_process:0006950
+biological_process:0001666,isa,biological_process:0070483
+biological_process:0010850,isa,biological_process:0007165
+biological_process:1990169,isa,biological_process:0097501
+biological_process:0061090,isa,biological_process:0048522
+biological_process:0050687,isa,biological_process:0039532
+biological_process:1903366,isa,biological_process:2000986
+biological_process:0052543,isa,biological_process:0070727
+biological_process:1902910,isa,biological_process:0048522
+biological_process:0009413,isa,biological_process:0006950
+biological_process:0007165,isa,biological_process:0023052
+biological_process:0007165,isa,biological_process:0035556
+biological_process:0007165,isa,biological_process:1903831
+biological_process:0007165,isa,biological_process:0060863
+biological_process:0007165,isa,biological_process:0009863
+biological_process:0007165,isa,biological_process:0090520
+biological_process:0007165,isa,biological_process:0009755
+biological_process:0007165,isa,biological_process:0030968
+biological_process:0007165,isa,biological_process:0097411
+biological_process:0007165,isa,biological_process:0023041
+biological_process:0007165,isa,biological_process:0007166
+biological_process:0007165,isa,biological_process:0099004
+biological_process:0007165,isa,biological_process:0007602
+biological_process:0007165,isa,biological_process:0006984
+biological_process:0007165,isa,biological_process:0051716
+biological_process:0007165,isa,biological_process:0023019
+biological_process:0007165,isa,biological_process:0097527
+biological_process:0050691,isa,biological_process:0002230
+biological_process:0045600,isa,biological_process:0045597
+biological_process:1904762,isa,biological_process:0045597
+biological_process:1900366,isa,biological_process:0032102
+biological_process:0097191,isa,biological_process:0097190
+biological_process:0010185,-regulates->,biological_process:0006968
+biological_process:0010185,isa,biological_process:0051245
+biological_process:0010185,isa,biological_process:0010186
+biological_process:0010455,isa,biological_process:0045597
+biological_process:1903028,isa,biological_process:0048522
+biological_process:0002418,isa,biological_process:0002347
+biological_process:0002418,-negatively_regulates->,biological_process:0002838
+biological_process:0045666,isa,biological_process:1905081
+biological_process:0045666,-positively_regulates->,biological_process:0030182
+biological_process:0045666,isa,biological_process:0045597
+biological_process:0045666,isa,biological_process:1902831
+biological_process:0045666,isa,biological_process:2000979
+biological_process:0045666,isa,biological_process:1902871
+biological_process:2001038,isa,biological_process:2001023
+biological_process:0050922,isa,biological_process:0032102
+biological_process:0051130,isa,biological_process:0048522
+biological_process:1990625,isa,biological_process:0032057
+biological_process:0051781,isa,biological_process:0048522
+biological_process:1901701,isa,biological_process:0071222
+biological_process:0090664,isa,biological_process:0006950
+biological_process:2000241,isa,biological_process:0045694
+biological_process:2001051,isa,biological_process:0045597
+biological_process:1905804,isa,biological_process:0048522
+biological_process:1900039,isa,biological_process:0048522
+biological_process:1990170,isa,biological_process:0097501
+biological_process:0075199,isa,biological_process:0075294
+biological_process:1905917,isa,biological_process:0045597
+biological_process:1902010,isa,biological_process:0036495
+biological_process:0001868,isa,biological_process:0045088
+biological_process:0001868,isa,biological_process:0030449
+biological_process:0001868,isa,biological_process:0001870
+biological_process:1903676,isa,biological_process:1904690
+biological_process:1903676,isa,biological_process:1903674
+biological_process:1902289,isa,biological_process:0032102
+biological_process:0048522,isa,biological_process:1905848
+biological_process:0048522,isa,biological_process:1903334
+biological_process:0048522,isa,biological_process:0045919
+biological_process:0048522,isa,biological_process:1905935
+biological_process:0048522,isa,biological_process:0106022
+biological_process:0048522,isa,biological_process:0045597
+biological_process:0048522,isa,biological_process:1900241
+biological_process:0048522,-positively_regulates->,biological_process:0009987
+biological_process:0048522,isa,biological_process:1902874
+biological_process:0048522,isa,biological_process:1900192
+biological_process:0048522,isa,biological_process:2000470
+biological_process:0048522,isa,biological_process:0031643
+biological_process:0048522,isa,biological_process:0010647
+biological_process:0048522,isa,biological_process:1903829
+biological_process:0048522,isa,biological_process:1902146
+biological_process:0048522,isa,biological_process:0051284
+biological_process:0048522,isa,biological_process:1905959
+biological_process:0048522,isa,biological_process:0010942
+biological_process:0048522,isa,biological_process:2000685
+biological_process:0043478,isa,biological_process:0009411
+biological_process:0032332,isa,biological_process:0045597
+biological_process:0032058,isa,biological_process:0006950
+biological_process:0045694,isa,biological_process:0045595
+biological_process:1904192,isa,biological_process:1904194
+biological_process:0080134,-regulates->,biological_process:0006950
+biological_process:0061999,isa,biological_process:0062000
+biological_process:0045088,isa,biological_process:0060330
+biological_process:0010720,isa,biological_process:0045597
+biological_process:0032057,isa,biological_process:0006950
+biological_process:0032057,isa,biological_process:0036495
+biological_process:0032057,isa,biological_process:0032063
+biological_process:0048681,isa,biological_process:0032102
+biological_process:0032102,isa,biological_process:1900425
+biological_process:0032102,isa,biological_process:1905788
+biological_process:0032102,-negatively_regulates->,biological_process:0009605
+biological_process:0032102,isa,biological_process:1905791
+biological_process:0032496,isa,biological_process:0071222
+biological_process:0046598,isa,biological_process:1903915
+biological_process:0046598,isa,biological_process:0075294
+biological_process:0034405,isa,biological_process:0006950
+biological_process:0002220,isa,biological_process:0002223
+biological_process:2001024,isa,biological_process:2001023
+biological_process:0001836,isa,biological_process:0097190
+biological_process:0010038,isa,biological_process:0097501
+biological_process:0097190,-regulates->,biological_process:2001233
+biological_process:0097190,isa,biological_process:0097314
+biological_process:0097501,isa,biological_process:0006950
+biological_process:0002834,-regulates->,biological_process:0002347
+biological_process:0002834,isa,biological_process:0002835
+biological_process:0009607,isa,biological_process:0002347
+biological_process:0104004,isa,biological_process:0051716
+biological_process:2001233,isa,biological_process:0009966
+biological_process:1903890,isa,biological_process:0045597
+biological_process:0045597,isa,biological_process:0045702
+biological_process:0045597,isa,biological_process:0062000
+biological_process:0045597,isa,biological_process:0045595
+biological_process:0045597,isa,biological_process:0045699
+biological_process:0045597,isa,biological_process:2001214
+biological_process:0045597,isa,biological_process:0045690
+biological_process:0045597,isa,biological_process:1901263
+biological_process:0045597,isa,biological_process:0048336
+biological_process:0045597,isa,biological_process:1901534
+biological_process:0009987,isa,biological_process:0051716
+biological_process:0055093,isa,biological_process:0006950
+biological_process:0052372,isa,biological_process:0075294
+biological_process:0006950,isa,biological_process:0009408
+biological_process:0006950,isa,biological_process:0035966
+biological_process:0006950,isa,biological_process:1990911
+biological_process:0006950,isa,biological_process:0035900
+biological_process:0006950,isa,biological_process:0009271
+biological_process:0006950,isa,biological_process:0003299
+biological_process:0070887,isa,biological_process:0051716
+biological_process:0036495,isa,biological_process:0036491
+biological_process:0061862,isa,biological_process:0051716
+biological_process:0043503,isa,biological_process:0051716
+biological_process:0071226,isa,biological_process:0002238
+cellular_component:1990061,isa,cellular_component:0005829
+cellular_component:0031597,isa,cellular_component:0005829
+cellular_component:0072379,isa,cellular_component:0005829
+cellular_component:0022626,isa,cellular_component:0005829
+cellular_component:0009316,isa,cellular_component:0005829
+cellular_component:1990133,isa,cellular_component:0005829
+cellular_component:0045250,isa,cellular_component:0005829
+cellular_component:0000345,isa,cellular_component:0005829
+cellular_component:1990233,isa,cellular_component:0005829
+cellular_component:0045247,isa,cellular_component:0005829
+cellular_component:0045246,isa,cellular_component:0005829
+cellular_component:0061702,isa,cellular_component:0005829
+cellular_component:1990588,isa,cellular_component:0005829
+cellular_component:0002186,isa,cellular_component:0005829
+cellular_component:1990235,isa,cellular_component:0005829
+cellular_component:0045249,isa,cellular_component:0005829
+cellular_component:0000015,isa,cellular_component:0005829
+cellular_component:0005829,isa,cellular_component:0034752
+cellular_component:0005829,isa,cellular_component:1990200
+cellular_component:0005829,isa,cellular_component:0062092
+cellular_component:0005829,isa,cellular_component:0034519
+cellular_component:0005829,isa,cellular_component:1990788
+cellular_component:0005829,isa,cellular_component:0016465
+cellular_component:0005829,isa,cellular_component:0005737
+cellular_component:0005829,isa,cellular_component:1990221
+cellular_component:0005829,isa,cellular_component:1990205
+cellular_component:0005829,isa,cellular_component:0002144
+cellular_component:0005829,isa,cellular_component:1990228
+cellular_component:0005829,isa,cellular_component:0097342
+cellular_component:0005829,isa,cellular_component:0043540
+cellular_component:0005829,isa,cellular_component:0045248
+cellular_component:0005829,isa,cellular_component:1990202
+cellular_component:0005829,isa,cellular_component:1990230
+cellular_component:0005829,isa,cellular_component:0008074
+cellular_component:0005829,isa,cellular_component:0005945
+cellular_component:0005829,isa,cellular_component:0110165
+cellular_component:0005829,isa,cellular_component:1990229
+cellular_component:0005829,isa,cellular_component:1990201
+cellular_component:0005829,isa,cellular_component:0106002
+cellular_component:0005829,isa,cellular_component:0033596
+cellular_component:0005829,isa,cellular_component:0005833
+cellular_component:0005829,isa,cellular_component:0005836
+cellular_component:0005829,isa,cellular_component:0005831
+cellular_component:0005829,isa,cellular_component:0043293
+cellular_component:0005829,isa,cellular_component:0090730
+cellular_component:0005829,isa,cellular_component:0008385
+cellular_component:0005829,isa,cellular_component:1990121
+cellular_component:0005829,isa,cellular_component:0099522
+cellular_component:0005829,isa,cellular_component:0005832
+cellular_component:0005829,isa,cellular_component:1990198
+cellular_component:0005829,isa,cellular_component:0097495
+biological_process:0032367,isa,biological_process:0090118
+biological_process:0001504,isa,biological_process:0098657
+biological_process:0072594,isa,biological_process:0098968
+biological_process:0072594,isa,biological_process:0072596
+biological_process:0072594,isa,biological_process:0071989
+biological_process:0072594,isa,biological_process:0099646
+biological_process:0072594,isa,biological_process:0072655
+biological_process:0072594,isa,biological_process:0072666
+biological_process:0072594,isa,biological_process:0140450
+biological_process:0072594,isa,biological_process:0033365
+biological_process:0072594,isa,biological_process:0045184
+biological_process:0072594,isa,biological_process:0020028
+biological_process:0072594,isa,biological_process:0070199
+biological_process:0072594,isa,biological_process:0044743
+biological_process:0072594,isa,biological_process:0072663
+biological_process:0072594,isa,biological_process:0072599
+biological_process:0072594,isa,biological_process:0070086
+biological_process:0072594,isa,biological_process:0006606
+biological_process:0046907,isa,biological_process:0090118
+biological_process:0098720,isa,biological_process:0098657
+biological_process:0098720,isa,biological_process:0071422
+biological_process:0098720,isa,biological_process:0098739
+biological_process:0035429,isa,biological_process:0140270
+biological_process:0140204,isa,biological_process:0098657
+biological_process:1903258,isa,biological_process:0140271
+biological_process:0098715,isa,biological_process:0098657
+biological_process:0098715,isa,biological_process:1901553
+biological_process:1904447,isa,biological_process:0098657
+biological_process:0019065,isa,biological_process:0075513
+biological_process:0019065,isa,biological_process:0006898
+biological_process:0019065,isa,biological_process:0075512
+biological_process:0019065,isa,biological_process:0075509
+biological_process:0098704,isa,biological_process:0098657
+biological_process:0098704,isa,biological_process:0034219
+biological_process:0098704,isa,biological_process:0009401
+biological_process:0098704,isa,biological_process:0106082
+biological_process:0098704,isa,biological_process:0140271
+biological_process:0098704,isa,biological_process:0106081
+biological_process:0098657,isa,biological_process:0033212
+biological_process:0098657,isa,biological_process:0098709
+biological_process:0098657,isa,biological_process:1905136
+biological_process:0098657,isa,biological_process:0006810
+biological_process:0098657,isa,biological_process:0009290
+biological_process:0098657,isa,biological_process:0140201
+biological_process:0098657,isa,biological_process:0098710
+biological_process:0098657,isa,biological_process:0090493
+biological_process:0098657,isa,biological_process:0140270
+biological_process:0098657,isa,biological_process:0098721
+biological_process:0098657,isa,biological_process:0140205
+biological_process:0098657,isa,biological_process:0051630
+biological_process:0098657,isa,biological_process:0020028
+biological_process:0098657,isa,biological_process:0098714
+biological_process:0098657,isa,biological_process:0099587
+biological_process:0098657,isa,biological_process:1904679
+biological_process:0098657,isa,biological_process:1905130
+biological_process:0098657,isa,biological_process:1903075
+biological_process:0098657,isa,biological_process:0089718
+biological_process:0098657,isa,biological_process:0140354
+biological_process:0098657,isa,biological_process:0140202
+biological_process:0098657,isa,biological_process:0140125
+biological_process:0098657,isa,biological_process:0098717
+biological_process:0098657,isa,biological_process:0098702
+biological_process:0098657,isa,biological_process:1905135
+biological_process:0098657,isa,biological_process:0140361
+biological_process:0098657,isa,biological_process:0060919
+biological_process:0008645,isa,biological_process:0140271
+biological_process:0033212,isa,biological_process:0006826
+biological_process:0033212,isa,biological_process:0033214
+biological_process:0033212,isa,biological_process:0033215
+biological_process:0033212,isa,biological_process:0140420
+biological_process:0033212,isa,biological_process:0006879
+biological_process:0033212,isa,biological_process:0140298
+biological_process:0033212,isa,biological_process:0098711
+biological_process:0033212,isa,biological_process:0051649
+biological_process:0015031,isa,biological_process:0020028
+biological_process:0090118,isa,biological_process:0006898
+biological_process:0072583,isa,biological_process:0006898
+biological_process:0098708,isa,biological_process:0140271
+biological_process:0055085,isa,biological_process:0098739
+biological_process:1905039,isa,biological_process:0071423
+biological_process:0140425,isa,biological_process:0140271
+biological_process:0098739,isa,biological_process:0098714
+biological_process:0098739,isa,biological_process:0089718
+biological_process:0098739,isa,biological_process:0098717
+biological_process:0098739,isa,biological_process:0015911
+biological_process:0020028,isa,biological_process:0006898
+biological_process:0098714,isa,biological_process:0071423
+biological_process:0006898,isa,biological_process:0006897
+biological_process:0006898,isa,biological_process:0031623
+biological_process:0006898,isa,biological_process:0160006
+biological_process:0071934,isa,biological_process:0140125
+biological_process:0015755,isa,biological_process:1990539
+biological_process:0015743,isa,biological_process:0071423
+biological_process:0140271,isa,biological_process:1990539
+Reactome_Pathway:R-HSA-1483148,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483171,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483257,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483196,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483101,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482925,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483191,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483213,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482883,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483076,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483166,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482801,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482788,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482798,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1482922,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483152,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483226,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483115,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1483206
+Reactome_Pathway:R-HSA-1483206,-pathway_is_parent_of->,Reactome_Pathway:R-HSA-1482839
