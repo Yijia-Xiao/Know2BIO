@@ -1,393 +1,393 @@
-UniProt:Q8NGM1,enables,molecular_function:0004930
-UniProt:Q9UKP6,located_in,cellular_component:0016020
-UniProt:Q86U70,located_in,cellular_component:0005634
-UniProt:Q8NGX5,enables,molecular_function:0004930
-biological_process:0007165,involved_in,UniProt:O76100
-UniProt:Q8NGC7,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NGZ3
-biological_process:0006955,involved_in,UniProt:P01024
-UniProt:P58181,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:Q92956
-molecular_function:0004930,enables,UniProt:Q8NGF9
-UniProt:Q8NGR5,enables,molecular_function:0004930
-Reactome_Pathway:R-HSA-381753,-may_participate_in->,Entrez:124538
-molecular_function:0004930,enables,UniProt:P30411
-UniProt:Q8NGF6,enables,molecular_function:0004930
-UniProt:P47890,is_active_in,cellular_component:0005886
-UniProt:Q12770,located_in,cellular_component:0005794
-biological_process:0006954,involved_in,UniProt:P46663
-biological_process:0006955,involved_in,UniProt:P01714
-UniProt:P06727,located_in,cellular_component:0045202
-UniProt:Q9NZP2,enables,molecular_function:0004930
-UniProt:P01611,located_in,cellular_component:0072562
-UniProt:P0DMU2,enables,molecular_function:0004930
-UniProt:Q8NG92,located_in,cellular_component:0005886
-Reactome_Pathway:R-HSA-418594,-may_participate_in->,UniProt:O43603
-UniProt:O14842,enables,molecular_function:0004930
-UniProt:A6NET4,enables,molecular_function:0004930
-UniProt:Q9H2C5,enables,molecular_function:0004930
-cellular_component:0005886,located_in,UniProt:A0A075B6H8
-molecular_function:0004930,enables,UniProt:Q8NGY0
-UniProt:A6NHG9,enables,molecular_function:0004930
-UniProt:O00574,enables,molecular_function:0004930
-UniProt:Q86WV1,involved_in,biological_process:0001954
-UniProt:P12956,part_of,cellular_component:0070418
-UniProt:Q9UMR7,is_active_in,cellular_component:0009897
-molecular_function:0004930,enables,UniProt:O60412
-biological_process:0006955,involved_in,UniProt:A0A0A6YYC5
-biological_process:0006955,involved_in,UniProt:A0A075B6K2
-cellular_component:0072562,located_in,UniProt:P01876
-UniProt:Q04900,involved_in,biological_process:0006955
-biological_process:0050911,involved_in,UniProt:O43869
-UniProt:P13747,involved_in,biological_process:0002250
-UniProt:Q8NGK3,enables,molecular_function:0004930
-cellular_component:0032991,part_of,UniProt:P13010
-molecular_function:0004930,enables,UniProt:Q8NH42
-UniProt:P0C7T3,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P51677
-cellular_component:0072562,located_in,UniProt:P01011
-cellular_component:0032991,part_of,UniProt:O43541
-UniProt:A6NMZ5,enables,molecular_function:0004930
-UniProt:Q8NH94,enables,molecular_function:0004930
-UniProt:A6NIJ9,located_in,cellular_component:0005886
-UniProt:Q9UKP6,located_in,cellular_component:0005886
-UniProt:Q8NGQ4,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P01624
-UniProt:Q8NH72,enables,molecular_function:0004930
-UniProt:P01706,involved_in,biological_process:0002250
-biological_process:0006955,involved_in,UniProt:P43403
-UniProt:P01602,involved_in,biological_process:0002250
-UniProt:Q9H255,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:Q8NGC1
-molecular_function:0004930,enables,UniProt:Q8NH70
-cellular_component:0072562,located_in,UniProt:P01624
-UniProt:O00144,enables,molecular_function:0004930
-UniProt:Q15622,enables,molecular_function:0004930
-UniProt:P06727,located_in,cellular_component:0005615
-UniProt:P05106,located_in,cellular_component:0005654
-UniProt:O15444,involved_in,biological_process:0001954
-biological_process:0009612,involved_in,UniProt:P02452
-molecular_function:0004930,enables,UniProt:Q6IEZ7
-UniProt:Q8NGY1,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NGR2
-UniProt:P29274,involved_in,biological_process:0007205
-cellular_component:0005886,located_in,UniProt:P51813
-UniProt:P30518,enables,molecular_function:0004930
-UniProt:P06727,located_in,cellular_component:0005788
-cellular_component:0072562,located_in,UniProt:P02647
-UniProt:P06727,located_in,cellular_component:0062023
-UniProt:A6NF89,enables,molecular_function:0004930
-UniProt:Q8NH73,-may_participate_in->,Reactome_Pathway:R-HSA-9752946
-UniProt:P18089,located_in,cellular_component:0009986
-UniProt:O95918,enables,molecular_function:0004930
-UniProt:P32248,located_in,cellular_component:0005739
-UniProt:A6NDL8,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:A0A0C4DH69
-UniProt:P01715,involved_in,biological_process:0002250
-molecular_function:0004930,enables,UniProt:Q96RB7
-cellular_component:0005829,located_in,UniProt:P06727
-UniProt:A4D2G3,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P41143
-biological_process:0050911,involved_in,UniProt:O76100
-UniProt:Q96RI0,enables,molecular_function:0004930
-UniProt:Q8NGF8,enables,molecular_function:0004930
-biological_process:0007204,involved_in,UniProt:O43603
-UniProt:P48039,enables,molecular_function:0004930
-UniProt:Q9BZJ7,located_in,cellular_component:0010008
-biological_process:0007189,involved_in,UniProt:P47775
-molecular_function:0004930,enables,UniProt:Q96R27
-UniProt:P0C7N5,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:A0A075B6K5
-UniProt:P59543,enables,molecular_function:0004930
-biological_process:0007189,involved_in,UniProt:P35408
-cellular_component:0072562,located_in,UniProt:P01857
-UniProt:Q8NGL6,enables,molecular_function:0004930
-UniProt:Q8NHB7,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:P46663
-UniProt:A0A0C4DH67,located_in,cellular_component:0005886
-biological_process:0006955,involved_in,UniProt:P41145
-UniProt:Q8NGL3,involved_in,biological_process:0007608
-UniProt:P32248,located_in,cellular_component:0005886
-UniProt:P01042,-may_participate_in->,Reactome_Pathway:R-HSA-418594
-UniProt:P0CG04,involved_in,biological_process:0002250
-biological_process:0006955,involved_in,UniProt:P03979
-UniProt:Q8NGY6,enables,molecular_function:0004930
-UniProt:A0A075B6I1,involved_in,biological_process:0002250
-cellular_component:0005886,located_in,UniProt:P01854
-UniProt:Q8TD43,involved_in,biological_process:0002250
-UniProt:A6NM76,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:A0A0G2JNH3
-cellular_component:0005829,is_active_in,UniProt:Q92674
-biological_process:0007188,involved_in,UniProt:P25100
-UniProt:A0A075B6R9,involved_in,biological_process:0002250
-molecular_function:0004930,enables,UniProt:Q8NGK4
-molecular_function:0004930,enables,UniProt:P32239
-biological_process:0007186,involved_in,UniProt:P18089
-UniProt:A6NKK0,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:O95013
-UniProt:Q9NZP0,enables,molecular_function:0004930
-UniProt:Q8N0Y5,enables,molecular_function:0004930
-UniProt:P0C7N8,enables,molecular_function:0004930
-cellular_component:0005737,located_in,UniProt:O43541
-UniProt:P18089,involved_in,biological_process:0001525
-UniProt:Q8NGC6,enables,molecular_function:0004930
-UniProt:Q86U70,located_in,cellular_component:0005654
-UniProt:Q8NGB9,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:O43541
-UniProt:Q13191,located_in,cellular_component:0005829
-UniProt:Q96RA2,enables,molecular_function:0004930
-biological_process:0007188,involved_in,UniProt:O60755
-UniProt:Q8NHB7,located_in,cellular_component:0005886
-biological_process:0006955,involved_in,UniProt:Q9NRJ3
-UniProt:P01601,involved_in,biological_process:0002250
-UniProt:P09564,involved_in,biological_process:0002250
-UniProt:Q9BZJ7,located_in,cellular_component:0005768
-UniProt:Q8NG81,enables,molecular_function:0004930
-cellular_component:0072562,located_in,UniProt:P01024
-molecular_function:0004930,enables,UniProt:P35414
-cellular_component:0005829,is_active_in,UniProt:O75874
-cellular_component:0072562,located_in,UniProt:P01877
-cellular_component:0005886,located_in,UniProt:P32239
-UniProt:Q04900,acts_upstream_of_or_within,biological_process:0007155
-cellular_component:0005737,located_in,UniProt:P05771
-UniProt:Q8NGN5,enables,molecular_function:0004930
-cellular_component:0005737,is_active_in,UniProt:Q9GZV5
-UniProt:P32248,involved_in,biological_process:0045785
-UniProt:Q8IXE1,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q96R48
-molecular_function:0004930,enables,UniProt:Q9H208
-biological_process:0006955,involved_in,UniProt:P04430
-UniProt:Q8N628,enables,molecular_function:0004930
-UniProt:Q8NGK1,enables,molecular_function:0004930
-UniProt:P61073,enables,molecular_function:0004930
-UniProt:Q8NGB4,-may_participate_in->,Reactome_Pathway:R-HSA-9752946
-cellular_component:0005829,located_in,UniProt:P18089
-molecular_function:0004930,enables,UniProt:Q6IF36
-UniProt:Q8NHA4,enables,molecular_function:0004930
-UniProt:P05771,located_in,cellular_component:0005654
-UniProt:Q8NHC5,located_in,cellular_component:0005886
-UniProt:Q8NGA5,involved_in,biological_process:0050911
-biological_process:0006955,involved_in,UniProt:P06126
-cellular_component:0005576,located_in,UniProt:P13010
-UniProt:P58180,enables,molecular_function:0004930
-UniProt:Q8NGL4,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q86Y34
-UniProt:Q9UKP6,enables,molecular_function:0004930
-cellular_component:0072562,located_in,UniProt:P04433
-biological_process:0007204,involved_in,UniProt:P46663
-UniProt:Q8NH85,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P21730
-UniProt:P12956,part_of,cellular_component:0000783
-biological_process:0050911,involved_in,UniProt:Q15615
-UniProt:P46663,enables,molecular_function:0004930
-UniProt:Q8NGJ4,located_in,cellular_component:0005886
-biological_process:0006955,involved_in,UniProt:Q8N423
-UniProt:P48039,is_active_in,cellular_component:0005886
-UniProt:P35368,enables,molecular_function:0004930
-UniProt:P00736,located_in,cellular_component:0072562
-UniProt:Q96RI0,involved_in,biological_process:0051281
-UniProt:Q8NH08,enables,molecular_function:0004930
-cellular_component:0019814,part_of,UniProt:A0A075B6H8
-UniProt:Q6IEV9,enables,molecular_function:0004930
-UniProt:Q9BZJ7,is_active_in,cellular_component:0005886
-UniProt:O00222,enables,molecular_function:0004930
-biological_process:0009612,involved_in,UniProt:P46663
-biological_process:0007205,involved_in,UniProt:O75912
-UniProt:Q86U70,involved_in,biological_process:0030334
-cellular_component:0072562,located_in,UniProt:P01717
-biological_process:0006955,involved_in,UniProt:Q12770
-UniProt:Q8NGD1,enables,molecular_function:0004930
-UniProt:Q8NGT7,enables,molecular_function:0004930
-UniProt:O00602,located_in,cellular_component:0005576
-UniProt:P01715,is_active_in,cellular_component:0005615
-cellular_component:0032991,part_of,UniProt:O75912
-UniProt:Q13191,involved_in,biological_process:0006955
-biological_process:0006955,involved_in,UniProt:O00574
-UniProt:Q6IF42,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NGZ9
-UniProt:Q8NH16,enables,molecular_function:0004930
-UniProt:P41145,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NH06
-UniProt:P01733,involved_in,biological_process:0002250
-UniProt:P41143,located_in,cellular_component:0005886
-UniProt:P48039,located_in,cellular_component:0005886
-UniProt:Q8NG98,enables,molecular_function:0004930
-UniProt:Q6IEY1,enables,molecular_function:0004930
-UniProt:P32248,is_active_in,cellular_component:0009897
-biological_process:0006955,involved_in,UniProt:P29016
-cellular_component:0005911,located_in,UniProt:P05106
-UniProt:Q8NGQ3,enables,molecular_function:0004930
-UniProt:P0C604,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NGE9
-UniProt:Q8N349,enables,molecular_function:0004930
-UniProt:A0A0B4J1Y8,involved_in,biological_process:0002250
-UniProt:P01854,located_in,cellular_component:0005615
-UniProt:P32248,enables,molecular_function:0004930
-UniProt:A0A0A0MT76,involved_in,biological_process:0002250
-cellular_component:0005737,located_in,UniProt:Q29983
-UniProt:A0A0A6YYK7,involved_in,biological_process:0002250
-molecular_function:0004930,enables,UniProt:Q8NGY3
-biological_process:0006955,involved_in,UniProt:A0A0C4DH26
-UniProt:P58170,enables,molecular_function:0004930
-UniProt:Q9H2C8,enables,molecular_function:0004930
-cellular_component:0005576,located_in,UniProt:P0DTE2
-biological_process:0006955,involved_in,UniProt:Q99788
-UniProt:A0A0C4DH72,involved_in,biological_process:0002250
-UniProt:Q8NGZ2,enables,molecular_function:0004930
-UniProt:Q8NGG0,enables,molecular_function:0004930
-UniProt:Q8NGP8,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NGP6
-UniProt:P10321,involved_in,biological_process:0002250
-biological_process:0050911,involved_in,UniProt:Q8NGP0
-cellular_component:0034774,located_in,UniProt:P13010
-UniProt:A0A075B6H7,involved_in,biological_process:0002250
-cellular_component:0005737,is_active_in,UniProt:Q6PIJ6
-UniProt:Q8NH05,enables,molecular_function:0004930
-UniProt:Q8NHC5,enables,molecular_function:0004930
-UniProt:Q8NGE1,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:Q8NH41
-cellular_component:0005829,located_in,UniProt:P68871
-cellular_component:0005886,located_in,UniProt:Q8NGP6
-molecular_function:0004930,enables,UniProt:A0A2R8YEV3
-biological_process:0006955,involved_in,UniProt:P40259
-UniProt:Q8NGC5,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:Q8NGP0
-biological_process:0006955,involved_in,UniProt:P60568
-biological_process:0007188,involved_in,UniProt:P01275
-biological_process:0050911,involved_in,UniProt:A6ND48
-molecular_function:0004930,enables,UniProt:Q8NGC4
-UniProt:Q8NH93,enables,molecular_function:0004930
-UniProt:Q86Y34,involved_in,biological_process:0007166
-molecular_function:0004930,enables,UniProt:Q6IFH4
-UniProt:Q9NVX2,located_in,cellular_component:0005730
-UniProt:Q9NVX2,is_active_in,cellular_component:0005730
-UniProt:O60755,located_in,cellular_component:0045202
-UniProt:Q8NGG6,enables,molecular_function:0004930
-UniProt:O95136,enables,molecular_function:0004930
-UniProt:A6ND48,enables,molecular_function:0004930
-biological_process:0007200,involved_in,UniProt:O43603
-biological_process:0006955,involved_in,UniProt:A0A0B4J280
-UniProt:Q99500,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8NH40
-biological_process:0006955,involved_in,UniProt:P04433
-UniProt:Q9Y585,enables,molecular_function:0004930
-UniProt:Q8NH73,enables,molecular_function:0004930
-biological_process:0007189,involved_in,UniProt:O43603
-cellular_component:0005829,located_in,UniProt:P51813
-cellular_component:0070062,located_in,UniProt:Q15485
-biological_process:0007186,involved_in,UniProt:Q8TDS4
-biological_process:0006955,involved_in,UniProt:P32249
-UniProt:Q8NGQ5,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:O14581
-UniProt:P25021,located_in,cellular_component:0045202
-UniProt:Q8NGV5,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q6IF82
-cellular_component:0005576,located_in,UniProt:P68871
-UniProt:Q8NGE9,involved_in,biological_process:0007608
-UniProt:O43869,enables,molecular_function:0004930
-UniProt:Q92574,involved_in,biological_process:0051492
-molecular_function:0004930,enables,UniProt:Q8NGX9
-UniProt:Q8NGJ3,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:A6NM03
-UniProt:Q8NGE8,enables,molecular_function:0004930
-UniProt:Q8NH51,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:Q29983
-cellular_component:1904724,located_in,UniProt:P68871
-UniProt:O75473,located_in,cellular_component:0005794
-UniProt:Q8TD07,is_active_in,cellular_component:0009897
-UniProt:Q8NGC2,enables,molecular_function:0004930
-biological_process:0007186,involved_in,UniProt:Q8NGM9
-UniProt:A0A075B6I6,involved_in,biological_process:0002250
-biological_process:0006955,involved_in,UniProt:P01850
-UniProt:A6NJZ3,enables,molecular_function:0004930
-cellular_component:0042101,part_of,UniProt:A0A0A0MTA7
-UniProt:Q8NGZ5,enables,molecular_function:0004930
-UniProt:Q96R08,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P01717
-cellular_component:0072562,located_in,UniProt:P01880
-molecular_function:0004930,enables,UniProt:P0C623
-UniProt:P19086,-may_participate_in->,Reactome_Pathway:R-HSA-418594
-UniProt:P01861,involved_in,biological_process:0002250
-biological_process:0006955,involved_in,UniProt:Q96BF3
-molecular_function:0004930,enables,UniProt:O95371
-cellular_component:0005829,located_in,UniProt:Q6PIJ6
-cellular_component:1904813,located_in,UniProt:O75874
-biological_process:0006955,involved_in,UniProt:A0A0B4J1Z2
-biological_process:0007188,involved_in,UniProt:P47901
-UniProt:P01834,located_in,cellular_component:0072562
-biological_process:0006955,involved_in,UniProt:P46092
-UniProt:P0DTE2,located_in,cellular_component:0005886
-UniProt:Q9NTG7,located_in,cellular_component:0005654
-cellular_component:0005886,is_active_in,UniProt:Q8NGJ9
-cellular_component:0005737,located_in,UniProt:Q9P0R6
-UniProt:Q9GZK7,enables,molecular_function:0004930
-UniProt:P06396,located_in,cellular_component:0072562
-molecular_function:0004930,enables,UniProt:A6NGY5
-UniProt:Q15619,enables,molecular_function:0004930
-UniProt:Q8WZ84,enables,molecular_function:0004930
-UniProt:Q9NZH0,enables,molecular_function:0004930
-UniProt:Q8NGI3,enables,molecular_function:0004930
-UniProt:P0CG04,located_in,cellular_component:0072562
-cellular_component:0005886,located_in,UniProt:Q8NGE9
-UniProt:Q8NGI2,located_in,cellular_component:0005886
-UniProt:Q02643,enables,molecular_function:0004930
-cellular_component:0005615,is_active_in,UniProt:Q29983
-UniProt:Q8NGT9,involved_in,biological_process:0050911
-UniProt:Q6IEU7,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:A0JD37
-biological_process:0007186,involved_in,UniProt:P32239
-biological_process:0090263,involved_in,UniProt:Q8N474
-UniProt:P18089,enables,molecular_function:0004930
-UniProt:Q8NGS9,enables,molecular_function:0004930
-UniProt:Q8TDS4,enables,molecular_function:0004930
-UniProt:P06396,located_in,cellular_component:0005615
-UniProt:P01615,involved_in,biological_process:0002250
-cellular_component:0009897,is_active_in,UniProt:P01854
-UniProt:P16410,involved_in,biological_process:0002250
-UniProt:P35462,enables,molecular_function:0004930
-biological_process:0090263,involved_in,UniProt:Q9HBX8
-biological_process:0050911,involved_in,UniProt:A0A2R8YEV3
-UniProt:Q9UGF6,enables,molecular_function:0004930
-cellular_component:0005759,colocalizes_with,UniProt:P14635
-UniProt:O75473,located_in,cellular_component:0005654
-molecular_function:0004930,enables,UniProt:Q8NGT2
-UniProt:Q8NGT9,located_in,cellular_component:0005886
-UniProt:Q8NGB6,enables,molecular_function:0004930
-UniProt:Q8NH74,enables,molecular_function:0004930
-UniProt:A6NMS3,enables,molecular_function:0004930
-UniProt:Q8NH55,enables,molecular_function:0004930
-UniProt:P05771,located_in,cellular_component:0005886
-biological_process:0050911,involved_in,UniProt:Q8NGJ9
-cellular_component:0072562,located_in,UniProt:P01593
-UniProt:P69892,part_of,cellular_component:0005833
-UniProt:P80748,involved_in,biological_process:0002250
-UniProt:Q8NGM9,located_in,cellular_component:0005886
-molecular_function:0004930,enables,UniProt:A6NFC9
-biological_process:0007188,involved_in,UniProt:P29274
-cellular_component:0032587,located_in,UniProt:P51813
-UniProt:Q8NG83,enables,molecular_function:0004930
-UniProt:P13010,located_in,cellular_component:0005886
-UniProt:Q9BZJ7,located_in,cellular_component:0005886
-UniProt:P59539,enables,molecular_function:0004930
-UniProt:P01599,located_in,cellular_component:0072562
-cellular_component:0072562,located_in,UniProt:P01594
-biological_process:0006955,involved_in,UniProt:A0A087WSX0
-UniProt:Q96D31,located_in,cellular_component:0005886
-UniProt:Q8NGS2,enables,molecular_function:0004930
-biological_process:0045944,acts_upstream_of_or_within,UniProt:Q16665
-UniProt:A0A075B6K4,involved_in,biological_process:0002250
-UniProt:A6NDL8,located_in,cellular_component:0005886
-UniProt:A6NL08,enables,molecular_function:0004930
-UniProt:Q9H346,enables,molecular_function:0004930
-UniProt:A6NL26,enables,molecular_function:0004930
-biological_process:0006955,involved_in,UniProt:P01704
-UniProt:Q96KK4,enables,molecular_function:0004930
-UniProt:Q8NGK5,enables,molecular_function:0004930
-molecular_function:0004930,enables,UniProt:Q8WZ92
-UniProt:Q8NG98,involved_in,biological_process:0050911
-cellular_component:0005576,located_in,UniProt:P01854
-biological_process:0006955,involved_in,UniProt:P01854
-biological_process:0090263,involved_in,UniProt:Q96PE1
-biological_process:0007186,involved_in,UniProt:P47775
-UniProt:O15303,enables,molecular_function:0004930
-UniProt:Q9Y3N9,enables,molecular_function:0004930
+UniProt:Q8NGM1	enables	molecular_function:0004930
+UniProt:Q9UKP6	located_in	cellular_component:0016020
+UniProt:Q86U70	located_in	cellular_component:0005634
+UniProt:Q8NGX5	enables	molecular_function:0004930
+biological_process:0007165	involved_in	UniProt:O76100
+UniProt:Q8NGC7	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NGZ3
+biological_process:0006955	involved_in	UniProt:P01024
+UniProt:P58181	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:Q92956
+molecular_function:0004930	enables	UniProt:Q8NGF9
+UniProt:Q8NGR5	enables	molecular_function:0004930
+Reactome_Pathway:R-HSA-381753	-may_participate_in->	Entrez:124538
+molecular_function:0004930	enables	UniProt:P30411
+UniProt:Q8NGF6	enables	molecular_function:0004930
+UniProt:P47890	is_active_in	cellular_component:0005886
+UniProt:Q12770	located_in	cellular_component:0005794
+biological_process:0006954	involved_in	UniProt:P46663
+biological_process:0006955	involved_in	UniProt:P01714
+UniProt:P06727	located_in	cellular_component:0045202
+UniProt:Q9NZP2	enables	molecular_function:0004930
+UniProt:P01611	located_in	cellular_component:0072562
+UniProt:P0DMU2	enables	molecular_function:0004930
+UniProt:Q8NG92	located_in	cellular_component:0005886
+Reactome_Pathway:R-HSA-418594	-may_participate_in->	UniProt:O43603
+UniProt:O14842	enables	molecular_function:0004930
+UniProt:A6NET4	enables	molecular_function:0004930
+UniProt:Q9H2C5	enables	molecular_function:0004930
+cellular_component:0005886	located_in	UniProt:A0A075B6H8
+molecular_function:0004930	enables	UniProt:Q8NGY0
+UniProt:A6NHG9	enables	molecular_function:0004930
+UniProt:O00574	enables	molecular_function:0004930
+UniProt:Q86WV1	involved_in	biological_process:0001954
+UniProt:P12956	part_of	cellular_component:0070418
+UniProt:Q9UMR7	is_active_in	cellular_component:0009897
+molecular_function:0004930	enables	UniProt:O60412
+biological_process:0006955	involved_in	UniProt:A0A0A6YYC5
+biological_process:0006955	involved_in	UniProt:A0A075B6K2
+cellular_component:0072562	located_in	UniProt:P01876
+UniProt:Q04900	involved_in	biological_process:0006955
+biological_process:0050911	involved_in	UniProt:O43869
+UniProt:P13747	involved_in	biological_process:0002250
+UniProt:Q8NGK3	enables	molecular_function:0004930
+cellular_component:0032991	part_of	UniProt:P13010
+molecular_function:0004930	enables	UniProt:Q8NH42
+UniProt:P0C7T3	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P51677
+cellular_component:0072562	located_in	UniProt:P01011
+cellular_component:0032991	part_of	UniProt:O43541
+UniProt:A6NMZ5	enables	molecular_function:0004930
+UniProt:Q8NH94	enables	molecular_function:0004930
+UniProt:A6NIJ9	located_in	cellular_component:0005886
+UniProt:Q9UKP6	located_in	cellular_component:0005886
+UniProt:Q8NGQ4	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P01624
+UniProt:Q8NH72	enables	molecular_function:0004930
+UniProt:P01706	involved_in	biological_process:0002250
+biological_process:0006955	involved_in	UniProt:P43403
+UniProt:P01602	involved_in	biological_process:0002250
+UniProt:Q9H255	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:Q8NGC1
+molecular_function:0004930	enables	UniProt:Q8NH70
+cellular_component:0072562	located_in	UniProt:P01624
+UniProt:O00144	enables	molecular_function:0004930
+UniProt:Q15622	enables	molecular_function:0004930
+UniProt:P06727	located_in	cellular_component:0005615
+UniProt:P05106	located_in	cellular_component:0005654
+UniProt:O15444	involved_in	biological_process:0001954
+biological_process:0009612	involved_in	UniProt:P02452
+molecular_function:0004930	enables	UniProt:Q6IEZ7
+UniProt:Q8NGY1	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NGR2
+UniProt:P29274	involved_in	biological_process:0007205
+cellular_component:0005886	located_in	UniProt:P51813
+UniProt:P30518	enables	molecular_function:0004930
+UniProt:P06727	located_in	cellular_component:0005788
+cellular_component:0072562	located_in	UniProt:P02647
+UniProt:P06727	located_in	cellular_component:0062023
+UniProt:A6NF89	enables	molecular_function:0004930
+UniProt:Q8NH73	-may_participate_in->	Reactome_Pathway:R-HSA-9752946
+UniProt:P18089	located_in	cellular_component:0009986
+UniProt:O95918	enables	molecular_function:0004930
+UniProt:P32248	located_in	cellular_component:0005739
+UniProt:A6NDL8	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:A0A0C4DH69
+UniProt:P01715	involved_in	biological_process:0002250
+molecular_function:0004930	enables	UniProt:Q96RB7
+cellular_component:0005829	located_in	UniProt:P06727
+UniProt:A4D2G3	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P41143
+biological_process:0050911	involved_in	UniProt:O76100
+UniProt:Q96RI0	enables	molecular_function:0004930
+UniProt:Q8NGF8	enables	molecular_function:0004930
+biological_process:0007204	involved_in	UniProt:O43603
+UniProt:P48039	enables	molecular_function:0004930
+UniProt:Q9BZJ7	located_in	cellular_component:0010008
+biological_process:0007189	involved_in	UniProt:P47775
+molecular_function:0004930	enables	UniProt:Q96R27
+UniProt:P0C7N5	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:A0A075B6K5
+UniProt:P59543	enables	molecular_function:0004930
+biological_process:0007189	involved_in	UniProt:P35408
+cellular_component:0072562	located_in	UniProt:P01857
+UniProt:Q8NGL6	enables	molecular_function:0004930
+UniProt:Q8NHB7	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:P46663
+UniProt:A0A0C4DH67	located_in	cellular_component:0005886
+biological_process:0006955	involved_in	UniProt:P41145
+UniProt:Q8NGL3	involved_in	biological_process:0007608
+UniProt:P32248	located_in	cellular_component:0005886
+UniProt:P01042	-may_participate_in->	Reactome_Pathway:R-HSA-418594
+UniProt:P0CG04	involved_in	biological_process:0002250
+biological_process:0006955	involved_in	UniProt:P03979
+UniProt:Q8NGY6	enables	molecular_function:0004930
+UniProt:A0A075B6I1	involved_in	biological_process:0002250
+cellular_component:0005886	located_in	UniProt:P01854
+UniProt:Q8TD43	involved_in	biological_process:0002250
+UniProt:A6NM76	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:A0A0G2JNH3
+cellular_component:0005829	is_active_in	UniProt:Q92674
+biological_process:0007188	involved_in	UniProt:P25100
+UniProt:A0A075B6R9	involved_in	biological_process:0002250
+molecular_function:0004930	enables	UniProt:Q8NGK4
+molecular_function:0004930	enables	UniProt:P32239
+biological_process:0007186	involved_in	UniProt:P18089
+UniProt:A6NKK0	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:O95013
+UniProt:Q9NZP0	enables	molecular_function:0004930
+UniProt:Q8N0Y5	enables	molecular_function:0004930
+UniProt:P0C7N8	enables	molecular_function:0004930
+cellular_component:0005737	located_in	UniProt:O43541
+UniProt:P18089	involved_in	biological_process:0001525
+UniProt:Q8NGC6	enables	molecular_function:0004930
+UniProt:Q86U70	located_in	cellular_component:0005654
+UniProt:Q8NGB9	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:O43541
+UniProt:Q13191	located_in	cellular_component:0005829
+UniProt:Q96RA2	enables	molecular_function:0004930
+biological_process:0007188	involved_in	UniProt:O60755
+UniProt:Q8NHB7	located_in	cellular_component:0005886
+biological_process:0006955	involved_in	UniProt:Q9NRJ3
+UniProt:P01601	involved_in	biological_process:0002250
+UniProt:P09564	involved_in	biological_process:0002250
+UniProt:Q9BZJ7	located_in	cellular_component:0005768
+UniProt:Q8NG81	enables	molecular_function:0004930
+cellular_component:0072562	located_in	UniProt:P01024
+molecular_function:0004930	enables	UniProt:P35414
+cellular_component:0005829	is_active_in	UniProt:O75874
+cellular_component:0072562	located_in	UniProt:P01877
+cellular_component:0005886	located_in	UniProt:P32239
+UniProt:Q04900	acts_upstream_of_or_within	biological_process:0007155
+cellular_component:0005737	located_in	UniProt:P05771
+UniProt:Q8NGN5	enables	molecular_function:0004930
+cellular_component:0005737	is_active_in	UniProt:Q9GZV5
+UniProt:P32248	involved_in	biological_process:0045785
+UniProt:Q8IXE1	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q96R48
+molecular_function:0004930	enables	UniProt:Q9H208
+biological_process:0006955	involved_in	UniProt:P04430
+UniProt:Q8N628	enables	molecular_function:0004930
+UniProt:Q8NGK1	enables	molecular_function:0004930
+UniProt:P61073	enables	molecular_function:0004930
+UniProt:Q8NGB4	-may_participate_in->	Reactome_Pathway:R-HSA-9752946
+cellular_component:0005829	located_in	UniProt:P18089
+molecular_function:0004930	enables	UniProt:Q6IF36
+UniProt:Q8NHA4	enables	molecular_function:0004930
+UniProt:P05771	located_in	cellular_component:0005654
+UniProt:Q8NHC5	located_in	cellular_component:0005886
+UniProt:Q8NGA5	involved_in	biological_process:0050911
+biological_process:0006955	involved_in	UniProt:P06126
+cellular_component:0005576	located_in	UniProt:P13010
+UniProt:P58180	enables	molecular_function:0004930
+UniProt:Q8NGL4	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q86Y34
+UniProt:Q9UKP6	enables	molecular_function:0004930
+cellular_component:0072562	located_in	UniProt:P04433
+biological_process:0007204	involved_in	UniProt:P46663
+UniProt:Q8NH85	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P21730
+UniProt:P12956	part_of	cellular_component:0000783
+biological_process:0050911	involved_in	UniProt:Q15615
+UniProt:P46663	enables	molecular_function:0004930
+UniProt:Q8NGJ4	located_in	cellular_component:0005886
+biological_process:0006955	involved_in	UniProt:Q8N423
+UniProt:P48039	is_active_in	cellular_component:0005886
+UniProt:P35368	enables	molecular_function:0004930
+UniProt:P00736	located_in	cellular_component:0072562
+UniProt:Q96RI0	involved_in	biological_process:0051281
+UniProt:Q8NH08	enables	molecular_function:0004930
+cellular_component:0019814	part_of	UniProt:A0A075B6H8
+UniProt:Q6IEV9	enables	molecular_function:0004930
+UniProt:Q9BZJ7	is_active_in	cellular_component:0005886
+UniProt:O00222	enables	molecular_function:0004930
+biological_process:0009612	involved_in	UniProt:P46663
+biological_process:0007205	involved_in	UniProt:O75912
+UniProt:Q86U70	involved_in	biological_process:0030334
+cellular_component:0072562	located_in	UniProt:P01717
+biological_process:0006955	involved_in	UniProt:Q12770
+UniProt:Q8NGD1	enables	molecular_function:0004930
+UniProt:Q8NGT7	enables	molecular_function:0004930
+UniProt:O00602	located_in	cellular_component:0005576
+UniProt:P01715	is_active_in	cellular_component:0005615
+cellular_component:0032991	part_of	UniProt:O75912
+UniProt:Q13191	involved_in	biological_process:0006955
+biological_process:0006955	involved_in	UniProt:O00574
+UniProt:Q6IF42	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NGZ9
+UniProt:Q8NH16	enables	molecular_function:0004930
+UniProt:P41145	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NH06
+UniProt:P01733	involved_in	biological_process:0002250
+UniProt:P41143	located_in	cellular_component:0005886
+UniProt:P48039	located_in	cellular_component:0005886
+UniProt:Q8NG98	enables	molecular_function:0004930
+UniProt:Q6IEY1	enables	molecular_function:0004930
+UniProt:P32248	is_active_in	cellular_component:0009897
+biological_process:0006955	involved_in	UniProt:P29016
+cellular_component:0005911	located_in	UniProt:P05106
+UniProt:Q8NGQ3	enables	molecular_function:0004930
+UniProt:P0C604	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NGE9
+UniProt:Q8N349	enables	molecular_function:0004930
+UniProt:A0A0B4J1Y8	involved_in	biological_process:0002250
+UniProt:P01854	located_in	cellular_component:0005615
+UniProt:P32248	enables	molecular_function:0004930
+UniProt:A0A0A0MT76	involved_in	biological_process:0002250
+cellular_component:0005737	located_in	UniProt:Q29983
+UniProt:A0A0A6YYK7	involved_in	biological_process:0002250
+molecular_function:0004930	enables	UniProt:Q8NGY3
+biological_process:0006955	involved_in	UniProt:A0A0C4DH26
+UniProt:P58170	enables	molecular_function:0004930
+UniProt:Q9H2C8	enables	molecular_function:0004930
+cellular_component:0005576	located_in	UniProt:P0DTE2
+biological_process:0006955	involved_in	UniProt:Q99788
+UniProt:A0A0C4DH72	involved_in	biological_process:0002250
+UniProt:Q8NGZ2	enables	molecular_function:0004930
+UniProt:Q8NGG0	enables	molecular_function:0004930
+UniProt:Q8NGP8	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NGP6
+UniProt:P10321	involved_in	biological_process:0002250
+biological_process:0050911	involved_in	UniProt:Q8NGP0
+cellular_component:0034774	located_in	UniProt:P13010
+UniProt:A0A075B6H7	involved_in	biological_process:0002250
+cellular_component:0005737	is_active_in	UniProt:Q6PIJ6
+UniProt:Q8NH05	enables	molecular_function:0004930
+UniProt:Q8NHC5	enables	molecular_function:0004930
+UniProt:Q8NGE1	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:Q8NH41
+cellular_component:0005829	located_in	UniProt:P68871
+cellular_component:0005886	located_in	UniProt:Q8NGP6
+molecular_function:0004930	enables	UniProt:A0A2R8YEV3
+biological_process:0006955	involved_in	UniProt:P40259
+UniProt:Q8NGC5	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:Q8NGP0
+biological_process:0006955	involved_in	UniProt:P60568
+biological_process:0007188	involved_in	UniProt:P01275
+biological_process:0050911	involved_in	UniProt:A6ND48
+molecular_function:0004930	enables	UniProt:Q8NGC4
+UniProt:Q8NH93	enables	molecular_function:0004930
+UniProt:Q86Y34	involved_in	biological_process:0007166
+molecular_function:0004930	enables	UniProt:Q6IFH4
+UniProt:Q9NVX2	located_in	cellular_component:0005730
+UniProt:Q9NVX2	is_active_in	cellular_component:0005730
+UniProt:O60755	located_in	cellular_component:0045202
+UniProt:Q8NGG6	enables	molecular_function:0004930
+UniProt:O95136	enables	molecular_function:0004930
+UniProt:A6ND48	enables	molecular_function:0004930
+biological_process:0007200	involved_in	UniProt:O43603
+biological_process:0006955	involved_in	UniProt:A0A0B4J280
+UniProt:Q99500	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8NH40
+biological_process:0006955	involved_in	UniProt:P04433
+UniProt:Q9Y585	enables	molecular_function:0004930
+UniProt:Q8NH73	enables	molecular_function:0004930
+biological_process:0007189	involved_in	UniProt:O43603
+cellular_component:0005829	located_in	UniProt:P51813
+cellular_component:0070062	located_in	UniProt:Q15485
+biological_process:0007186	involved_in	UniProt:Q8TDS4
+biological_process:0006955	involved_in	UniProt:P32249
+UniProt:Q8NGQ5	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:O14581
+UniProt:P25021	located_in	cellular_component:0045202
+UniProt:Q8NGV5	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q6IF82
+cellular_component:0005576	located_in	UniProt:P68871
+UniProt:Q8NGE9	involved_in	biological_process:0007608
+UniProt:O43869	enables	molecular_function:0004930
+UniProt:Q92574	involved_in	biological_process:0051492
+molecular_function:0004930	enables	UniProt:Q8NGX9
+UniProt:Q8NGJ3	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:A6NM03
+UniProt:Q8NGE8	enables	molecular_function:0004930
+UniProt:Q8NH51	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:Q29983
+cellular_component:1904724	located_in	UniProt:P68871
+UniProt:O75473	located_in	cellular_component:0005794
+UniProt:Q8TD07	is_active_in	cellular_component:0009897
+UniProt:Q8NGC2	enables	molecular_function:0004930
+biological_process:0007186	involved_in	UniProt:Q8NGM9
+UniProt:A0A075B6I6	involved_in	biological_process:0002250
+biological_process:0006955	involved_in	UniProt:P01850
+UniProt:A6NJZ3	enables	molecular_function:0004930
+cellular_component:0042101	part_of	UniProt:A0A0A0MTA7
+UniProt:Q8NGZ5	enables	molecular_function:0004930
+UniProt:Q96R08	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P01717
+cellular_component:0072562	located_in	UniProt:P01880
+molecular_function:0004930	enables	UniProt:P0C623
+UniProt:P19086	-may_participate_in->	Reactome_Pathway:R-HSA-418594
+UniProt:P01861	involved_in	biological_process:0002250
+biological_process:0006955	involved_in	UniProt:Q96BF3
+molecular_function:0004930	enables	UniProt:O95371
+cellular_component:0005829	located_in	UniProt:Q6PIJ6
+cellular_component:1904813	located_in	UniProt:O75874
+biological_process:0006955	involved_in	UniProt:A0A0B4J1Z2
+biological_process:0007188	involved_in	UniProt:P47901
+UniProt:P01834	located_in	cellular_component:0072562
+biological_process:0006955	involved_in	UniProt:P46092
+UniProt:P0DTE2	located_in	cellular_component:0005886
+UniProt:Q9NTG7	located_in	cellular_component:0005654
+cellular_component:0005886	is_active_in	UniProt:Q8NGJ9
+cellular_component:0005737	located_in	UniProt:Q9P0R6
+UniProt:Q9GZK7	enables	molecular_function:0004930
+UniProt:P06396	located_in	cellular_component:0072562
+molecular_function:0004930	enables	UniProt:A6NGY5
+UniProt:Q15619	enables	molecular_function:0004930
+UniProt:Q8WZ84	enables	molecular_function:0004930
+UniProt:Q9NZH0	enables	molecular_function:0004930
+UniProt:Q8NGI3	enables	molecular_function:0004930
+UniProt:P0CG04	located_in	cellular_component:0072562
+cellular_component:0005886	located_in	UniProt:Q8NGE9
+UniProt:Q8NGI2	located_in	cellular_component:0005886
+UniProt:Q02643	enables	molecular_function:0004930
+cellular_component:0005615	is_active_in	UniProt:Q29983
+UniProt:Q8NGT9	involved_in	biological_process:0050911
+UniProt:Q6IEU7	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:A0JD37
+biological_process:0007186	involved_in	UniProt:P32239
+biological_process:0090263	involved_in	UniProt:Q8N474
+UniProt:P18089	enables	molecular_function:0004930
+UniProt:Q8NGS9	enables	molecular_function:0004930
+UniProt:Q8TDS4	enables	molecular_function:0004930
+UniProt:P06396	located_in	cellular_component:0005615
+UniProt:P01615	involved_in	biological_process:0002250
+cellular_component:0009897	is_active_in	UniProt:P01854
+UniProt:P16410	involved_in	biological_process:0002250
+UniProt:P35462	enables	molecular_function:0004930
+biological_process:0090263	involved_in	UniProt:Q9HBX8
+biological_process:0050911	involved_in	UniProt:A0A2R8YEV3
+UniProt:Q9UGF6	enables	molecular_function:0004930
+cellular_component:0005759	colocalizes_with	UniProt:P14635
+UniProt:O75473	located_in	cellular_component:0005654
+molecular_function:0004930	enables	UniProt:Q8NGT2
+UniProt:Q8NGT9	located_in	cellular_component:0005886
+UniProt:Q8NGB6	enables	molecular_function:0004930
+UniProt:Q8NH74	enables	molecular_function:0004930
+UniProt:A6NMS3	enables	molecular_function:0004930
+UniProt:Q8NH55	enables	molecular_function:0004930
+UniProt:P05771	located_in	cellular_component:0005886
+biological_process:0050911	involved_in	UniProt:Q8NGJ9
+cellular_component:0072562	located_in	UniProt:P01593
+UniProt:P69892	part_of	cellular_component:0005833
+UniProt:P80748	involved_in	biological_process:0002250
+UniProt:Q8NGM9	located_in	cellular_component:0005886
+molecular_function:0004930	enables	UniProt:A6NFC9
+biological_process:0007188	involved_in	UniProt:P29274
+cellular_component:0032587	located_in	UniProt:P51813
+UniProt:Q8NG83	enables	molecular_function:0004930
+UniProt:P13010	located_in	cellular_component:0005886
+UniProt:Q9BZJ7	located_in	cellular_component:0005886
+UniProt:P59539	enables	molecular_function:0004930
+UniProt:P01599	located_in	cellular_component:0072562
+cellular_component:0072562	located_in	UniProt:P01594
+biological_process:0006955	involved_in	UniProt:A0A087WSX0
+UniProt:Q96D31	located_in	cellular_component:0005886
+UniProt:Q8NGS2	enables	molecular_function:0004930
+biological_process:0045944	acts_upstream_of_or_within	UniProt:Q16665
+UniProt:A0A075B6K4	involved_in	biological_process:0002250
+UniProt:A6NDL8	located_in	cellular_component:0005886
+UniProt:A6NL08	enables	molecular_function:0004930
+UniProt:Q9H346	enables	molecular_function:0004930
+UniProt:A6NL26	enables	molecular_function:0004930
+biological_process:0006955	involved_in	UniProt:P01704
+UniProt:Q96KK4	enables	molecular_function:0004930
+UniProt:Q8NGK5	enables	molecular_function:0004930
+molecular_function:0004930	enables	UniProt:Q8WZ92
+UniProt:Q8NG98	involved_in	biological_process:0050911
+cellular_component:0005576	located_in	UniProt:P01854
+biological_process:0006955	involved_in	UniProt:P01854
+biological_process:0090263	involved_in	UniProt:Q96PE1
+biological_process:0007186	involved_in	UniProt:P47775
+UniProt:O15303	enables	molecular_function:0004930
+UniProt:Q9Y3N9	enables	molecular_function:0004930

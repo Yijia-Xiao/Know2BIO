@@ -1,72 +1,72 @@
-biological_process:1900150,isa,biological_process:0070953
-biological_process:0031347,isa,biological_process:0045088
-biological_process:0050896,isa,biological_process:0051716
-biological_process:0072573,isa,biological_process:0071222
-biological_process:0002191,-positively_regulates->,biological_process:1903676
-biological_process:0052482,isa,biological_process:0052544
-biological_process:1900443,isa,biological_process:1900444
-biological_process:0051240,isa,biological_process:0045696
-biological_process:0006968,-positively_regulates->,biological_process:0010186
-biological_process:0045824,isa,biological_process:0045088
-biological_process:1905209,isa,biological_process:2000724
-biological_process:0048585,isa,biological_process:0032102
-biological_process:0046596,isa,biological_process:0052372
-biological_process:0031348,isa,biological_process:1900366
-biological_process:0140204,isa,biological_process:0098739
-biological_process:0002833,-positively_regulates->,biological_process:0009607
-biological_process:0006952,isa,biological_process:0002209
-biological_process:0007165,-regulates->,biological_process:0009966
-biological_process:1905136,isa,biological_process:0098739
-biological_process:0043065,isa,biological_process:0042981
-biological_process:0070953,isa,biological_process:0070965
-biological_process:0050688,isa,biological_process:0031347
-biological_process:0070955,isa,biological_process:0032102
-biological_process:0031347,-regulates->,biological_process:0006952
-biological_process:0050896,isa,biological_process:0006950
-biological_process:1904416,isa,biological_process:0032102
-biological_process:2000654,isa,biological_process:0050794
-biological_process:0050688,isa,biological_process:0032101
-biological_process:0002831,isa,biological_process:0002834
-biological_process:0045947,isa,biological_process:1901191
-biological_process:0002183,isa,biological_process:0006413
-biological_process:0050776,isa,biological_process:0045088
-biological_process:0070949,isa,biological_process:0070953
-biological_process:0002183,-regulates->,biological_process:1904688
-biological_process:0098710,isa,biological_process:0098739
-biological_process:0098739,isa,biological_process:0098702
-biological_process:0098721,isa,biological_process:0098739
-biological_process:0002837,-regulates->,biological_process:0002418
-biological_process:0050794,isa,biological_process:0048522
-biological_process:0048584,isa,biological_process:1900039
-biological_process:1904688,isa,biological_process:1904690
-biological_process:0031348,isa,biological_process:1902289
-biological_process:0002837,isa,biological_process:0002834
-biological_process:0098739,isa,biological_process:1904679
-biological_process:0048585,isa,biological_process:0031348
-biological_process:0045824,isa,biological_process:0031348
-biological_process:0002423,-regulates->,biological_process:0002855
-biological_process:0071216,isa,biological_process:0009607
-biological_process:2001234,isa,biological_process:2001233
-biological_process:0031347,isa,biological_process:0031348
-biological_process:1905209,-positively_regulates->,biological_process:0035051
-biological_process:0071216,isa,biological_process:0051716
-biological_process:0006952,-negatively_regulates->,biological_process:0031348
-biological_process:0140205,isa,biological_process:0098739
-biological_process:0098739,isa,biological_process:1903075
-biological_process:2001235,isa,biological_process:2001233
-biological_process:0006952,isa,biological_process:0006950
-biological_process:0098709,isa,biological_process:0098739
-biological_process:0031348,isa,biological_process:1900425
-biological_process:0032101,isa,biological_process:0032102
-biological_process:0036180,-negatively_regulates->,biological_process:1900444
-biological_process:0043476,isa,biological_process:0009605
-biological_process:0008348,isa,biological_process:0032102
-biological_process:0050688,isa,biological_process:0050687
-biological_process:0050687,isa,biological_process:0032102
-biological_process:0051240,isa,biological_process:0062000
-biological_process:0002831,isa,biological_process:0048583
-biological_process:0098739,isa,biological_process:0099587
-biological_process:0045824,isa,biological_process:0032102
-biological_process:1904416,isa,biological_process:0031348
-biological_process:0098739,isa,biological_process:0140125
-biological_process:0070949,isa,biological_process:0070955
+biological_process:1900150	isa	biological_process:0070953
+biological_process:0031347	isa	biological_process:0045088
+biological_process:0050896	isa	biological_process:0051716
+biological_process:0072573	isa	biological_process:0071222
+biological_process:0002191	-positively_regulates->	biological_process:1903676
+biological_process:0052482	isa	biological_process:0052544
+biological_process:1900443	isa	biological_process:1900444
+biological_process:0051240	isa	biological_process:0045696
+biological_process:0006968	-positively_regulates->	biological_process:0010186
+biological_process:0045824	isa	biological_process:0045088
+biological_process:1905209	isa	biological_process:2000724
+biological_process:0048585	isa	biological_process:0032102
+biological_process:0046596	isa	biological_process:0052372
+biological_process:0031348	isa	biological_process:1900366
+biological_process:0140204	isa	biological_process:0098739
+biological_process:0002833	-positively_regulates->	biological_process:0009607
+biological_process:0006952	isa	biological_process:0002209
+biological_process:0007165	-regulates->	biological_process:0009966
+biological_process:1905136	isa	biological_process:0098739
+biological_process:0043065	isa	biological_process:0042981
+biological_process:0070953	isa	biological_process:0070965
+biological_process:0050688	isa	biological_process:0031347
+biological_process:0070955	isa	biological_process:0032102
+biological_process:0031347	-regulates->	biological_process:0006952
+biological_process:0050896	isa	biological_process:0006950
+biological_process:1904416	isa	biological_process:0032102
+biological_process:2000654	isa	biological_process:0050794
+biological_process:0050688	isa	biological_process:0032101
+biological_process:0002831	isa	biological_process:0002834
+biological_process:0045947	isa	biological_process:1901191
+biological_process:0002183	isa	biological_process:0006413
+biological_process:0050776	isa	biological_process:0045088
+biological_process:0070949	isa	biological_process:0070953
+biological_process:0002183	-regulates->	biological_process:1904688
+biological_process:0098710	isa	biological_process:0098739
+biological_process:0098739	isa	biological_process:0098702
+biological_process:0098721	isa	biological_process:0098739
+biological_process:0002837	-regulates->	biological_process:0002418
+biological_process:0050794	isa	biological_process:0048522
+biological_process:0048584	isa	biological_process:1900039
+biological_process:1904688	isa	biological_process:1904690
+biological_process:0031348	isa	biological_process:1902289
+biological_process:0002837	isa	biological_process:0002834
+biological_process:0098739	isa	biological_process:1904679
+biological_process:0048585	isa	biological_process:0031348
+biological_process:0045824	isa	biological_process:0031348
+biological_process:0002423	-regulates->	biological_process:0002855
+biological_process:0071216	isa	biological_process:0009607
+biological_process:2001234	isa	biological_process:2001233
+biological_process:0031347	isa	biological_process:0031348
+biological_process:1905209	-positively_regulates->	biological_process:0035051
+biological_process:0071216	isa	biological_process:0051716
+biological_process:0006952	-negatively_regulates->	biological_process:0031348
+biological_process:0140205	isa	biological_process:0098739
+biological_process:0098739	isa	biological_process:1903075
+biological_process:2001235	isa	biological_process:2001233
+biological_process:0006952	isa	biological_process:0006950
+biological_process:0098709	isa	biological_process:0098739
+biological_process:0031348	isa	biological_process:1900425
+biological_process:0032101	isa	biological_process:0032102
+biological_process:0036180	-negatively_regulates->	biological_process:1900444
+biological_process:0043476	isa	biological_process:0009605
+biological_process:0008348	isa	biological_process:0032102
+biological_process:0050688	isa	biological_process:0050687
+biological_process:0050687	isa	biological_process:0032102
+biological_process:0051240	isa	biological_process:0062000
+biological_process:0002831	isa	biological_process:0048583
+biological_process:0098739	isa	biological_process:0099587
+biological_process:0045824	isa	biological_process:0032102
+biological_process:1904416	isa	biological_process:0031348
+biological_process:0098739	isa	biological_process:0140125
+biological_process:0070949	isa	biological_process:0070955
