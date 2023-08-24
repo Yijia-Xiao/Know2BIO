@@ -19,7 +19,7 @@ Including or excluding certain data files from Know2BIO allows the construction 
 
 An example of specific use cases is included within the `input_lists` folder and detailed below:
 - A protein-protein interaction knowledge graph: This protein-centric knowledge graph includes only known protein-protein interactions, their relation to genes, and their relations to biological pathways. No disease or drug information is included, as their inclusion could hinder prediction of protein-protein interactions.
-- A protein-drug interaction knowledge graph: This knowledge graph focuses specifically on protein-drug interactions between DrugBank drugs, UniProt proteins, MeSH diseases, and Reactome biological pathways. This KG does not include data files from different knowledge bases which serve a similar purpose (e.g., using Reactome, instead of Reactome and KEGG; using DrugBank only, instead of DrugBank and MeSH compounds) to reduce complexity of the KG when integrating from multiple sources.
+- A drug-target interaction knowledge graph: This knowledge graph focuses specifically on protein-drug interactions between DrugBank drugs, UniProt proteins, MeSH diseases, and Reactome biological pathways. This KG does not include data files from different knowledge bases which serve a similar purpose (e.g., using Reactome, instead of Reactome and KEGG; using DrugBank only, instead of DrugBank and MeSH compounds) to reduce complexity of the KG when integrating from multiple sources.
 
 Furthermore, these KGs can be constructed for testing predictive power of biologically relevant triples (e.g., train a model using entire Know2BIO and predict only on protein-drug edges) will be detailed soon.
 
