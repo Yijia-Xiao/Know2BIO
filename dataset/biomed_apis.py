@@ -1,5 +1,6 @@
 import json, csv, pandas as pd, numpy as np, parse_xml, requests, subprocess, os,  urllib.parse, urllib.request, html
 from bs4 import BeautifulSoup
+from biomedkg_utils import switch_dictset_to_dictlist, switch_dictlist_to_dictset
 
     
 # Source: https://github.com/HHS/uts-rest-api/blob/master/samples/python/Authentication.py
@@ -89,7 +90,7 @@ def unii2mesh_meshapi(b_id, unii_batch):
     - unii_batch: UNII IDs used as input to be mapped to MeSH
     '''
     tot = str(len(unii_batch))
-    temp_path = direct+'/temp_unii2mesh'+str(b_id)+'.txt'
+    temp_path = 'output/compound2compound/temp_unii2mesh'+str(b_id)+'.txt'
     open(temp_path,'w').write('')
     with open(temp_path,'a') as fout:
         
@@ -127,8 +128,8 @@ def db2meshorcas_inxightAPI(b_id, db_batch):
     ''' 
     
     # Prepare files
-    temp_db2mesh_path = direct+'/temp_db2mesh_inxightapi'+str(b_id)+'.txt'
-    temp_db2cas_path = direct+'/db2cas_inxight'+str(b_id)+'.txt'
+    temp_db2mesh_path = 'output/compound2compound/temp_db2mesh_inxightapi'+str(b_id)+'.txt'
+    temp_db2cas_path = 'output/compound2compound/db2cas_inxight'+str(b_id)+'.txt'
     open(temp_db2mesh_path,'w').write('')
     open(temp_db2cas_path, 'w').write('')
     tot = len(db_batch)
@@ -195,7 +196,7 @@ def unii2mesh_mycheminfoapi(b_id, unii_batch):
     - unii_batch: UNII IDs used as input to be mapped to MeSH
     '''
     
-    temp_path = direct+'/temp_unii2mesh_mycheminfo'+str(b_id)+'.txt'
+    temp_path = 'output/compound2compound/temp_unii2mesh_mycheminfo'+str(b_id)+'.txt'
     open(temp_path,'w').write('')
     tot = str(len(unii_batch))
     
@@ -230,7 +231,7 @@ def cas2mesh_meshapi(b_id, cas_batch):
     - cas_batch: cas IDs used as input to be mapped to MeSH
     '''
     tot = str(len(cas_batch))
-    temp_path = direct+'/temp_cas2mesh'+str(b_id)+'.txt'
+    temp_path = 'output/compound2compound/temp_cas2mesh'+str(b_id)+'.txt'
     open(temp_path,'w').write('')
     with open(temp_path,'a') as fout:
         

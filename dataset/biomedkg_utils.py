@@ -6,7 +6,8 @@ from multiprocessing import Pool, cpu_count, Process
 
 
 
-def output_edgefile_onerel_noweight(outpath, columns, dictionary, rel, prefix_col1='', prefix_col2='', edges_folder = True):
+def output_edgefile_onerel_noweight(outpath, columns, dictionary, rel, prefix_col1='', prefix_col2='', 
+                                    edges_folder = True, edges_to_use_folder=True):
     '''
     FUNCTION:
     - Reformat a dictionary {start node: end nodes, ...} to an edge file 
@@ -41,6 +42,9 @@ def output_edgefile_onerel_noweight(outpath, columns, dictionary, rel, prefix_co
         edges_folder_outpath = 'output/edges/'+outpath.split('/')[2]
         df.to_csv(edges_folder_outpath, index=False)
              
+    if edges_to_use_folder == True:
+        edges_folder_outpath = 'output/edges_to_use/'+outpath.split('/')[2]
+        df.to_csv(edges_folder_outpath, index=False)
                 
                 
                 
