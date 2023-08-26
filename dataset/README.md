@@ -2,18 +2,17 @@
 
 A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folder. For accessing the full released dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
 
-# Constructing Know2BIO
+# How to Construct the Know2BIO Knowledge Graph (KG)
 Run all scripts that will construct the entire KG's edges by executing `python runner.py`. This executes scripts in a suitable order. Note that some scripts must be run in this order (e.g., `compound_to_compound_alignment` and `gene_to_protein` should be run first) but others can be run in different orders or can be not run if you don't want to create the edges for the script's respective edge types. Alternatively, you can still create the edges but just choose to not use the edge file produced by the script. 
 
-# Preparing the Know2BIO Knowledge Graph
+## Prepare the Knowledge Graph Files
 
 Following construction of the Know2BIO dataset detailed above, the individual data files must be assembled into a knowledge graph and prepared following a specific data format for use with our benchmark knowledge graph representation learning models.
 
 
+## Assemble the Knowledge Graph from the Files
 
-## Assembling the Knowledge Graph
-
-### Step 0: (Optional) Sub-sample the Know2BIO dataset.
+### Step 0: (Optional) Only Assemble Part of the Knowledge Graph.
 Including or excluding certain data files from Know2BIO allows the construction of a use-case specific knowledge graph. This is achieved by providing a tailored file list for the knowledge graph construction. Included within this repository is the `input_list` folder, specifying specific edge lists to be used for knowledge graph construction. The `all_kg_edges.txt` file specifies all edge_files generated from constructing Know2BIO. This text file specifies which files are considered as part of each view (i.e., instance view, ontology view, bridge view). To make a tailored file, we recommend copying this file and deleting the file names which should not be included.
 
 An example of specific use cases is included within the `input_lists` folder and detailed below:
@@ -31,7 +30,7 @@ python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/a
 
 ## Generate Train, Test, Validation datasets
 
-Step 2: Split the dataset for training and evaluation.
+### Step 2: Split the dataset for training and evaluation.
 The `split_dataset.py` script splits the knowledge graphs constructed from the previous step, into separate knowledge graphs for training and evaluation. The input folder (with `kg1f_instances.txt`,`kg2f_ontologies.txt`, and `alignf_bridges.txt`) is provided as the first argument, with the proportion of the KG for training as the second argument. The train graph is required to span all nodes in the knowledge graph, for every connected component with greater than 10 nodes. 
 
 ```bash
@@ -40,7 +39,7 @@ python ./prepare_kgs/split_dataset.py ./know2bio 0.8
 
 ## Prepare Benchmark Dataset
 
-Step 3: Reformat the data for Benchmark modeling.
+### Step 3: Reformat the data for Benchmark modeling.
 The `prepare_benchmark.py` script automatically reformats the resulting aggregate, instance, and ontology view data into the data folder of the benchmark section of the repository. This generates the `entity2id.txt`, `relation2id.txt`, `whole2id.txt`, `train2id.txt`, `test2id.txt`, and `valid2id.txt` files in the corresponding data folder. The `n-n.py` script must be executed to generate the remaining datafiles to sucessfully update the dataset for modeling.
 
 ```bash
