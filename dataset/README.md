@@ -3,8 +3,7 @@
 A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folder. For accessing the full released dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
 
 # Constructing Know2BIO
-
-Scripts for constructing Know2BIO dataset. In order, run `compound_to_compound_alignment`, `compound_to_protein_compound_to_pathway`, `protein_to_pathway`, `protein_to_reaction`, `gene_to_protein`. The other scripts have no other execution dependencies (files to download outside of those downloaded in the notebook, intermediate files, etc.); they can be executed in any order.
+Run all scripts that will construct the entire KG's edges by executing `python runner.py`. This executes scripts in a suitable order. Note that some scripts must be run in this order (e.g., `compound_to_compound_alignment` and `gene_to_protein` should be run first) but others can be run in different orders or can be not run if you don't want to create the edges for the script's respective edge types. Alternatively, you can still create the edges but just choose to not use the edge file produced by the script. 
 
 # Preparing the Know2BIO Knowledge Graph
 
@@ -50,7 +49,7 @@ cd ../../benchmark/data/K2BIO
 python n-n.py
 ```
 
-# Datasheet for Know2BIO
+# Datasheet for Know2BIO / Additional Details
 - [Motivation](#motivation)
 - [Composition](#composition)
 - [Collection process](#collection-process)
