@@ -3,6 +3,14 @@
 A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folder. For accessing the full released dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
 
 Summary:
+
+Manually download this data into the dataset/input folder:
+```
+UMLS thesaurus "MRCONSO.RRF" (make a UMLS account): https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
+Drugbank full database (make a DrugBank account): https://go.drugbank.com/releases/5-1-9/downloads/all-full-database
+DrugBank compound structures (make a Drugbank account): https://go.drugbank.com/releases/5-1-9/downloads/all-structure-links
+```
+
 Execute these commands: 
 ```
 python runner.py
