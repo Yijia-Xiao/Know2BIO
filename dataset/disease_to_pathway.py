@@ -7,9 +7,6 @@ from biomed_apis import *
 from biomedkg_utils import *
 
 def download_kegg_data():
-
-    # NOTE: Find source of this download
-    os.system('../../Drug Repurposing Knowledge Graph/input/KEGG/kegg_disease_to_mesh_and_omim.csv' 'input/KEGG/kegg_disease_to_mesh_and_omim.csv')
     
     # drug to disease edges
     os.system('curl https://rest.kegg.jp/link/drug/disease > input/KEGG/kegg_drug_to_disease.tsv')
@@ -96,7 +93,7 @@ def map_disease_to_kegg_pathway(kegg_disease2mesh):
         line = line.split('\t')
         try:
             # MeSH Disease, KEGG Pathway
-            kegg_disease = line[0]
+            kegg_disease = line[0].split(':')[1]
             mesh_diseases = kegg_disease2mesh[kegg_disease]
             kegg_pathway = line[1].strip().replace('path:','path_')
 
@@ -120,12 +117,10 @@ def map_disease_to_kegg_pathway(kegg_disease2mesh):
         prefix_col1='MeSH_Disease:',
         prefix_col2='KEGG_Pathway:'
     )
-    df = pd.read_csv(outpath)
-    df.to_csv(os.path.join('output/edges', file), index=False)
-    df.to_csv(os.path.join('output/edges_to_use/', file), index=False)
     
-    
+
 def map_reactome_pathway_to_disease():
+    # Currently requires Reactome Graph database, but is being improved to not re
     disease_nodes = pd.read_csv('input/human_disease_with_pathways_involved.csv')[['_id', 'identifier']].drop_duplicates()
 
     # Reactome database ID to Disease Ontology ID
@@ -192,7 +187,7 @@ def export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges):
 if __name__ == '__main__':
 
     '''KEGG PATHWAYS'''
-    download_kegg_data()
+    #ownload_kegg_data()
     _, kegg_disease2mesh = align_disease_kegg_to_mesh()
     map_disease_to_kegg_pathway(kegg_disease2mesh)
 
@@ -215,7 +210,9 @@ if __name__ == '__main__':
     #os.system('cp ../../Drug\ Repurposing\ Knowledge\ Graph/input/human_pathways_involved_in_diseases.xlsx input/human_pathways_involved_in_diseases.xlsx')
     #os.system('cp ../../Drug\ Repurposing\ Knowledge\ Graph/input/human_pathway_disease_edges.xlsx input/human_pathway_disease_edges.xlsx')
 
-    reactome_pw_to_disease_edges = map_reactome_pathway_to_disease()
-    doid2mesh = json.load(open('output/disease2disease/doid2mesh.json'))
-    df = export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges)
-    
+    try:
+        reactome_pw_to_disease_edges = map_reactome_pathway_to_disease()
+        doid2mesh = json.load(open('output/disease2disease/doid2mesh.json'))
+        df = export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges)
+    except:
+        print('Could not map Reactome pathways to disease')

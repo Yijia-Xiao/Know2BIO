@@ -43,8 +43,8 @@ def map_compound_to_drug_class():
     print(len(set(atc_df['ATC Child']).union(set(atc_df['ATC Parent']))), 'ATC-ATC nodes')
     print(len(atc_df), 'ATC edges')
     atc_df.to_csv('output/compound2drugclass/atc_class_tree.csv',index=False)
-    atc_df.to_csv('output/edges/edges_atc_to_atc.csv')
-    atc_df.to_csv('output/edges_to_use/DrugClass_(ATC)_2_DrugClass_(ATC).csv')
+    atc_df.to_csv('output/edges/edges_atc_to_atc.csv', index=False)
+    atc_df.to_csv('output/edges_to_use/DrugClass_(ATC)_2_DrugClass_(ATC).csv',index=False)
 
 if __name__ == '__main__':
     map_compound_to_drug_class()

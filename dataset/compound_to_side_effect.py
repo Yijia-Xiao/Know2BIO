@@ -6,6 +6,10 @@ import pandas as pd
 
 def download_drug_to_side_effect():
     os.system('wget -N -P input/ http://sideeffects.embl.de/media/download/meddra_all_se.tsv.gz')
+    try:
+        os.remove('input/meddra_all_se.tsv')
+    except:
+        pass
     os.system('gunzip input/meddra_all_se.tsv.gz')
     
     

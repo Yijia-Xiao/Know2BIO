@@ -109,7 +109,7 @@ def export_ctd_compound_to_gene(df):
                     rel = intActs[0].split('^')[0]
                     if 'affects' in rel:
                         continue
-                    writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(geneID), '-'+rel+'->'])
+                    writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(int(geneID)), '-'+rel+'->'])
 
                 # Case: 'Expression' + 'Reaction' relationships
                 elif len(intActs) == 2 and 'creases^reaction' in intActs1 and 'mutant' not in desc and 'affects' not in intActs1:                
@@ -121,7 +121,7 @@ def export_ctd_compound_to_gene(df):
                         rel = 'decreases'#^expression'
                     elif 'decreases^reaction' in intActs and 'decreases^expression' in intActs:
                         rel = 'increases'#^expression'
-                    writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(geneID), rel])
+                    writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(int(geneID)), rel])
 
             # Case: 'Activity' is the only relationship
             intActs = intActs1.split('|')
@@ -130,7 +130,7 @@ def export_ctd_compound_to_gene(df):
                 geneID = df['GeneID'].iloc[i]
                 desc   = df['Interaction'].iloc[i]
                 rel    = intActs[0].split('^')[0]
-                writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(geneID), '-'+rel+'->'])
+                writer.writerow(['MeSH_Compound:'+chemID, 'Entrez:'+str(int(geneID)), '-'+rel+'->'])
 
     meshcompound2gene = pd.read_csv('output/compound2gene/edges_compound2gene.csv')[['Compound (MeSH)','Gene (Entrez)', 'Relationship']].drop_duplicates()
     meshcompound2gene.to_csv('output/compound2gene/edges_compound2gene.csv', index=False)
@@ -176,7 +176,7 @@ def map_mesh_gene_to_compound(df):
                         desc = desc.split(' ')
                         rel = intrAx[0].split('^')[0]
                         if desc[1] in ('protein','gene','mRNA'):
-                            writer.writerow(['Entrez:'+str(geneID), 'MeSH_Compound:'+chemID, '-'+rel+'->'])   
+                            writer.writerow(['Entrez:'+str(int(geneID)), 'MeSH_Compound:'+chemID, '-'+rel+'->'])   
 
     meshgene2compound = pd.read_csv('output/compound2gene/edges_gene2compound.csv').drop_duplicates()[['Gene (Entrez)', 'Compound (MeSH)','Relationship']]
     meshgene2compound.to_csv('output/compound2gene/edges_gene2compound.csv',index=False)
@@ -241,16 +241,14 @@ def map_gene_to_compound_via_kegg():
         if db_drugs == ''  and mesh_drugs == '':
             continue
 
-
         # Gene
-        entrez_gene = line[1].strip().split(':')[1]
+        entrez_gene = str(int(line[1].strip().split(':')[1]))
 
         # MeSH Drug - Gene
         if mesh_drugs != '':
             for mesh_drug in mesh_drugs:
                 meshcompound2gene_kegg.setdefault(mesh_drug, set()).add(entrez_gene)
                 gene2meshcompound_kegg.setdefault(entrez_gene, set()).add(mesh_drug)
-
 
         # DrugBank Drug - Gene
         if db_drugs != '':
@@ -266,24 +264,28 @@ def map_gene_to_compound_via_kegg():
                                drugbank2gene_kegg,
                                '-associated_with->',
                                 'DrugBank_Compound:',
-                                'Entrez:')
+                                'Entrez:',
+                                edges_to_use_folder=False)
 
     output_edgefile_onerel_noweight('output/compound2gene/edges_meshcompound2gene_kegg.csv',
                                ['Compound (MeSH)','Gene (Entrez)','Relationship'],
                                meshcompound2gene_kegg,
                                '-associated_with->',
                                 'MeSH_Compound:',
-                                'Entrez:')
+                                'Entrez:',
+                                edges_to_use_folder=False)
     
 def export_all_merged_gene_to_compound_relationships():
     gene2comp_df1 = pd.read_csv('output/edges/edges_gene2compound.csv')
-    gene2comp_df1.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(MeSH).csv', index=False)
+    gene2comp_df1.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(MeSH).csv',
+                         index=False)
     gene2comp_df2 = pd.read_csv('output/edges/edges_gene2compound.csv')
-    gene2comp_df2.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(DrugBank).csv', index=False)
+    gene2comp_df2.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(DrugBank).csv', 
+                         index=False)
 
     comp2gene_df1 = pd.read_csv('output/edges/edges_compound2gene.csv')
     comp2gene_df2 = pd.read_csv('output/compound2gene/edges_meshcompound2gene_kegg.csv')
-    comp2gene_df = comp2gene_df2.append(comp2gene_df1).drop_duplicates()
+    comp2gene_df = pd.concat([comp2gene_df2, comp2gene_df1]).drop_duplicates()
     comp2gene_df.to_csv('output/edges_to_use/Compound_(MeSH)_2_Gene_(Entrez).csv', index=False)
     
 if __name__ == '__main__':    

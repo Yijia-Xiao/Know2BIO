@@ -254,11 +254,13 @@ def export_all_compound_treats_disease_associations(compound_treats_disease):
                 dictionary = compound_treats_disease,
                 rel = '-treats->',
                 prefix_col1 = 'MeSH_Compound:',
-                prefix_col2 = 'MeSH_Disease:')
+                prefix_col2 = 'MeSH_Disease:',
+                edges_to_use_folder=False)
 
     df = pd.read_csv('output/edges/edges_meshCompound-TREATS->meshDisease.csv')
     df.to_csv('output/edges_to_use/Compound_(MeSH)_treats_Disease_(MeSH).csv', index=False)
 
+    mesh2db = json.load(open('output/compound2compound/mesh2db.json'))
     dbcompTREATSdis = dict()
     for comp, diseases in compound_treats_disease.items():
         try:
@@ -276,7 +278,8 @@ def export_all_compound_treats_disease_associations(compound_treats_disease):
                                    dictionary = dbcompTREATSdis,
                                    rel = '-treats->',
                                    prefix_col1 = 'DrugBank_Compound:',
-                                   prefix_col2 = 'MeSH_Disease:')
+                                   prefix_col2 = 'MeSH_Disease:',
+                                   edges_to_use_folder=False)
 
     df = pd.read_csv('output/edges/edges_drugbankCompound-TREATS->meshDisease.csv')
     df.to_csv('output/edges_to_use/Compound_(DrugBank)_treats_Disease_(MeSH).csv', index=False)

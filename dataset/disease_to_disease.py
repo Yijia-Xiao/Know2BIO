@@ -34,6 +34,10 @@ def download_disgenet_curated_disease_to_disease():
     os.remove(file_path)
 
     os.system('wget -N -P input/ https://www.disgenet.org/static/disgenet_ap1/files/downloads/disease_to_disease_CURATED.tsv.gz')
+    try:
+        os.remove('input/disease_to_disease_CURATED.tsv')
+    except:
+        pass
     os.system('gunzip input/disease_to_disease_CURATED.tsv.gz')
     
 
@@ -100,6 +104,7 @@ def map_disease_shares_variants_with_umls_disease(dda_df):
     
 def map_disease_shares_genes_with_disease():
     # MeSH Disease IDs
+    umls2mesh = json.load(open('output/otherMappings/umls2mesh.json'))
     file = 'Disease_(MeSH)_sharesgenes_Disease_(MeSH).csv'
     outpath = os.path.join('output/disease2disease/',file)
     with open(outpath, 'w', newline='') as fout:
@@ -129,6 +134,7 @@ def map_disease_shares_genes_with_disease():
 
 def map_disease_shares_variants_with_disease():
     # MeSH Disease IDs
+    umls2mesh = json.load(open('output/otherMappings/umls2mesh.json'))
     file = 'Disease_(MeSH)_sharesvariants_Disease_(MeSH).csv'
     outpath = os.path.join('output/disease2disease/',file)
     with open(outpath, 'w') as fout:

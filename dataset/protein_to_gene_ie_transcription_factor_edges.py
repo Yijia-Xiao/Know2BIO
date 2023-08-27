@@ -137,8 +137,8 @@ def export_transcription_factor_edges():
                                     columns=['Protein (UniProt)','Gene (Entrez)', 'Relationship'],
                                     dictionary=tf_protein_id_to_target_gene_id,
                                     rel='-transcription_factor_targets->', 
-                                    prefix_col1='Entrez:', 
-                                    prefix_col2='UniProt:',
+                                    prefix_col1='UniProt:', 
+                                    prefix_col2='Entrez:',
                                    )
     print('Exported transcription factor edges')
     

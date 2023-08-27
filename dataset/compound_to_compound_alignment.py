@@ -870,7 +870,8 @@ def output_final_db_to_mesh_edges():
                                    dictionary = db2mesh,
                                    rel = '-is-',
                                    prefix_col1 = 'DrugBank_Compound:',
-                                   prefix_col2 = 'MeSH_Compound:')
+                                   prefix_col2 = 'MeSH_Compound:',
+                                   edges_to_use_folder=False)
     
 '''
 INSTRUCTIONS: 

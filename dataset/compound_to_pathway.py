@@ -220,7 +220,9 @@ def map_compounds_to_smpdb_pathway(root):
     df.to_csv('output/edges/edges_drugbankCompound-participates_in-smpdbPathway.csv', index=False)
     df.to_csv('output/edges_to_use/Compound_(DrugBank)_to_Pathway_(SMPDB).csv', index=False)
 
+    
     # MeSH Compound
+    db2mesh = json.load(open('output/compound2compound/db2mesh.json'))
     with open('output/compound2pathway/edges_MeSHCompound-participates_in-smpdbPathway.csv','w') as fout:
         writer = csv.writer(fout)
         writer.writerow(['Compound (MeSH)','Pathway (SMPDB)','Relationship'])
@@ -348,6 +350,8 @@ def map_drug_to_kegg_pathway():
             kegg_drug = line[0].split('dr:')[1]
             mesh_drugs = keggdrug2mesh[kegg_drug]
             kegg_pathway = line[1].strip().replace('path:','path_')
+            if '_map' in kegg_pathway:
+                kegg_pathway = kegg_pathway.replace('_map','_hsa') ### NOTE: Temp fix
 
             # MeSH drug -> KEGG Pathway
             for mesh_drug in mesh_drugs:
