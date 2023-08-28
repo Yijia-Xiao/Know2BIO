@@ -79,9 +79,14 @@ cd ../../benchmark/data/K2BIO
 python n-n.py
 ```
 
+## Prepare Multimodal Data (Optional)
 
+### Step 4: Combine multimodal data.
+The `prepare_multimodal_data.py` script automatically combines the resulting node features in the `multi-modal_data` folder as the `node_features.json` file. This file summarizes the node features for each node in the knowledge graph. To generate this file, make sure all parsed files are within the `multi-modal_data` folder and execute the below script.
 
-
+```bash
+python ./prepare_kgs/prepare_multimodal_data.py
+```
 
 
 # Datasheet for Know2BIO / Additional Details
