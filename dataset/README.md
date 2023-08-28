@@ -37,11 +37,11 @@ Following construction of the Know2BIO dataset detailed above, the individual da
 ## Assemble the Knowledge Graph from the Files
 
 ### Step 0: (Optional) Only Assemble Part of the Knowledge Graph.
-Including or excluding certain data files from Know2BIO allows the construction of a use-case specific knowledge graph. This is achieved by providing a tailored file list for the knowledge graph construction. Included within this repository is the `input_list` folder, specifying specific edge lists to be used for knowledge graph construction. The `all_kg_edges.txt` file specifies all edge_files generated from constructing Know2BIO. This text file specifies which files are considered as part of each view (i.e., instance view, ontology view, bridge view). To make a tailored file, we recommend copying this file and deleting the file names which should not be included.
+Including or excluding certain data files from Know2BIO allows the construction of a use-case specific knowledge graph. This is achieved by providing a tailored file list for the knowledge graph construction. Included within this repository is the `input_list` folder, specifying specific edge lists to be used for knowledge graph construction. The `ont_bridge_inst_list.txt` file specifies all edge_files generated from constructing Know2BIO. This text file specifies which files are considered as part of each view (i.e., instance view, ontology view, bridge view). To make a tailored file, we recommend copying this file and deleting the file names which should not be included.
 
 An example of specific use cases is included within the `input_lists` folder and detailed below:
-- A protein-protein interaction knowledge graph: This protein-centric knowledge graph includes only known protein-protein interactions, their relation to genes, and their relations to biological pathways. No disease or drug information is included, as their inclusion could hinder prediction of protein-protein interactions.
-- A drug-target interaction knowledge graph: This knowledge graph focuses specifically on protein-drug interactions between DrugBank drugs, UniProt proteins, MeSH diseases, and Reactome biological pathways. This KG does not include data files from different knowledge bases which serve a similar purpose (e.g., using Reactome, instead of Reactome and KEGG; using DrugBank only, instead of DrugBank and MeSH compounds) to reduce complexity of the KG when integrating from multiple sources.
+- A protein-protein interaction knowledge graph: This protein-centric knowledge graph includes only known protein-protein interactions, their relation to genes, and their relations to biological pathways. No disease or drug information is included, as their inclusion could hinder prediction of protein-protein interactions. An example input list for this knowledge graph is `protein_protein_interaction_kg_list.txt`
+- A drug-target interaction knowledge graph: This knowledge graph focuses specifically on protein-drug interactions between DrugBank drugs, UniProt proteins, MeSH diseases, and Reactome biological pathways. This KG does not include data files from different knowledge bases which serve a similar purpose (e.g., using Reactome, instead of Reactome and KEGG; using DrugBank only, instead of DrugBank and MeSH compounds) to reduce complexity of the KG when integrating from multiple sources. An example input list for this knowledge graph is `drug_target_interaction_kg_list.txt`
 
 Furthermore, these KGs can be constructed for testing predictive power of biologically relevant triples (e.g., train a model using entire Know2BIO and predict only on protein-drug edges) will be detailed soon.
 
@@ -49,7 +49,7 @@ Furthermore, these KGs can be constructed for testing predictive power of biolog
 The `prepare_kgs.py` script prepares the input data from `know2bio_edges` and splits the dataset into different views (i.e., instance view, ontology view, bridge view, and the aggregate view). These four combined knowledge graphs will be output to the `know2bio` folder. Run the below command to execute.
 
 ```bash
-python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/all_kg_edges.txt
+python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/ont_bridge_inst_list.txt
 ```
 
 ## Generate Train, Test, Validation datasets
