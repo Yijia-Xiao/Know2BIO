@@ -1,0 +1,15 @@
+## ontologies ###
+Disease_(MeSH_Tree)_2_Disease_(MeSH_Tree).csv
+Pathway_(Reactome)_2_Pathway_(Reactome).csv
+
+### bridges ###
+Disease_(MeSH)_2_Disease_(MeSH_Tree).csv
+Disease_(MeSH)_2_Pathway_(Reactome).csv
+Protein_(UniProt)_2_Pathway_(Reactome).csv
+Compound_(DrugBank)_2_Pathway_(Reactome).csv
+
+### instances ###
+Compound_(DrugBank)_2_Compound_(DrugBank).csv
+Compound_(DrugBank)_treats_Disease_(MeSH).csv
+Compound_(DrugBank)_2_Protein_(UniProt).csv
+Protein_(UniProt)_2_Protein_(UniProt).csv

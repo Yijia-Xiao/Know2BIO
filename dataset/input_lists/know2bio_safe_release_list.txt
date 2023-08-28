@@ -1,0 +1,33 @@
+## ontologies ###
+Disease_(MeSH_Tree)_2_Disease_(MeSH_Tree).csv
+Anatomy_(MeSH_Tree)_2_Anatomy_(MeSH_Tree).csv
+Molecular_Function_(GO)_2_Molecular_Function_(GO).csv
+Biological_Process_(GO)_2_Biological_Process_(GO).csv
+Cellular_Component_(GO)_2_Cellular_Component_(GO).csv
+Pathway_(Reactome)_2_Pathway_(Reactome).csv
+DrugClass_(ATC)_2_DrugClass_(ATC).csv
+
+### bridges ###
+Anatomy_(MeSH)_2_Anatomy_(MeSH_Tree).csv
+Disease_(MeSH)_2_Disease_(MeSH_Tree).csv
+Disease_(MeSH)_2_Pathway_(Reactome).csv
+Protein_(UniProt)_2_GO_(GO).csv
+Protein_(UniProt)_2_Pathway_(Reactome).csv
+Gene_(Entrez)_2_Pathway_(Reactome).csv
+Compound_(MeSH)_2_Pathway_(Reactome).csv
+Reaction_(Reactome)_2_Pathway_(Reactome).csv
+
+### instances ###
+Compound_(MeSH)_2_Compound_(MeSH).csv
+Compound_(MeSH)_treats_Disease_(MeSH).csv
+Compound_(MeSH)_2_Gene_(Entrez).csv
+Compound_(MeSH)_2_Protein_(UniProt).csv
+Compound_(MeSH)_2_Reaction_(Reactome).csv
+Disease_(MeSH)_sharesgenes_Disease_(MeSH).csv
+Disease_(MeSH)_sharesvariants_Disease_(MeSH).csv
+Disease_(MeSH)_2_Gene_(Entrez).csv
+Gene_(Entrez)_2_Anatomy_(MeSH).csv
+Gene_(Entrez)_2_Protein_(UniProt).csv
+Protein_(UniProt)_2_Gene_(Entrez).csv
+Protein_(UniProt)_2_Protein_(UniProt).csv
+Protein_(UniProt)_2_Reaction_(Reactome).csv

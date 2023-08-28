@@ -1,0 +1,20 @@
+## ontologies ###
+Molecular_Function_(GO)_2_Molecular_Function_(GO).csv
+Biological_Process_(GO)_2_Biological_Process_(GO).csv
+Cellular_Component_(GO)_2_Cellular_Component_(GO).csv
+Pathway_(KEGG)_2_Pathway_(KEGG).csv
+Pathway_(Reactome)_2_Pathway_(Reactome).csv
+
+### bridges ###
+Protein_(UniProt)_2_GO_(GO).csv
+Protein_(UniProt)_2_Pathway_(Reactome).csv
+Gene_(Entrez)_2_Pathway_(KEGG).csv
+Gene_(Entrez)_2_Pathway_(Reactome).csv
+Reaction_(Reactome)_2_Pathway_(Reactome).csv
+
+### instances ###
+Protein_(UniProt)_2_Pathway_(SMPDB).csv
+Gene_(Entrez)_2_Protein_(UniProt).csv
+Protein_(UniProt)_2_Gene_(Entrez).csv
+Protein_(UniProt)_2_Protein_(UniProt).csv
+Protein_(UniProt)_2_Reaction_(Reactome).csv
