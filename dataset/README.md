@@ -35,6 +35,13 @@ Following construction of the Know2BIO dataset detailed above, the individual da
 
 
 ## Assemble the Knowledge Graph from the Files
+Scripts for constructing the knowledge graph for Know2BIO dataset are found in the `prepare_kgs` folder.
+
+Set up the environment to run the script, using `pip install -r prepare_kgs_requirements.txt`
+
+The script takes as input the directory where Know2BIO is downloaded, the output directory, and a list of all input files separated by which kg it is a part of. The kgs are separated into test/train/validation set following 80/10/10 split and are processed in the correct format for benchmarking.
+
+Run `kg_sampler.py` to sample a subset of the knowledge graph for testing purposes.
 
 ### Step 0: (Optional) Only Assemble Part of the Knowledge Graph.
 Including or excluding certain data files from Know2BIO allows the construction of a use-case specific knowledge graph. This is achieved by providing a tailored file list for the knowledge graph construction. Included within this repository is the `input_list` folder, specifying specific edge lists to be used for knowledge graph construction. The `ont_bridge_inst_list.txt` file specifies all edge_files generated from constructing Know2BIO. This text file specifies which files are considered as part of each view (i.e., instance view, ontology view, bridge view). To make a tailored file, we recommend copying this file and deleting the file names which should not be included.
