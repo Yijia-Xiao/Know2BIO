@@ -42,7 +42,7 @@ def map_go_to_go_type():
 
 def download_go_annotation_file_gaf():
     go_gaf_url = 'http://geneontology.org/gene-associations/goa_human.gaf.gz'
-    input_folder = 'output/'
+    input_folder = 'input/'
 
     try:
         open(go_gaf_path)
@@ -50,7 +50,7 @@ def download_go_annotation_file_gaf():
         os.system(f'wget -N -P {input_folder} {go_gaf_url}')
         go_gaf_file = go_gaf_url.split('/')[-1]
         go_gaf_path = os.path.join(input_folder, go_gaf_file)
-        os.system(f'gunzip {go_gaf_path}')
+        os.system(f'gunzip -f {go_gaf_path}')
 
 
 def map_protein_to_go():

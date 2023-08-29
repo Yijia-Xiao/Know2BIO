@@ -410,7 +410,7 @@ def map_drug_to_kegg_pathway():
     print(len(keggpathway2dbdrug), 'KEGG Pathways')
     print(len(dbdrug2keggpathway), 'DrugBank Drugs')
 
-    file = 'Compound_(DrugBank)_compound_participates_in_Pathway_(KEGG).csv'
+    file = 'Compound_(DrugBank)_drug_participates_in_Pathway_(KEGG).csv'
     outpath = os.path.join('output/compound2pathway', file)
     output_edgefile_onerel_noweight(
         outpath = outpath,

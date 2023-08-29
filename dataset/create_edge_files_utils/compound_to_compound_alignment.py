@@ -821,13 +821,14 @@ def align_drugbank_to_ttd():
 
 
     ''' Align OldTTD -is- NewTTD via DrugBank '''
+    #NOTE: Fix this part
     multiprocess_a_dict_of_lists_values(db2oldttd, getOld2NewTTDdrug)
 
     # Merge temp files
     oldttd2newttd = switch_dictset_to_dictlist(merge_oldttd2newttd())
     json.dump(oldttd2newttd, open('output/compound2compound/oldTTD2newTTD.json','w'))
     print(len(oldttd2newttd))
-
+    # ------------------------------------
 
     ''' Align DrugBank -is- New TTD '''
     ttd2db = dict()
@@ -867,13 +868,13 @@ def output_final_db_to_mesh_edges():
     mesh2db = json.load(open(os.path.join('output/compound2compound/mesh2db.json'))) 
     print(f'{len(db2mesh)} DrugBank-to-MeSH {len(mesh2db)} MeSH to DrugBank')
 
-    output_edgefile_onerel_noweight(outpath = 'output/compound2compound/edges_drugbank_is_mesh.csv',
+    output_edgefile_onerel_noweight(outpath = 'output/compound2compound/Compound_(DrugBank)_2_Compound_(MeSH).csv',
                                    columns = ['Compound (DrugBank)','Compound (MeSH)','Relationship'],
                                    dictionary = db2mesh,
                                    rel = '-is-',
                                    prefix_col1 = 'DrugBank_Compound:',
                                    prefix_col2 = 'MeSH_Compound:',
-                                   edges_to_use_folder=False)
+                                   )
     
 '''
 INSTRUCTIONS: 

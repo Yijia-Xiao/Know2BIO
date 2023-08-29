@@ -273,16 +273,36 @@ def export_all_compound_treats_disease_associations(compound_treats_disease):
 
 
     ### DrugBank Compound -TREATS-> drugbank Disease
-    output_edgefile_onerel_noweight(outpath = 'output/compound2disease/edges_drugbankCompound-TREATS->meshDisease.csv',
+    output_edgefile_onerel_noweight(outpath = 'output/compound2disease/Compound_(DrugBank)_treats_Disease_(MeSH).csv',
                                    columns = ['Compound (DrugBank)','Disease (MeSH)','Relationship'],
                                    dictionary = dbcompTREATSdis,
                                    rel = '-treats->',
                                    prefix_col1 = 'DrugBank_Compound:',
-                                   prefix_col2 = 'MeSH_Disease:',
-                                   edges_to_use_folder=False)
+                                   prefix_col2 = 'MeSH_Disease:',)
+    
+    
+def map_mesh_compound_to_protein_final():
+    db_to_prot = pd.read_csv('output/edges_to_use/Compound_(DrugBank)_2_Protein_(UniProt).csv')
+    db2mesh = json.load(open('output/compound2compound/db2mesh.json'))
+    rows = []
 
-    df = pd.read_csv('output/edges/edges_drugbankCompound-TREATS->meshDisease.csv')
-    df.to_csv('output/edges_to_use/Compound_(DrugBank)_treats_Disease_(MeSH).csv', index=False)
+    for idx in range(len(db_to_prot)):
+        db_comp = db_to_prot['Compound (DrugBank)'].iloc[idx]
+        prot = db_to_prot['Protein (UniProt)'].iloc[idx]
+        rel = db_to_prot['Relationship'].iloc[idx]
+
+
+        try:
+            mesh_comps = db2mesh[db_comp.split(':')[1]]
+            for mesh_comp in mesh_comps:
+                rows.append(['MeSH_Compound:'+mesh_comp, prot, rel])
+        except:
+            pass
+
+    mesh_to_prot = pd.DataFrame(rows, columns=['Compound (MeSH)','Protein (UniProt)','Relationship'])
+    mesh_to_prot.to_csv('output/edges_to_use/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
+    mesh_to_prot.to_csv('output/compound2protein/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
+    mesh_to_prot.to_csv('output/edges/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
     
     
     
@@ -302,3 +322,4 @@ if __name__ == '__main__':
     # All
     compound_treats_disease = merge_compound_treats_disease_associations()
     export_all_compound_treats_disease_associations(compound_treats_disease)
+    map_mesh_compound_to_protein_final()

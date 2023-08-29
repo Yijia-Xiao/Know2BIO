@@ -303,18 +303,23 @@ def align_uniprot_name_to_uniprot_id():
         results = get_id_mapping_results_search_UniProtAPI(link)
 
     ''' Print summary '''
-    try: print(len(results['failedIds']), 'failed alignments')
-    except: results['failedIds'] = []
-    try: print(len(results['results']), 'successful alignments')
-    except: print()
+    try: 
+        print(len(results['failedIds']), 'failed alignments')
+    except: 
+        results['failedIds'] = []
+    try: 
+        print(len(results['results']), 'successful alignments')
+    except: 
+        print()
     print('\nUnaligned IDs', len(set(results['failedIds'])))
-    print('Aligned Human IDs', len(name2up_id))    
+ 
 
     ''' Store mapping results '''
     name2up_id = get_to_uniprotid_from_genename_mapping_dict_UniProtAPI(results, [9606])
     name2up_id = switch_dictset_to_dictlist(name2up_id)
     json.dump(name2up_id, open('output/protein2protein/uniprotname2uniprotid_from_ttd.json','w'))
-
+    print('Aligned Human IDs', len(name2up_id))   
+    
     # Checks for an unexpected error in submitted names
     ID_not_in_submitted_IDs = set()
     for ID in results['failedIds']:
@@ -343,9 +348,14 @@ def align_ttd_target_id_to_uniprot_target_id():
     # Switch set to list
     ttdtarg2up_id = switch_dictset_to_dictlist(ttdtarg2up_id)
     
+    with open('output/compound2compound/ttdtarg2up_id.json','w') as fout:
+        json.dump(ttdtarg2up_id, fout)
+    
     
 def drugbank_id_targets_uniprot_id():
     db2up = dict()
+    ttd2db = json.load(open('output/compound2compound/ttd2db.json'))
+    ttdtarg2up_id = json.load(open('output/compound2compound/ttdtarg2up_id.json'))
     for ttddrug, ttdtargets in ttd2ttdtarget.items():
 
         # DrugBank Drugs -are- TTD Drug
@@ -364,7 +374,7 @@ def drugbank_id_targets_uniprot_id():
                 
                 
     alignable_ttd_rows = list()
-
+    target2compound_df = pd.read_excel('input/P1-07-Drug-TargetMapping.xlsx')
     for i in range(0,len(target2compound_df['DrugID'])):
         TTD_drug = target2compound_df['DrugID'].iloc[i]
         TTD_targ = target2compound_df['TargetID'].iloc[i]
@@ -381,6 +391,8 @@ def drugbank_id_targets_uniprot_id():
         except:
             continue
             
+    print('target2compound_df', len(target2compound_df))
+    print(len(alignable_ttd_rows), 'alignable_ttd_rows')
     alignable_targ2comp_df = target2compound_df.iloc[alignable_ttd_rows]
     
     return alignable_targ2comp_df
@@ -388,6 +400,8 @@ def drugbank_id_targets_uniprot_id():
 
 def export_drug_to_protein_from_ttd(alignable_targ2comp_df):
     ''' Output DrugBank-[moa]->Protein (Source: TTD)'''
+    ttd2db = json.load(open('output/compound2compound/ttd2db.json'))
+    ttdtarg2up_id = json.load(open('output/compound2compound/ttdtarg2up_id.json'))
     with open('output/compound2protein/edges_drugbank-moa->protein_ttd.csv','w') as fout:
         writer = csv.writer(fout)
         writer.writerow(['Compound (DrugBank)','Protein (UniProt)','Relationship'])
@@ -436,15 +450,16 @@ def export_drug_to_protein_from_ttd(alignable_targ2comp_df):
 def display_and_save_relationship_details():
     d2p_TTD = pd.read_csv('output/compound2protein/edges_drugbank-moa->protein_ttd.csv')
     d2p_DB = pd.read_csv('output/compound2protein/edges_compoundsometargetsdetailed_drugbank.csv')
-    d2p = d2p_DB.append(d2p_TTD).drop_duplicates()
+    d2p = pd.concat([d2p_DB, d2p_TTD]).drop_duplicates()
 
     print(len(d2p_DB), 'rows from DrugBank')
     print(len(d2p_TTD), 'rows from TTD')
     print(len(d2p), 'combined rows')
-    print(d2p['Relationship'].value_counts())
+    #print(d2p['Relationship'].value_counts())
 
     d2p.to_csv('output/compound2protein/edges_drugbank-alltargetmoa->protein.csv', index=False)
     d2p.to_csv('output/edges/edges_drugbank-alltargetmoa->protein.csv', index=False)
+    d2p.to_csv('output/edges_to_use/Compound_(DrugBank)_2_Protein_(UniProt).csv', index=False)
 
 if __name__ == '__main__':
     try:
@@ -452,7 +467,7 @@ if __name__ == '__main__':
     except:
         extract_drugbank_xml()
         root = parse_drugbank_xml()    
-    #map_compound_to_protein_df(root)
+    map_compound_to_protein_df(root)
     map_compounds_to_targets(root)
     align_ttd_target_id_to_uniprot_target_name()
     align_ttd_target_id_to_uniprot_target_id()
@@ -461,5 +476,6 @@ if __name__ == '__main__':
     align_uniprot_name_to_uniprot_id()
     align_ttd_target_id_to_uniprot_target_id()
     target_to_compound = drugbank_id_targets_uniprot_id()
+    print('alignable_targ2comp_df', len(target_to_compound))
     export_drug_to_protein_from_ttd(target_to_compound)
     display_and_save_relationship_details()

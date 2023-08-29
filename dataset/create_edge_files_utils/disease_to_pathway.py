@@ -1,5 +1,3 @@
-# Note: To get extra relations (only ~600) from Reactome, more manual steps are needed (see bottom). Efforts are underway to automate this process
-
 import pandas as pd
 import os 
 import json
@@ -115,7 +113,7 @@ def map_disease_to_kegg_pathway(kegg_disease2mesh):
         outpath = os.path.join('output/disease2pathway',file),
         columns = ['Disease (MeSH)','Pathway (KEGG)','Relationship'],
         dictionary = mesh_disease2kegg_pathway,
-        rel = '-disease_involves->',
+        rel = '-disease_involves_pathway->',
         prefix_col1='MeSH_Disease:',
         prefix_col2='KEGG_Pathway:'
     )
@@ -162,7 +160,7 @@ def export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges):
     with open(os.path.join('output/disease2pathway', file),'w') as fout:
         writer = csv.writer(fout)
         writer.writerow(['Disease (MeSH)','Pathway (Reactome)','Relationship'])
-        relationship = '-disease_involves->'
+        relationship = '-disease_involves_pathway->'
 
         for edge in reactome_pw_to_disease_edges:
             pathway = edge[0]
@@ -195,8 +193,11 @@ if __name__ == '__main__':
 
     
     
-    
     '''
+    Note: Relations (only ~600) from Reactome are provided in the output folder. To
+    redo the curation of these edges, more manual steps are needed. Efforts are
+    underway to automate this process
+    
     REACTOME PATHWAYS
     Download the Reactome database as a Neo4j graph: https://reactome.org/download-data/
     https://reactome.org/download/current/reactome.graphdb.tgz or https://reactome.org/download/current/reactome.graphdb.dump
@@ -220,4 +221,11 @@ if __name__ == '__main__':
         doid2mesh = json.load(open('output/disease2disease/doid2mesh.json'))
         df = export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges)
     except:
-        print('Could not map Reactome pathways to disease')
+        msg = 'Could not map Reactome pathways to disease'
+        file = 'Disease_(MeSH)_2_Pathway_(Reactome).csv'
+        reactome_path_dis_file = os.path.join('output/disease2pathway', file)
+        reactome_pathways_to_disease_exists = os.path.exists(reactome_path_dis_file)
+        if reactome_pathways_to_disease_exists:
+            msg += ', but edges already exist (provided previously)'
+            os.system(f'cp {reactome_path_dis_file} output/edges_to_use/{file}')
+        print(msg)

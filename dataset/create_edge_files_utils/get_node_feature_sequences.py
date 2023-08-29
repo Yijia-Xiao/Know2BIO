@@ -1,4 +1,5 @@
 import requests
+from time import sleep
 import sys
 import json
 from gene_to_anatomy import batch_iterator        
@@ -6,8 +7,55 @@ from multiprocessing import cpu_count
 from joblib import Parallel, delayed
     
 '''Genes'''
-def map_gene_id_to_dna_sequence():
+def align_gene_ids_entrez_to_ensembl(entrez_genes):
+    ensembl_is_entrez = dict()
+    BATCH_SIZE = 4000
+
+    for idx, entrez_ids in enumerate(batch_iterator(entrez_genes, BATCH_SIZE)):
+        print(idx, '/',len(entrez_genes)/BATCH_SIZE, end='\r')
+        # Use MyGene.Info to get Ensembl IDs
+        headers = {'content-type': 'application/x-www-form-urlencoded'}
+        params = 'q=%s&scopes=entrezgene&fields=ensembl&species=human'%entrez_ids
+        res = requests.post('http://mygene.info/v3/query', \
+                        data=params, \
+                        headers=headers).json()
+
+        # Align/map Ensembl to Entrez
+        for r in res:
+
+            # Entrez ID
+            try:
+                entrez_id = r['_id']
+            except:
+                continue
+
+            # Ensembl ID
+            try:
+                if type(r['ensembl']) == list:
+                    for entry in r['ensembl']:
+                        ensembl = entry['gene']
+                        ensembl_is_entrez[ensembl] = entrez_id # 1 to 1
+
+                elif type(r['ensembl']) == dict:
+                    ensembl = r['ensembl']['gene']
+                    ensembl_is_entrez[ensembl] = entrez_id # 1 to 1
+            except: 
+                continue
+        sleep(1)
+    
     ensembl_to_entrez = json.load(open('output/gene2gene/ensembl2entrez.json'))
+    ensembl_is_entrez = ensembl_is_entrez | ensembl_to_entrez
+    json.dump(ensembl_is_entrez, open('output/gene2gene/ensembl2entrez_all.json','w'))    
+    
+
+
+def map_gene_id_to_dna_sequence():
+    all_ids = json.load(open('output/otherMappings/all_ids.json'))
+    entrez_genes = list({id_.split(':')[1] 
+                         for id_ in all_ids if id_.startswith('Entrez:')})
+    align_gene_ids_entrez_to_ensembl(entrez_genes)
+   
+    ensembl_to_entrez = json.load(open('output/gene2gene/ensembl2entrez_all.json'))
     entrez_id_to_dna_sequence = {}
 
     # Use API
@@ -53,7 +101,7 @@ def extract_amino_acid_sequence(data):
 
 
 def remove_ids_not_in_all_ids(my_dict, all_ids):
-    return {key:list(value) for key,value in my_dict.items() if key in all_ids}
+    return {key:value for key,value in my_dict.items() if key in all_ids}
 
 
 def batch_map_protein_id_to_sequence(protein_ids):
@@ -134,7 +182,10 @@ def map_protein_id_to_amino_acid_sequence():
         map_protein_id_to_sequence_via_uniprot_human_proteome_download())
 
     # Get protein sequences from EBI that were missing from UniProt
-    proteins_without_sequences = list(set(protein_ids).difference(protein_id_to_sequence_uniprot))
+    all_ids = json.load(open('output/otherMappings/all_ids.json'))
+    all_protein_ids = list({id_.split(':')[1] for id_ in all_ids if id_.startswith('UniProt')})
+    proteins_without_sequences = list(set(all_protein_ids).difference(protein_id_to_sequence_uniprot))
+    BATCHES = cpu_count()
     protein_batches = split_a_list_into_batches(proteins_without_sequences, BATCHES)
     protein_to_sequence_dicts = (
         Parallel(n_jobs=-1)(delayed(batch_map_protein_id_to_sequence)(protein_batch) 
@@ -145,16 +196,15 @@ def map_protein_id_to_amino_acid_sequence():
     for protein_to_sequence_batch in protein_to_sequence_dicts:
         protein_to_sequence.update(protein_to_sequence_batch)
     protein_to_sequence.update(protein_id_to_sequence_uniprot)
-
-    all_ids = json.load(open('output/otherMappings/all_ids.json'))
-    all_protein_ids = list({id_.split(':')[1] for id_ in all_ids if id_.startswith('UniProt')})
+    
     protein_to_sequence = remove_ids_not_in_all_ids(protein_to_sequence, all_protein_ids)
-    print(f'Mapped {len(protein_to_sequence)}/{len(protein_ids)} proteins to sequences')
+    print(f'Mapped {len(protein_to_sequence)}/{len(all_protein_ids)} proteins to sequences')
 
+    
     # Export results                                           
     with open('output/node_features/sequences/protein_id_to_sequences.json','w') as fout:
-        json.dump(protein_to_sequence, fout)      
-        
+        json.dump(protein_to_sequence, fout)                                        
+
         
 def map_compound_ids_to_chemical_smiles_sequence():
     all_ids = json.load(open('output/otherMappings/all_ids.json'))
@@ -188,7 +238,7 @@ def map_compound_ids_to_chemical_smiles_sequence():
     
 
 if __name__ == '__main__':
-    map_gene_id_to_dna_sequence()
+    #map_gene_id_to_dna_sequence()
     map_protein_id_to_amino_acid_sequence()
     map_compound_ids_to_chemical_smiles_sequence()  # Compound sequences obtained through compound_to_compound_alignment
     

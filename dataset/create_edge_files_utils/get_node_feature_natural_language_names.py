@@ -48,7 +48,12 @@ class NodeNames():
         print(len(all_ids), 'nodes/IDs')
         ids_without_prefixes = [ID for ID in all_ids if ':' not in ID]
         print(len(ids_without_prefixes), 'IDs without prefixes')
-        print(ids_without_prefixes)
+        if len(ids_without_prefixes) > 0:
+            print(ids_without_prefixes)
+        
+        self.mesh_compound_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('MeSH_Compound:')})
+        self.mesh_disease_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('MeSH_Disease:')})
+        self.mesh_anatomy_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('MeSH_Anatomy:')})
 
         
     def map_protein_id_to_name(self):
@@ -276,8 +281,16 @@ class NodeNames():
         mesh_id_to_name = {}
         for dictionary in mesh_dicts:
             for id_,names in dictionary.items():
+                if id_ in self.mesh_compound_ids:
+                    prefix = 'MeSH_Compound:'
+                elif id_ in self.mesh_disease_ids:
+                    prefix = 'MeSH_Disease:'
+                elif id_ in self.mesh_anatomy_ids:
+                    prefix = 'MeSH_Anatomy:'
+                else:
+                    print(id_, 'not found in your MeSH IDs')
                 for name in names:
-                    mesh_id_to_name.setdefault('MeSH_Compound:'+id_, set()).add(name)
+                    mesh_id_to_name.setdefault(prefix+id_, set()).add(name)
 
         # Export
         print(f'{len(mesh_id_to_name)}/{len(mesh_ids)} MeSH compounds mapped to names')
@@ -288,7 +301,7 @@ class NodeNames():
     
     def map_drugbank_compound_id_to_name(self):
         '''DrugBank'''
-        all_drugbank_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('DrugBank')})
+        all_drugbank_ids = list({ID for ID in self.all_ids if ID.startswith('DrugBank')})
         root = parse_drugbank_xml()
         self.drugbank_compound_id_to_name = {}
         self.drugbank_compound_name_to_id = {}
