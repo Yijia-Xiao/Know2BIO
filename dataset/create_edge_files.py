@@ -1,5 +1,7 @@
 import os
 
+os.chdir('create_edge_files_utils/')
+
 file_names = [
     'compound_to_compound_alignment.py', # required for many compound files
     'gene_to_protein.py', # required for some gene/protein files
@@ -27,6 +29,8 @@ file_names = [
     'disease_to_anatomy.py',
     'protein_and_compound_to_reaction.py',
     'protein_and_gene_to_pathway.py',
+    'get_node_feature_natural_language_names.py',
+    'get_node_feature_sequences.py',
 ]
 
 with open('output/log_file.txt','w') as fout:
@@ -34,5 +38,5 @@ with open('output/log_file.txt','w') as fout:
         print('*'*50)
         print(f"{'*'*10} Running {file_name} {'*'*10}")
         fout.write(f"{'*'*10} Running {file_name} {'*'*10}")
-        os.system(f'python {file_name}')
+        os.system(f'python create_edge_files_utils/{file_name}')
         print('*'*50)

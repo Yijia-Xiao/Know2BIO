@@ -267,6 +267,8 @@ def map_compound_to_kegg_pathway():
             kegg_cpd = line[0].split('cpd:')[1]
             mesh_cpds = keggcompound2mesh[kegg_cpd]
             kegg_pathway = line[1].strip().replace('path:','path_')
+            if '_map' in kegg_pathway:
+                kegg_pathway = kegg_pathway.replace('_map','_hsa')
 
             # MeSH Compound -> KEGG Pathway
             if kegg_cpd not in keggcompound2keggdrug:
@@ -306,7 +308,9 @@ def map_compound_to_kegg_pathway():
             kegg_cpd = line[0].split('cpd:')[1]
             db_cpds = keggcompound2db[kegg_cpd]
             kegg_pathway = line[1].strip().replace('path:','path_')
-
+            if '_map' in kegg_pathway:
+                kegg_pathway = kegg_pathway.replace('_map','_hsa')
+            
             # db Compound -> KEGG Pathway
             if kegg_cpd not in keggcompound2keggdrug:
                 for db_cpd in db_cpds:

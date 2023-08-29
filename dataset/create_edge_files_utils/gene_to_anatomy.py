@@ -3,6 +3,7 @@ import pandas as pd
 import json
 import requests as req
 from biomedkg_utils import switch_dictset_to_dictlist, output_edgefile_onerel_noweight
+from time import sleep
 
 def download_bgee_diff_expr_in_anatomy():
     urls = ['https://bgee.org/ftp/bgee_v13_2/download/calls/diff_expr_calls/Homo_sapiens_diffexpr-anatomy-simple.tsv.zip']
@@ -11,51 +12,55 @@ def download_bgee_diff_expr_in_anatomy():
         filename = url.split('/')[-1] 
         #os.remove(filename[:-4])
         os.system(f'wget -N -P input/ {url}')       # Download file
-        os.system(f'unzip input/{filename}')        # Unzip file
-        os.system(f'mv filename[:-4] input/{filename[:-4]}') 
+        os.system(f'unzip -f input/{filename}')        # Unzip file
+        os.system(f'mv {filename[:-4]} input/{filename[:-4]}') 
 
 
+def batch_iterator(data, batch_size):
+    for i in range(0, len(data), batch_size):
+        yield data[i:i+batch_size]
+        
         
 def align_gene_ids_entrez_to_ensembl():
-
+    ensembl_is_entrez = dict()
+    BATCH_SIZE = 5000
+    
     # Get Entrez Gene IDs
-    #entrez_df = pd.read_csv('output/nodes/genes_nodes.csv')[['Gene (Entrez)']]
-    #entrez_genes = sorted([gene.split(':')[1] for gene in list(entrez_df['Gene (Entrez)'])[1:]])
-    #entrez_genes = sorted(list(json.load(open('output/protein2gene/all_entrez2uniprot.json')).keys()))[1:]
     os.system('wget -N -P input/ https://www.genenames.org/cgi-bin/download/custom?col=md_eg_id&status=Approved&hgnc_dbtag=on&order_by=gd_app_sym_sort&format=text&submit=submit')
     entrez_df = pd.read_csv('input/custom?col=md_eg_id')
-    id_col = list(entrez_df.columns)[0]
-    entrez_genes = [str(gene) for gene in sorted(list(entrez_df[id_col]))]
-    entrez_genes = str(",".join(entrez_genes))
-    
-    
-    # Use MyGene.Info to get Ensembl IDs
-    headers = {'content-type': 'application/x-www-form-urlencoded'}
-    params = 'q=%s&scopes=entrezgene&fields=ensembl&species=human'%entrez_ids
-    res = req.post('http://mygene.info/v3/query', \
-                    data=params, \
-                    headers=headers).json()
-    
-    # Align/map Ensembl to Entrez
-    ensembl_is_entrez = dict()
+    id_col = (entrez_df.columns)[0]
+    entrez_genes = [str(gene) for gene in sorted(entrez_df[id_col].to_list())]
 
-    for r in res:
+    for entrez_ids in batch_iterator(entrez_genes, BATCH_SIZE):
+        # Use MyGene.Info to get Ensembl IDs
+        headers = {'content-type': 'application/x-www-form-urlencoded'}
+        params = 'q=%s&scopes=entrezgene&fields=ensembl&species=human'%entrez_ids
+        res = req.post('http://mygene.info/v3/query', \
+                        data=params, \
+                        headers=headers).json()
 
-        # Entrez ID
-        try:entrez_id = r['_id']
-        except:continue
+        # Align/map Ensembl to Entrez
+        for r in res:
 
-        # Ensembl ID
-        try:
-            if type(r['ensembl']) == list:
-                for entry in r['ensembl']:
-                    ensembl = entry['gene']
+            # Entrez ID
+            try:
+                entrez_id = r['_id']
+            except:
+                continue
+
+            # Ensembl ID
+            try:
+                if type(r['ensembl']) == list:
+                    for entry in r['ensembl']:
+                        ensembl = entry['gene']
+                        ensembl_is_entrez[ensembl] = entrez_id # 1 to 1
+
+                elif type(r['ensembl']) == dict:
+                    ensembl = r['ensembl']['gene']
                     ensembl_is_entrez[ensembl] = entrez_id # 1 to 1
-
-            elif type(r['ensembl']) == dict:
-                ensembl = r['ensembl']['gene']
-                ensembl_is_entrez[ensembl] = entrez_id # 1 to 1
-        except: continue
+            except: 
+                continue
+        sleep(1)
             
     json.dump(ensembl_is_entrez, open('output/gene2gene/ensembl2entrez.json','w'))    
 
@@ -161,7 +166,9 @@ def map_gene_to_anatomy():
         dictionary = underexp_gene2anat, 
         rel = '-underexpressed_in->', 
         prefix_col1='Entrez:', 
-        prefix_col2='MeSH_Anatomy:')
+        prefix_col2='MeSH_Anatomy:',
+        edges_folder=False,
+        edges_to_use_folder=False)
 
     # Output overexpressed genes
     output_edgefile_onerel_noweight(
@@ -170,9 +177,19 @@ def map_gene_to_anatomy():
         dictionary = overexp_gene2anat, 
         rel = '-overexpressed_in->', 
         prefix_col1='Entrez:', 
-        prefix_col2='MeSH_Anatomy:')
+        prefix_col2='MeSH_Anatomy:',
+        edges_folder=False,
+        edges_to_use_folder=False)
     
-    
+    # Output both (differential expression = over- and under-expressed)import os
+    under_df = pd.read_csv('output/gene2anatomy/edges_gene-underexpressed_in-anatomy.csv')
+    over_df = pd.read_csv('output/gene2anatomy/edges_gene-overexpressed_in-anatomy.csv')
+    diff_df = pd.concat([under_df, over_df])
+    file = 'Gene_(Entrez)_to_Anatomy_(MeSH).csv'
+    diff_df.to_csv(os.path.join('output/gene2anatomy/', file), index=False)
+    diff_df.to_csv(os.path.join('output/edges_to_use/', file), index=False)
+    diff_df.to_csv(os.path.join('output/edges/', file), index=False)
+
 if __name__ == '__main__':
     download_bgee_diff_expr_in_anatomy()
     align_gene_ids_entrez_to_ensembl()

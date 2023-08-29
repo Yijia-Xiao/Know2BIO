@@ -63,7 +63,6 @@ def map_disease_shares_genes_with_umls_disease(dda_df):
 
     dda_gene_df = pd.read_csv(umls_edge_path).drop_duplicates()
     dda_gene_df.to_csv('output/edges/'+umls_edge_file, index=False)
-    shutil.copy(umls_edge_path, 'output/edges_to_use/'+umls_edge_file)
 
     num_disease_pairs = len(dda_gene_df)
     unique_diseases = len(set(dda_gene_df['Disease (UMLS)']).union(set(dda_gene_df['Disease (UMLS).1'])))
@@ -94,7 +93,6 @@ def map_disease_shares_variants_with_umls_disease(dda_df):
 
     dda_variant_df = pd.read_csv(umls_edge_path).drop_duplicates()
     dda_variant_df.to_csv('output/edges/'+umls_edge_file, index=False)
-    shutil.copy(umls_edge_path, 'output/edges_to_use/'+umls_edge_file)
 
     num_disease_pairs = len(dda_variant_df)
     unique_diseases = len(set(dda_variant_df['Disease (UMLS)']).union(set(dda_variant_df['Disease (UMLS).1'])))

@@ -8,15 +8,13 @@ import pandas as pd
 import obonet
 
 def download_mesh_xml():
-    year = datetime.now().year
     url = f'https://nlmpubs.nlm.nih.gov/projects/mesh/MESH_FILES/xmlmesh/desc{year}.xml'
     dest = f'input/desc{year}.xml'
     urllib.request.urlretrieve(url, dest);
 
-    return year
-
-
-def parse_mesh_xml(year):
+    
+def parse_mesh_xml():
+    year = datetime.now().year
     tree = ET.parse(f'input/desc{year}.xml')
     root = tree.getroot()
     
@@ -178,8 +176,8 @@ def align_uberon_to_mesh_anatomy(dest='input/uberon.obo'):
         json.dump(uberon_to_mesh, fout)                
 
 if __name__ == '__main__':        
-    year = download_mesh_xml()
-    root = parse_mesh_xml(year)
+    download_mesh_xml()
+    root = parse_mesh_xml()
     id2tree, all_tree_numbers = align_anatomy_identifiers_within_mesh(root)
     export_mesh_tree_and_id_alignment(id2tree)
     map_and_export_mesh_tree_number_hierarchy(all_tree_numbers)

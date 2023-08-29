@@ -30,7 +30,8 @@ def create_empty_folders_for_data():
                'gene2gene','go2go','otherMappings','pathway2gene','pathway2pathway',
                'pathway2protein','pathway2reaction','protein2gene','protein2go',
                'protein2protein','protein2reaction','reaction2reaction',
-               'edges','edges_to_use']
+               'edges','edges_to_use', 'node_features', 'node_features/sequences',
+               'node_features/natural_language_names','node_features/structures']
 
     for folder in folders:
         path = os.path.join('output', folder)
@@ -63,6 +64,7 @@ def align_db_to_mesh_via_x_to_mesh_set(db2x, x2mesh, db2mesh, mesh2db):
     mesh2db = switch_dictset_to_dictlist(mesh2db)
     json.dump(db2mesh, open('output/compound2compound/db2mesh.json','w'))
     json.dump(mesh2db, open('output/compound2compound/mesh2db.json','w'))        
+        
         
 def align_db_to_mesh_via_x_to_mesh_list(db2x, x2mesh, db2mesh, mesh2db):
     for db, xes in db2x.items():
@@ -366,7 +368,7 @@ def align_db_to_mesh_via_atc():
                 continue
             for mesh in meshes:
                 db2mesh.setdefault(db, set()).add(mesh)
-                mesh2db.setdefault(mesh, set()).add(mesh)
+                mesh2db.setdefault(mesh, set()).add(db)
 
     db2mesh = switch_dictset_to_dictlist(db2mesh)
     mesh2db = switch_dictset_to_dictlist(mesh2db)

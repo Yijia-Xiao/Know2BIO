@@ -1,3 +1,5 @@
+# Note: To get extra relations (only ~600) from Reactome, more manual steps are needed (see bottom). Efforts are underway to automate this process
+
 import pandas as pd
 import os 
 import json
@@ -187,10 +189,13 @@ def export_mesh_disease_to_reactome_pathway(reactome_pw_to_disease_edges):
 if __name__ == '__main__':
 
     '''KEGG PATHWAYS'''
-    #ownload_kegg_data()
+    download_kegg_data()
     _, kegg_disease2mesh = align_disease_kegg_to_mesh()
     map_disease_to_kegg_pathway(kegg_disease2mesh)
 
+    
+    
+    
     '''
     REACTOME PATHWAYS
     Download the Reactome database as a Neo4j graph: https://reactome.org/download-data/
