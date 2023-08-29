@@ -142,7 +142,7 @@ def get_multimodal_data_files(directory, contact_map_directory=None, node_type_t
                     for category, entities in id2name.items():
                         print("%s has %d entities"%(category, len(entities)))
                         
-        if filename == "protein2sequence.json":
+        if filename == "protein_id_to_sequences.json":
             with open(os.path.join(directory,filename)) as json_file:
                 protein2sequence = json.load(json_file)
                 remapped_protein2sequence = remap_protein2sequence(protein2sequence)
@@ -150,7 +150,7 @@ def get_multimodal_data_files(directory, contact_map_directory=None, node_type_t
                 if debug:
                     print("%d protein sequences"%(len(protein2sequence)))
       
-        if filename == "db2smiles.json":
+        if filename == "drugbank_compounds_to_chemical_sequence.json":
             with open(os.path.join(directory,filename)) as json_file:
                 db2smiles = json.load(json_file)
                 remapped_db2smiles = remap_db2smiles(db2smiles)
@@ -159,7 +159,7 @@ def get_multimodal_data_files(directory, contact_map_directory=None, node_type_t
                 if debug:
                     print("%d compound sequences from DrugBank"%(len(db2smiles)))
                     
-        if filename == "mesh2smiles.json":
+        if filename == "mesh_compounds_to_chemical_sequence.json":
             with open(os.path.join(directory,filename)) as json_file:
                 mesh2smiles = json.load(json_file)
                 remapped_mesh2smiles = remap_mesh2smiles(mesh2smiles)
@@ -168,7 +168,7 @@ def get_multimodal_data_files(directory, contact_map_directory=None, node_type_t
                 if debug:
                     print("%d compound sequences from MeSH"%(len(mesh2smiles)))         
     
-        if filename == "entrez2seq.json":
+        if filename == "gene_id_to_dna_sequences.json":
             with open(os.path.join(directory,filename)) as json_file:
                 entrez2seq = json.load(json_file)
                 remapped_entrez2seq = remap_entrez2seq(entrez2seq)
