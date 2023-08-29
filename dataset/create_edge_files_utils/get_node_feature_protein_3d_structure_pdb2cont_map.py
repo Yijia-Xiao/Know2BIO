@@ -8,8 +8,8 @@ from absl import app, flags
 import time
 from multiprocessing import Pool
 
-directory = './protein_3d_structure'
-out_dir = './protein_contact_map'
+directory = '../output/node_features/structures/protein_3d_structure'
+out_dir = '../output/node_features/structures/protein_contact_map'
 if not os.path.exists(out_dir):
     os.makedirs(out_dir)
 # parser = PDBParser()

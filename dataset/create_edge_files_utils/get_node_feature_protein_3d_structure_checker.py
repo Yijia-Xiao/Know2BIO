@@ -50,16 +50,16 @@ if __name__ == "__main__":
     display_examples = True
 
     # directories
-    output_directory = '.'
+    output_directory = '../output/node_features/structures'
     cif_directory = os.path.join(output_directory,'protein_3d_structure')
-    pae_directory = os.path.join(output_directory,'prediction_errors')
+    pae_directory = os.path.join(output_directory,'protein_3d_structure_prediction_errors')
     cif_files = os.listdir(cif_directory)
     pae_files = os.listdir(pae_directory)
     print("%d files in %s"%(len(cif_files),cif_directory))
     print("%d files in %s"%(len(pae_files),pae_directory))
     
     # load protein ids and sequences to download
-    prot2seq_file = './protein_id2sequence.json'
+    prot2seq_file = '../output/node_features/sequences/protein_id_to_sequences.json'
     protein_id2sequence = read_prot2seq(prot2seq_file)
     
     
@@ -94,11 +94,12 @@ if __name__ == "__main__":
         
     ## FAQ 3: ##
     #     - Not in UniProt's One protein Sequence Per Gene list
-    fasta_file = "2023-02-01_UP000005640_9606.fasta"
-    uniprot_ospg = check_against_uniprot_ospg(missing_ids, fasta_file)
+    #fasta_file = "2023-02-01_UP000005640_9606.fasta"
+    #uniprot_ospg = check_against_uniprot_ospg(missing_ids, fasta_file)
 
     # Summary
-    explained_missing = set(too_short).union(set(too_long)).union(set(nonstandard_aa)).union(set(uniprot_ospg))
+    explained_missing = set(too_short).union(set(too_long)).union(set(nonstandard_aa))
+    #explained_missing = set(too_short).union(set(too_long)).union(set(nonstandard_aa)).union(set(uniprot_ospg))
     unexplained_missing = set(missing_ids).difference(explained_missing)
     print("%d out of %d were explained by FAQ's. %d unexplained." %(len(explained_missing),len(missing_ids),len(unexplained_missing)))
 
@@ -107,6 +108,6 @@ if __name__ == "__main__":
         print(too_short[:n])
         print(too_long[:n])
         print(nonstandard_aa[:n])
-        print(uniprot_ospg[:n])
+        #print(uniprot_ospg[:n])
         print(list(unexplained_missing)[:n])
 

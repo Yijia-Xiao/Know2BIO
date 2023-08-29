@@ -64,16 +64,16 @@ if __name__ == "__main__":
 	print("Downloading 3d structures")
 
 	# make output directories
-	output_directory = '.'
+	output_directory = '../output/node_features/structures/'
 	cif_directory = os.path.join(output_directory,'protein_3d_structure')
-	pae_directory = os.path.join(output_directory,'prediction_errors')
+	pae_directory = os.path.join(output_directory,'protein_3d_structure_prediction_errors')
 	if not os.path.exists(cif_directory):
 		os.makedirs(cif_directory)
 	if not os.path.exists(pae_directory):
 		os.makedirs(pae_directory)
 	
 	# load protein ids and sequences to download
-	prot2seq_file = '../multi-modal_data/protein2sequence.json'
+	prot2seq_file = '../output/node_features/sequences/protein_id_to_sequences.json'
 	protein_id2sequence = read_prot2seq(prot2seq_file)
 	
 	count = 0
