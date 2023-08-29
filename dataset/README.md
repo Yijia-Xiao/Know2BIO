@@ -4,7 +4,7 @@ A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folde
 
 Summary:
 
-Manually download this data into the dataset/input folder:
+Manually download this data into the dataset/create_edge_files_utils/input folder:
 ```
 - UMLS thesaurus "MRCONSO.RRF" (make a UMLS account): https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
 - Drugbank full database (make a DrugBank account): https://go.drugbank.com/releases/5-1-9/downloads/all-full-database
@@ -14,7 +14,7 @@ Manually download this data into the dataset/input folder:
 
 Execute these commands: 
 ```
-python runner.py
+python create_edge_files.py
 
 bash
 python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/all_kg_edges.txt
@@ -25,13 +25,14 @@ python n-n.py
 ```
 
 # How to Construct the Know2BIO Knowledge Graph (KG)
-Execute ```python runner.py``` to construct the KG from all edge types' scripts. 
+## Create the edge files
+Execute ```python create_edge_files_utils.py``` to create all edges. 
 
 Note: This executes scripts in a suitable order. Note that some scripts must be run in this order (e.g., `compound_to_compound_alignment` and `gene_to_protein` should be run first) but others can be run in different orders or can be not run if you don't want to create the edges for the script's respective edge types. Alternatively, you can still create the edges but just choose to not use the edge file produced by the script. 
 
 ## Prepare the Knowledge Graph Files
 
-Following construction of the Know2BIO dataset detailed above, the individual data files must be assembled into a knowledge graph and prepared following a specific data format for use with our benchmark knowledge graph representation learning models.
+Following construction of the Know2BIO dataset detailed above, the edge files must be assembled into a knowledge graph and prepared following a specific data format for use with our benchmark knowledge graph representation learning models.
 
 
 ## Assemble the Knowledge Graph from the Files
