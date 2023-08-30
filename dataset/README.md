@@ -9,7 +9,6 @@ Manually download this data into the dataset/create_edge_files_utils/input folde
 - UMLS thesaurus "MRCONSO.RRF" (make a UMLS account): https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html
 - Drugbank full database (make a DrugBank account): https://go.drugbank.com/releases/5-1-9/downloads/all-full-database
 - DrugBank compound structures (make a Drugbank account): https://go.drugbank.com/releases/5-1-9/downloads/all-structure-links
-- Reactome Graph DB (this is being replaced to be automated)
 ```
 
 Execute these commands: 
