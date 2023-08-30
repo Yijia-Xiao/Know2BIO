@@ -24,7 +24,10 @@ Most compound-to-protein relationships are from DrugBank. Some are taken from TT
 **disease_to_disease**
 The official xml file from MeSH was used to map disease MeSH IDs and MeSH tree numbers to each other, as well as MeSH tree numbers to each other to form the hierarchical relationships in the ontology. 
 
+**compound_to_side_effect**
+Mappings from compounds to the side effects they are associated with were provided by SIDER. This required alignments from PubChem to DrugBank (provided by DrugBank) and UMLS to MeSH (provided in compound_to_compound_alignment.py).
 
-```compound_to_side_effect.py```
+**disease_to_anatomy**
+Disease and anatomy association mappings rely on MeSH for aligning the MeSH IDs and MeSH tree numbers and rely on the disease-anatomy coocurrences in PubMed articles' MeSH annotations.
 
 
