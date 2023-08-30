@@ -25,4 +25,6 @@ Most compound-to-protein relationships are from DrugBank. Some are taken from TT
 The official xml file from MeSH was used to map disease MeSH IDs and MeSH tree numbers to each other, as well as MeSH tree numbers to each other to form the hierarchical relationships in the ontology. 
 
 
+```compound_to_side_effect.py```
+
 
