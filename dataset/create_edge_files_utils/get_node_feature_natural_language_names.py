@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import json
-from biomedkg_utils import switch_dictset_to_dictlist
+from biomedkg_utils import switch_dictset_to_dictlist, switch_dictlist_to_dictset
 import requests
 import zipfile
 from disease_to_disease import download_mesh_xml, parse_mesh_xml
@@ -207,7 +207,7 @@ class NodeNames():
 
                 
         print(f'{len(self.anatomy_tree_to_name)}/{len(all_anatomy_trees)} anatomy tree numbers mapped to names')
-        print(f'{len(self.anatomy_id_to_name)}/{len(all_anatomy_ids)} anatomy IDs mapped to names')
+        #print(f'{len(self.anatomy_id_to_name)}/{len(all_anatomy_ids)} anatomy IDs mapped to names')
         json.dump(self.anatomy_name_to_id, open('output/node_features/natural_language_names/anatomy_name_to_id.json','w'))
         json.dump(self.anatomy_id_to_name, open('output/node_features/natural_language_names/anatomy_id_to_name.json','w'))
         json.dump(self.anatomy_name_to_tree, open('output/node_features/natural_language_names/anatomy_name_to_tree.json','w'))
@@ -258,7 +258,7 @@ class NodeNames():
         self.disease_tree_to_name = remove_ids_not_in_all_ids(switch_dictset_to_dictlist(self.disease_tree_to_name), self.all_ids)
         
         print(f'{len(self.disease_tree_to_name)}/{len(all_disease_trees)} disease tree numbers mapped to names')
-        print(f'{len(self.disease_id_to_name)}/{len(all_disease_ids)} disease IDs mapped to names')
+        #print(f'{len(self.disease_id_to_name)}/{len(all_disease_ids)} disease IDs mapped to names')
         json.dump(self.disease_name_to_id, open('output/node_features/natural_language_names/disease_name_to_id.json','w'))
         json.dump(self.disease_id_to_name, open('output/node_features/natural_language_names/disease_id_to_name.json','w'))
         json.dump(self.disease_name_to_tree, open('output/node_features/natural_language_names/disease_name_to_tree.json','w'))
@@ -268,7 +268,12 @@ class NodeNames():
     def map_mesh_id_to_names(self):
         ''' Includes drugs, diseases, and anatomies'''
         mesh_ids = list({id_.split(':')[1] for id_ in self.all_ids if id_.startswith('MeSH_') and '.' not in id_})
-        
+        mesh_compound_ids = list({id_.split(':')[1] for id_ in self.all_ids if id_.startswith('MeSH_Compound:') and '.' not in id_})
+        all_anatomy_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('MeSH_Anatomy:')})
+        all_disease_ids = list({ID.split(':')[1] for ID in self.all_ids if ID.startswith('MeSH_Disease:')})
+        self.disease_id_to_name = switch_dictlist_to_dictset(self.disease_id_to_name)
+        self.anatomy_id_to_name = switch_dictlist_to_dictset(self.anatomy_id_to_name)
+       
         # Parse the MRCONSO file across CPUs
         with open('input/MRCONSO.RRF') as fin:
             lines = fin.readlines()
@@ -290,12 +295,23 @@ class NodeNames():
                 else:
                     print(id_, 'not found in your MeSH IDs')
                 for name in names:
-                    mesh_id_to_name.setdefault(prefix+id_, set()).add(name)
-
+                    if prefix == 'MeSH_Disease:':
+                        self.disease_id_to_name.setdefault(prefix+id_, set()).add(name)
+                    if prefix == 'MeSH_Anatomy:':
+                        self.anatomy_id_to_name.setdefault(prefix+id_, set()).add(name)
+                    if prefix == 'MeSH_Compound:':
+                        mesh_id_to_name.setdefault(prefix+id_, set()).add(name)
         # Export
-        print(f'{len(mesh_id_to_name)}/{len(mesh_ids)} MeSH compounds mapped to names')
+        self.disease_id_to_name = switch_dictset_to_dictlist(self.disease_id_to_name)
+        self.anatomy_id_to_name = switch_dictset_to_dictlist(self.anatomy_id_to_name)
+       
+        json.dump(self.disease_id_to_name, open('output/node_features/natural_language_names/disease_id_to_name.json','w'))
+        json.dump(self.anatomy_id_to_name, open('output/node_features/natural_language_names/anatomy_id_to_name.json','w'))
+        print(f'{len(self.anatomy_id_to_name)}/{len(all_anatomy_ids)} anatomy IDs mapped to names')
+        print(f'{len(self.disease_id_to_name)}/{len(all_disease_ids)} disease IDs mapped to names')
+        print(f'{len(mesh_id_to_name)}/{len(mesh_compound_ids)} MeSH compounds mapped to names')
         self.mesh_id_to_name = remove_ids_not_in_all_ids(switch_dictset_to_dictlist(mesh_id_to_name), self.all_ids)
-        with open('output/node_features/natural_language_names/mesh_id_to_name.json','w') as fout:
+        with open('output/node_features/natural_language_names/compound_mesh_id_to_name.json','w') as fout:
             json.dump(self.mesh_id_to_name, fout)
 
     
