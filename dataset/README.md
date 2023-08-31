@@ -1,6 +1,11 @@
 # Know2BIO Dataset
 
-A sample of Know2BIO is released under the 'sampled_know2bio_safe_release' folder. For accessing the full released dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
+Know2BIO dataset is periodically updated and released. The latest release is from 2023-08-18 and consists of 3 versions:
+1. Full dataset: The full Know2BIO Knowledge Graph consisting of 219,169 nodes and 6,181,160 edges. This dataset requires licensing restrictions to access. Instructions on obtaining these license will be released soon. This dataset can be obtained by obtaining the necessary licenses and filling out the below webform.
+2. Safe release: The Know2BIO Knowledge Graph without licensing-restricted information. The resulting KG is 152,845 nodes and 3,282,063 edges. This dataset can be obtained by filling out the below webform.
+3. Sampled safe release: A 1% sample of the Know2BIO safe release, representing roughly 1% proportional to all edges. This dataset is accesible under the 'sampled_know2bio_safe_release' folder.
+
+For accessing the full dataset of the safe release dataset, please fill out this webform: https://forms.gle/3HdKRtvW7ce9PKpw6
 
 Summary:
 
