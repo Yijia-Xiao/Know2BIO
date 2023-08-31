@@ -16,7 +16,7 @@ We recommend using Anaconda3 to manage the environment.
 - Create `know2bio` environment using `conda env create -f env.yml`.
 
 ### Hardware Requirements
-- Server: AMD EPYC 7542 Processor (124 cores), 1.73 TB RAM, and 8 NVIDIA A100-SXM4-40GB GPUs.
+- Server: AMD EPYC 7542 Processor (128 cores), 1.73 TB RAM, and 8 NVIDIA A100-SXM4-80GB GPUs.
 - Operating system: Ubuntu 20.04 LTS.
 
 
