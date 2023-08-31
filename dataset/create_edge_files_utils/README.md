@@ -65,11 +65,10 @@ To map proteins and genes to pathways, KEGG was used for KEGG pathways (genes), 
 To map the proteins (i.e., transcription factors) to their targeted genes (i.e., the proteins that affect expression of particular genes), GRNdb's high confidence relationships virtually all derived from GTEx, were used. This also required aligning gene names to Entrez gene IDs through MyGene.info
 
 **protein_to_protein**
-Protein-protein interactions (i.e., functional associations) were derived from STRING. To map the STRING protein identifiers to UniProt, the UniProt API was used. 
+Protein-protein interactions (i.e., functional associations) were derived from STRING. To map the STRING protein identifiers to UniProt, the UniProt API was used. A confidence threshold of 0.7 was used. (Users may adjust this in the script)
 
 **reaction_to_pathway**
 To map reactions to the pathways they participate in, Reactome was used.
 
 **reaction_to_reaction**
 To map reactions to reactions that precede them, Reactome was used. 
-**reaction_to_reaction**
