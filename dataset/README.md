@@ -16,7 +16,7 @@ Execute these commands:
 python create_edge_files.py
 
 bash
-python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/all_kg_edges.txt
+python ./prepare_kgs/prepare_kgs.py ./output/edges_to_use/ ./know2bio ./input_lists/all_kg_edges.txt
 python ./prepare_kgs/split_dataset.py ./know2bio 0.8
 python ./prepare_kgs/prepare_benchmark.py ./know2bio ../../benchmark/data
 cd ../../benchmark/data/K2BIO
@@ -53,10 +53,10 @@ An example of specific use cases is included within the `input_lists` folder and
 Furthermore, these KGs can be constructed for testing predictive power of biologically relevant triples (e.g., train a model using entire Know2BIO and predict only on protein-drug edges) will be detailed soon.
 
 ### Step 1: Combine all individual edge files into a combined Knowledge Graph.
-The `prepare_kgs.py` script prepares the input data from `know2bio_edges` and splits the dataset into different views (i.e., instance view, ontology view, bridge view, and the aggregate view). These four combined knowledge graphs will be output to the `know2bio` folder. Run the below command to execute.
+The `prepare_kgs.py` script prepares the input data from `output/edges_to_use` and splits the dataset into different views (i.e., instance view, ontology view, bridge view, and the aggregate view). These four combined knowledge graphs will be output to the `know2bio` folder. Run the below command to execute.
 
 ```bash
-python ./prepare_kgs/prepare_kgs.py ./know2bio_edges/ ./know2bio ./input_lists/ont_bridge_inst_list.txt
+python ./prepare_kgs/prepare_kgs.py ./output/edges_to_use/ ./know2bio ./input_lists/ont_bridge_inst_list.txt
 ```
 
 ## Generate Train, Test, Validation datasets
