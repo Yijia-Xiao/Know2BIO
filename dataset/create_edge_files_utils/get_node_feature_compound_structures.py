@@ -56,3 +56,23 @@ def map_drugbank_id_to_compound_structure():
 if __name__ == '__main__':
     mesh_to_compound_graphs = map_mesh_id_to_compound_structure()
     drugbank_to_compound_graphs = map_drugbank_id_to_compound_structure()
+
+
+
+'''
+Example of graph embeddings of the compounds
+import os
+os.system('pip install karateclub')
+from karateclub import Graph2Vec
+import pandas as pd
+
+# Make graph2vec embeddings
+model = Graph2Vec()
+model.fit(pd.Series(drugbank_to_compound_graphs.values()))
+drugbank_compound_graph2vec = model.get_embedding()
+
+drugbank_compound_graph2vec_df = pd.DataFrame(drugbank_compound_graph2vec, index=list(drugbank_to_compound_graphs.keys()))
+drugbank_compound_graph2vec_dict = {'DrugBank_Compound:'+drug:list(row) for drug,row in drugbank_compound_graph2vec_df.iterrows()}
+with open('output/node_features/structures/drugbank_compound_graph2vec_dict.json','w') as fout:
+    json.dump(drugbank_compound_graph2vec_dict, fout)
+'''
