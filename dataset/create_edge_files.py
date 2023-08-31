@@ -31,6 +31,7 @@ file_names = [
     'protein_and_gene_to_pathway.py',
     'get_node_feature_natural_language_names.py',
     'get_node_feature_sequences.py',
+    'get_node_feature_compound_structures.py',
 ]
 
 with open('output/log_file.txt','w') as fout:
