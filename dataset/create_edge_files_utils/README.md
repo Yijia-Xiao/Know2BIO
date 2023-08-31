@@ -24,10 +24,36 @@ Most compound-to-protein relationships are from DrugBank. Some are taken from TT
 **disease_to_disease**
 The official xml file from MeSH was used to map disease MeSH IDs and MeSH tree numbers to each other, as well as MeSH tree numbers to each other to form the hierarchical relationships in the ontology. 
 
+To measure disease similarity, edges were obtained from DisGeNET's curated data. The UMLS-to-MeSH alignment was used (from compound_to_compound_alignment). 
+
+Disease Ontology was used to align Disease Ontology to MeSH. Mondo and MyDisease.info were relied on to align Mondo to MeSH, DOID, OMIM, and UMLS. These alignments were used to align relationships from other scripts to the MeSH disease identifiers.
+
 **compound_to_side_effect**
-Mappings from compounds to the side effects they are associated with were provided by SIDER. This required alignments from PubChem to DrugBank (provided by DrugBank) and UMLS to MeSH (provided in compound_to_compound_alignment.py).
+Mappings from compounds to the side effects they are associated with were provided by SIDER. This required alignments from PubChem to DrugBank (provided by DrugBank) and UMLS to MeSH (provided in [compound_to_compound_alignment](http://sideeffects.embl.de/media/download/).py).
 
 **disease_to_anatomy**
 Disease and anatomy association mappings rely on MeSH for aligning the MeSH IDs and MeSH tree numbers and rely on the disease-anatomy coocurrences in PubMed articles' MeSH annotations.
 
+**disease_to_pathway**
+KEGG was used to map KEGG pathways to disease. Reactome was used to map Reactome pathways to diseases, relying on the DOID-to-MeSH alignments for disease.
 
+**gene_to_anatomy**
+Gene expression in anatomy was derived from Bgee. To align the Bgee-provided Ensembl gene IDs to Entrez, MyGene.info was used. To align the Bgee-provided Uberon anatomy IDs to MeSH, Uberon was used (see anatomy_to_anatomy)
+
+**gene_to_disease**
+Virtually all gene-disease associations were obtained from DisGeNET's entire dataset. Additional associations---many of which were already present in DisGeNET---were obtained from ClinVar, ClinGen, and PharmGKB. (Users may be interested in only using the curated evidence from DisGeNET or increasing the confidence score threshold for DisGeNET gene-disease association. We chose a threshold of 0.06 based on what a lead DisGeNET author mentioned to the Hetionet creator in a forum. 
+
+**gene_to_protein**
+We relied on UniProt and HGNC to map proteins to the genes that encode them. Notably, there is a very large overlap between these sources (~95%). HGNC currently broke, so only UniProt is being used. 
+
+**go_to_go**
+The source of the Gene Ontology ontologies is Gene Ontology itself. 
+
+**go_to_protein**
+The source of the mappings between proteins and their GO terms is Gene Ontology. 
+
+**pathway_to_pathway**
+The source of pathway hierarchy mappings for KEGG is KEGG and for Reactome is Reactome. (SMPDB does not have a hierarchy)
+
+**protein_and_compound_to_reaction**
+The source of mappings from proteins and compounds to reactions is Reactome. This file relies on alignments from ChEBI to DrugBank. 
