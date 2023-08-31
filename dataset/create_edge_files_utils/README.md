@@ -56,4 +56,20 @@ The source of the mappings between proteins and their GO terms is Gene Ontology.
 The source of pathway hierarchy mappings for KEGG is KEGG and for Reactome is Reactome. (SMPDB does not have a hierarchy)
 
 **protein_and_compound_to_reaction**
-The source of mappings from proteins and compounds to reactions is Reactome. This file relies on alignments from ChEBI to DrugBank. 
+The source of mappings from proteins and compounds to reactions is Reactome. This file relies on alignments from ChEBI to DrugBank.
+
+**protein_and_gene_to_pathway**
+To map proteins and genes to pathways, KEGG was used for KEGG pathways (genes), Reactome for Reactome pathways (proteins and genes), and SMPDB for SMPDB pathways (proteins). 
+
+**protein_to_gene_ie_transcription_factor_edges**
+To map the proteins (i.e., transcription factors) to their targeted genes (i.e., the proteins that affect expression of particular genes), GRNdb's high confidence relationships virtually all derived from GTEx, were used. This also required aligning gene names to Entrez gene IDs through MyGene.info
+
+**protein_to_protein**
+Protein-protein interactions (i.e., functional associations) were derived from STRING. To map the STRING protein identifiers to UniProt, the UniProt API was used. 
+
+**reaction_to_pathway**
+To map reactions to the pathways they participate in, Reactome was used.
+
+**reaction_to_reaction**
+To map reactions to reactions that precede them, Reactome was used. 
+**reaction_to_reaction**
