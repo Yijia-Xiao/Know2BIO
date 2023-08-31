@@ -733,40 +733,39 @@ def align_kegg_drugs_and_compounds():
     
     
             
-def getOld2NewTTDdrug(b_id, oldTTD_list):
+def getOld2NewTTDdrug(b_id, old_ttd_list):
     '''
     Function: 
     - Saves JSON files of {old TTD ID : [new TTD ID], ...}
     
     Params: 
     - b_id: batch ID from the multiprocess process
-    - oldTTD_list: list of deprecated TTD IDs / old naming scheme
+    - old_ttd_list: list of deprecated TTD IDs / old naming scheme
     '''
-    oldttd2newttd = dict() 
+    old_ttd2newttd = dict() 
     no_newttd = set()
-    tot = str(len(oldTTD_list))
+    tot = str(len(old_ttd_list))
     
     # Find drug's updated TTD ID
-    for i, oldTTD in enumerate(oldTTD_list):
-        oldTTD = oldTTD[0]
+    for i, old_ttd in enumerate(old_ttd_list):
+        old_ttd = old_ttd[0]
         
         # Print progress
         if b_id == 1 or int(b_id) > 999:
             print('Progress of Batch 1'+str(i)+'/'+tot, end='\r')
         
         try:
-            res = requests.get('http://db.idrblab.net/web/drug/'+oldTTD)
-            split_on = '<link rel="canonical" href="http://db.idrblab.net/web/drug/'
-            newTTD = res.text.split(split_on)[1].split("\"")[0].upper()
-            oldttd2newttd.setdefault(oldTTD, set()).add(newTTD)
+            res = requests.get('http://db.idrblab.net/web/drug/'+old_ttd)
+            new_ttd = res.url.split('/')[-1].upper()
+            old_ttd2newttd.setdefault(old_ttd, set()).add(new_ttd)
         except:
-            no_newttd.add(oldTTD)
+            no_newttd.add(old_ttd)
             continue
      
     # Export Old TTD -is- New TTD
-    oldttd2newttd = switch_dictset_to_dictlist(oldttd2newttd)
+    old_ttd2newttd = switch_dictset_to_dictlist(old_ttd2newttd)
     fout1 = open('output/compound2compound/temp_newTTDfound_'+str(b_id)+'.json', 'w')
-    json.dump(oldttd2newttd, fout1)
+    json.dump(old_ttd2newttd, fout1)
     
     # Export Old TTD without New TTD alignments
     no_newttd = list(no_newttd)
