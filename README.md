@@ -63,7 +63,7 @@ options:
 CUDA_VISIBLE_DEVICES=0 python main.py --model TransE --dataset whole --valid 10 --patience 5 --rank 512 --neg_sample_size 150 --optimizer Adam --learning_rate 0.001
 ```
 
-Fode and README for the benchmarking Know2BIO can be found in [**benchmark**](./benchmark).
+Code and README for the benchmarking Know2BIO can be found in [**benchmark**](./benchmark).
 
 ## Dataset Construction
 ### Dataset Schema
