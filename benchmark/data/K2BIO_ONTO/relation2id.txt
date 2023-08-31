@@ -1,6 +1,0 @@
-5
--pathway_is_parent_of->	0
-isa	1
--positively_regulates->	2
--regulates->	3
--negatively_regulates->	4

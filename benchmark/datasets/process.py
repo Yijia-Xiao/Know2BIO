@@ -5,7 +5,18 @@ import os
 import pickle
 
 import numpy as np
+import argparse
 
+
+parser = argparse.ArgumentParser(
+    description="Dataset builder"
+)
+parser.add_argument(
+    "--dataset", default="ontology", choices=["ontology", "instance", "whole"],
+    help="Know2BIO's dataset view"
+)
+
+args = parser.parse_args()
 
 def get_idx(path):
     """Map entities and relations to unique ids.
@@ -101,12 +112,12 @@ def process_dataset(path):
 
 if __name__ == "__main__":
     data_path = os.environ["DATA_PATH"]
-    for dataset_name in os.listdir(data_path):
-        dataset_path = os.path.join(data_path, dataset_name)
-        dataset_examples, dataset_filters = process_dataset(dataset_path)
-        for dataset_split in ["train", "valid", "test"]:
-            save_path = os.path.join(dataset_path, dataset_split + ".pickle")
-            with open(save_path, "wb") as save_file:
-                pickle.dump(dataset_examples[dataset_split], save_file)
-        with open(os.path.join(dataset_path, "to_skip.pickle"), "wb") as save_file:
-            pickle.dump(dataset_filters, save_file)
+    dataset_name = args.dataset
+    dataset_path = os.path.join(data_path, dataset_name)
+    dataset_examples, dataset_filters = process_dataset(dataset_path)
+    for dataset_split in ["train", "valid", "test"]:
+        save_path = os.path.join(dataset_path, dataset_split + ".pickle")
+        with open(save_path, "wb") as save_file:
+            pickle.dump(dataset_examples[dataset_split], save_file)
+    with open(os.path.join(dataset_path, "to_skip.pickle"), "wb") as save_file:
+        pickle.dump(dataset_filters, save_file)
