@@ -6,7 +6,7 @@ from torch import nn
 from models.base import KGModel
 from utils.euclidean import euc_sqdistance, givens_rotations, givens_reflection
 
-EUC_MODELS = ["TransE", "TransR", "DistMult", "RESCAL", "CP", "MurE", "RotE", "RefE", "AttE"]
+EUC_MODELS = ["TransE", "TransR", "DistMult", "CP", "MurE", "RotE", "RefE", "AttE"]
 
 
 class BaseE(KGModel):
