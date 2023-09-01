@@ -1,3 +1,5 @@
+# Message to NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+
 # Know2BIO Dataset
 
 Know2BIO dataset is periodically updated and released. The latest release is from 2023-08-18 and consists of 3 versions:
