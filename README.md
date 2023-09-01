@@ -11,7 +11,7 @@ Know2BIO is a comprehensive biomedical knowledge graph benchmark harmonizing het
 ```
 To NeurIPS reviewers:
 
-We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location.
+We mistakenly submitted our final rebuttal revision to the "supplemental materials" instead of the main "pdf". Please check the version in the supplemental.
 
 Sorry about any inconvenience caused. Thanks.
 ```
