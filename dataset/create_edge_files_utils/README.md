@@ -1,3 +1,7 @@
+# Message to NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+Message to NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+
+
 **anatomy_to_anatomy**
 The official xml file from MeSH was used to map anatomy MeSH IDs and MeSH tree numbers to each other, as well as MeSH tree numbers to each other to form the hierarchical relationships in the ontology. MeSH IDs were aligned to Uberon IDs via the official Uberon obo file (used in gene-to-anatomy) 
 
