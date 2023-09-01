@@ -3,6 +3,9 @@
 </p>
 
 ------------------------------------------------
+# NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+
 
 # Know2BIO
 
