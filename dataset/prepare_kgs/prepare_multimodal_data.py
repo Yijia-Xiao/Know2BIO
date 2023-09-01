@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import random
 import os
-
+import pickle
 
 def read_kg(kg_file):
     '''
@@ -42,7 +42,7 @@ def remap_entrez2seq(entrez2seq):
     return {"Entrez:"+k:v for k,v in entrez2seq.items()}
 
 
-def combine_compound(db2smiles,mesh2smiles):
+def combine_compound(dict1, dict2):
     '''
     Combines db2smiles and mesh2smile dictionaries
     '''
@@ -128,81 +128,84 @@ def get_multimodal_data_files(directory, contact_map_directory=None, node_type_t
     
     # store multiple descriptions in id2desc
     id2desc = {}
-    
     # read through files in multi-modal_data
-    for filename in os.listdir(directory):
-        
-        if filename == "id2name_dicts.json":
-            with open(os.path.join(directory,filename)) as json_file:
-                id2name = json.load(json_file)
-                file_mapping['id2name'] = id2name 
-                
-                if debug:
-                    print("%d entity name categories"%(len(id2name)))
-                    for category, entities in id2name.items():
-                        print("%s has %d entities"%(category, len(entities)))
-                        
-        if filename == "protein_id_to_sequences.json":
-            with open(os.path.join(directory,filename)) as json_file:
-                protein2sequence = json.load(json_file)
-                remapped_protein2sequence = remap_protein2sequence(protein2sequence)
-                file_mapping['protein2sequence'] = remapped_protein2sequence
-                if debug:
-                    print("%d protein sequences"%(len(protein2sequence)))
-      
-        if filename == "drugbank_compounds_to_chemical_sequence.json":
-            with open(os.path.join(directory,filename)) as json_file:
-                db2smiles = json.load(json_file)
-                remapped_db2smiles = remap_db2smiles(db2smiles)
-                file_mapping['db2smiles'] = remapped_db2smiles 
-                
-                if debug:
-                    print("%d compound sequences from DrugBank"%(len(db2smiles)))
-                    
-        if filename == "mesh_compounds_to_chemical_sequence.json":
-            with open(os.path.join(directory,filename)) as json_file:
-                mesh2smiles = json.load(json_file)
-                remapped_mesh2smiles = remap_mesh2smiles(mesh2smiles)
-                file_mapping['mesh2smiles'] = remapped_mesh2smiles  
-                
-                if debug:
-                    print("%d compound sequences from MeSH"%(len(mesh2smiles)))         
-    
-        if filename == "gene_id_to_dna_sequences.json":
-            with open(os.path.join(directory,filename)) as json_file:
-                entrez2seq = json.load(json_file)
-                remapped_entrez2seq = remap_entrez2seq(entrez2seq)
-                file_mapping['entrez2seq'] = remapped_entrez2seq  
-                
-                if debug:
-                    print("%d gene sequences from Entrez"%(len(entrez2seq)))    
-    
-        if "description" in filename:
-            if filename == "smpdb_pathway2description.json":
-                with open(os.path.join(directory,'smpdb_pathway2description.json')) as json_file:
-                    smpdb2desc = json.load(json_file)
-                    id2desc.update({"SPMDB_Pathway:"+k:v for k,v in smpdb2desc.items()})
-            elif filename == 'go2text_description.json':
-                with open(os.path.join(directory,'go2text_description.json')) as json_file:
-                    go2desc = json.load(json_file)
-                    id2desc.update(go2desc)
+    for folder in os.listdir(directory):
+        folder_dir = os.path.join(directory,folder)
 
+        for filename in os.listdir(folder_dir):
+            if '.json' in filename or '.pkl' in filename:
+                full_path = os.path.join(folder_dir,filename)
+                if filename == "all_ids_to_names.json":
+                    with open(full_path) as json_file:
+                        id2name = json.load(json_file)
+                        file_mapping['node2desc'] = id2name     
+                        
+                        if debug:
+                            print("%d entity names: "%(len(id2name)))
+                                
+                if filename == "protein_id_to_sequences.json":
+                    with open(full_path) as json_file:
+                        protein2sequence = json.load(json_file)
+                        remapped_protein2sequence = remap_protein2sequence(protein2sequence)
+                        file_mapping['protein2sequence'] = remapped_protein2sequence
+                        if debug:
+                            print("%d protein sequences"%(len(protein2sequence)))
+              
+                if filename == "drugbank_compounds_to_chemical_sequence.json":
+                    with open(full_path) as json_file:
+                        db2smiles = json.load(json_file)
+                        file_mapping['db2smiles'] = db2smiles 
+                        
+                        if debug:
+                            print("%d compound sequences from DrugBank"%(len(db2smiles)))
+                            
+                if filename == "mesh_compounds_to_chemical_sequence.json":
+                    with open(full_path) as json_file:
+                        mesh2smiles = json.load(json_file)
+                        file_mapping['mesh2smiles'] = mesh2smiles  
+                        
+                        if debug:
+                            print("%d compound sequences from MeSH"%(len(mesh2smiles)))         
+            
+                if filename == "gene_id_to_sequences.json":
+                    with open(full_path) as json_file:
+                        entrez2seq = json.load(json_file)
+                        file_mapping['entrez2seq'] = entrez2seq  
+                        
+                        if debug:
+                            print("%d gene sequences from Entrez"%(len(entrez2seq)))    
+
+                if "description" in filename:
+                    if filename == "smpdb_pathway2description.json":
+                        with open(full_path) as json_file:
+                            smpdb2desc = json.load(json_file)
+                            id2desc.update({"SPMDB_Pathway:"+k:v for k,v in smpdb2desc.items()})
+                    elif filename == 'go2text_description.json':
+                        with open(full_path) as json_file:
+                            go2desc = json.load(json_file)
+                            id2desc.update(go2desc)
+                
+                if filename == "compound_id_to_compound_structures.pkl":
+                    with open(full_path,'rb') as f:
+                        compound_id_to_compound_structures = pickle.load(f) 
+                        compound_id_to_compound_structures['file_path'] = full_path # Reference the file in node_features.json
+                        file_mapping['compound_id_to_compound_structures'] = compound_id_to_compound_structures  
+                
     # protein contact map
     if contact_map_directory:              
         protein2contactmap = get_protein_contact_maps(contact_map_directory, debug=True)
         remapped_protein2contactmap = remap_protein2sequence(protein2contactmap)
         file_mapping['protein2contactmap'] = remapped_protein2contactmap
-                      
-    file_mapping['id2desc'] = id2desc
-    if debug:
-        print("%d node to descriptions"%len(id2desc))
     
-#     compound2smiles = combine_compound(remapped_db2smiles, remapped_mesh2smiles)
-    compound2smiles = file_mapping['mesh2smiles'] # skip drugbank since it's not in the safe release
+    if len(id2desc) > 0:
+        file_mapping['id2desc'] = id2desc
+        if debug:
+            print("%d node to descriptions"%len(id2desc))
+    
+    compound2smiles = combine_compound(file_mapping['mesh2smiles'],file_mapping['db2smiles'])
     file_mapping['compound2smiles'] = compound2smiles
                       
-    node2desc = remap_id2name_dicts(id2name, remap_namespaces=remap_namespaces_dict)
-    file_mapping['node2desc'] = node2desc     
+    #node2desc = remap_id2name_dicts(id2name, remap_namespaces=remap_namespaces_dict)
     return file_mapping
   
     
@@ -223,9 +226,10 @@ def create_node_features(multimodal_data, kg_df=None):
     protein2sequence = multimodal_data['protein2sequence']
     compound2smiles = multimodal_data['compound2smiles']
     node2desc = multimodal_data['node2desc']
-    id2desc = multimodal_data['id2desc']
+    #id2desc = multimodal_data['id2desc']
     entrez2seq = multimodal_data['entrez2seq']
     protein2contactmap = multimodal_data['protein2contactmap']
+    compound_id_to_compound_structures = multimodal_data['compound_id_to_compound_structures']
                       
     if kg_df is not None:
         nodes = set(kg_df['h']).union(set(kg_df['t']))
@@ -236,7 +240,7 @@ def create_node_features(multimodal_data, kg_df=None):
         
     node_features = {}
     node_feature_counters={'names':0, 'protein_sequence':0, 'compound_sequence':0, 
-                           'description':0, 'gene_sequence':0, 'protein_3d_structure':0}
+                           'gene_sequence':0, 'protein_3d_structure':0, 'compound_3d_structure':0}
     for n in nodes:
         features = {}
         if n in node2desc:
@@ -251,10 +255,10 @@ def create_node_features(multimodal_data, kg_df=None):
             feat_name = 'compound_sequence'
             features[feat_name] = compound2smiles[n]
             node_feature_counters[feat_name] += 1
-        if n in id2desc:
-            feat_name = 'description'
-            features[feat_name] = id2desc[n]
-            node_feature_counters[feat_name] += 1
+     #   if n in id2desc:
+     #       feat_name = 'description'
+     #       features[feat_name] = id2desc[n]
+     #       node_feature_counters[feat_name] += 1
         if n in entrez2seq:
             feat_name = 'gene_sequence'
             features[feat_name] = entrez2seq[n]
@@ -262,6 +266,10 @@ def create_node_features(multimodal_data, kg_df=None):
         if n in protein2contactmap:
             feat_name = 'protein_3d_structure'
             features[feat_name] = protein2contactmap[n]
+            node_feature_counters[feat_name] += 1
+        if n in compound_id_to_compound_structures:
+            feat_name = 'compound_3d_structure'
+            features[feat_name] = compound_id_to_compound_structures['file_path']
             node_feature_counters[feat_name] += 1
         node_features[n] = features
         
@@ -274,16 +282,20 @@ def create_node_features(multimodal_data, kg_df=None):
     
 
 # input files
-multimodal_data_folder = './multi-modal_data'
-protein_contact_map_directory = './protein_structure/protein_contact_map/'
-whole_kg_file = './sampled_know2bio_safe_release/whole_kg_sampled.txt'
-
+multimodal_data_folder = './output/node_features'
+protein_contact_map_directory = './output/node_features/structures/protein_contact_map/'
+#whole_kg_file = './know2bio/whole_kg.txt'
+whole_kg_file = './know2bio_safe_release/whole_kg.txt'
+#whole_kg_file = './sampled_know2bio_safe_release/whole_kg_sampled.txt'
 
 # read whole_kg only output node features within this kg
 kg_df = read_kg(whole_kg_file)
 nodes = set(kg_df['h']).union(set(kg_df['t']))
 node_types = set([n.split(":")[0] for n in nodes])
+import pdb;pdb.set_trace()
 node_type_to_nodes = {n_t:[n.split(":")[1] for n in nodes if n_t in n] for n_t in node_types}
+print("Parsed knowledge graph %s: %d nodes and %d edges. %d node types and %d edge types."%(whole_kg_file,len(nodes),
+        kg_df.shape[0],len(node_types),len(set(kg_df['r']))))
 
 # parse multimodal data
 multimodal_data = get_multimodal_data_files(multimodal_data_folder, 
