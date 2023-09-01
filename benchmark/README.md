@@ -36,8 +36,8 @@ Knowledge Graph Embedding
 
 options:
   -h, --help            show this help message and exit
-  --dataset {ontology,instance,whole,FB15K,WN,WN18RR,FB237,YAGO3-10}
-                        Knowledge Graph dataset
+  --dataset {ontology,instance,whole}
+                        Knowledge Graph dataset: ontology, instance, whole views
   --model {TransE,TransR,DistMult,CP,MurE,RotE,RefE,AttE,RotH,RefH,AttH,ComplEx,RotatE}
                         Knowledge Graph embedding model
   --optimizer {Adagrad,Adam,SparseAdam}

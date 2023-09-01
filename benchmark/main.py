@@ -19,8 +19,8 @@ parser = argparse.ArgumentParser(
     description="Knowledge Graph Embedding"
 )
 parser.add_argument(
-    "--dataset", default="ontology", choices=["ontology", "instance", "whole", "FB15K", "WN", "WN18RR", "FB237", "YAGO3-10"],
-    help="Knowledge Graph dataset"
+    "--dataset", default="ontology", choices=["ontology", "instance", "whole"],
+    help="Knowledge Graph dataset: ontology, instance, whole views"
 )
 parser.add_argument(
     "--model", default="TransE", choices=all_models, help="Knowledge Graph embedding model"
