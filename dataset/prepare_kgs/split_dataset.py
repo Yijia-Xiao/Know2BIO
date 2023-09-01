@@ -11,7 +11,7 @@ def read_df(file_name, overwrite=True):
     
     if overwrite:
         df.to_csv(file_name,sep='\t',header=False,index=False)
-		
+        
     return df
 
 
@@ -68,7 +68,8 @@ def get_subgraphs(g, thresh=10, debug=True):
                 print("SCC %d: %d nodes %d edges"%(idx, sub_g.get_number_of_nodes(), sub_g.get_number_of_edges()))
     return sub_gs    
 
-def train_test_split(edges_file,nodes_file,training_size=0.8, include_headers=False, include_weights=False, debug=True):
+def train_test_split(edges_file,nodes_file,training_size=0.8, include_headers=False, 
+                    include_weights=False, remove_intermediate_files=True, debug=True):
     # load graph as grape graph
     g = Graph.from_csv(
       directed=False, 
@@ -144,7 +145,6 @@ def train_test_split(edges_file,nodes_file,training_size=0.8, include_headers=Fa
                                  sub_g.get_number_of_nodes(), sub_g.get_number_of_edges(),
                                  train.get_number_of_nodes(), train.get_number_of_edges(),
                                  test.get_number_of_nodes(), test.get_number_of_edges()))
-
         
     # Combine files and split validation from test set
     train_dfs = [pd.read_csv(f,sep='\t') for f in train_files]
@@ -154,13 +154,18 @@ def train_test_split(edges_file,nodes_file,training_size=0.8, include_headers=Fa
     test_valid_df = pd.concat(test_dfs, ignore_index=True)
     test_df, valid_df = split_df(test_valid_df)
 
+    # Clean up the directory
+    if remove_intermediate_files:
+        for f in train_files+test_files:
+            os.remove(f)
+
     # Save files
     train_out_file = edges_file.replace("_grape.txt","_train.txt")
     test_out_file = edges_file.replace("_grape.txt","_test.txt")
     valid_out_file = edges_file.replace("_grape.txt","_valid.txt")
-    train_df.to_csv(train_out_file,index=False,header=False)
-    test_df.to_csv(test_out_file,index=False,header=False)
-    valid_df.to_csv(valid_out_file,index=False,header=False)
+    train_df.to_csv(train_out_file,index=False,header=False,sep='\t')
+    test_df.to_csv(test_out_file,index=False,header=False,sep='\t')
+    valid_df.to_csv(valid_out_file,index=False,header=False,sep='\t')
  
     print("Original graph: %d nodes %d edges"%(g.get_number_of_nodes(),g.get_number_of_edges()))
     train_nodes,train_edges = get_nodes_edges_from_df(train_df)
@@ -174,6 +179,8 @@ def train_test_split(edges_file,nodes_file,training_size=0.8, include_headers=Fa
     assert len(test_nodes.difference(train_nodes)) == 0
     assert len(valid_nodes.difference(train_nodes)) == 0
     print(True)
+    
+    return train_df, test_df, valid_df
 
 def get_nodes_edges_from_df(df):
     nodes = set(df['h']).union(set(df['t']))
@@ -191,18 +198,53 @@ def split_df(df):
 
     return first_half_df, second_half_df
 
+### Parse arguments ###
+if len(sys.argv) < 3:
+    print("Incorrect usage.")
+    print("python split_dataset.py <directory> <train_size>")
+    print("Example: python split_dataset.py ./know2bio 0.8")
+    sys.exit(0)
+
+# Read arguments
+directory = sys.argv[1]
+train_size = float(sys.argv[2])
+remove_intermediate_files = True
+
+# Create filepaths to multiview kgs
 in_files = ['kg1f_instances.txt','kg2f_ontologies.txt','alignf_bridges.txt']
-#in_file = 'kg1f_instances.txt'
-#in_file = 'kg2f_ontologies.txt'
-#in_file = 'alignf_bridges.txt'
-for in_file in in_files:
+in_file_names = [os.path.join(directory,f) for f in in_files]
+
+train_dfs = []  # store to aggregate into whole_kg_train.txt
+test_dfs = []  # store to aggregate into whole_kg_test.txt
+valid_dfs = []  # store to aggregate into whole_kg_valid.txt
+
+for in_file in in_file_names:
     print(in_file)
+    
+    # Export to GraPE format to load graph
     edges_file, nodes_file = export_grape_files(in_file)
-    #edges_file = in_file[:-4]+"_grape.txt"
-    #nodes_file = in_file[:-4]+"_nodes.txt"
-    train_test_split(edges_file, nodes_file,debug=False)
+    
+    # Split into test, train, and validation
+    train_df, test_df, valid_df = train_test_split(edges_file, 
+                     nodes_file, training_size=train_size, 
+                     remove_intermediate_files=remove_intermediate_files, 
+                     debug=False)
 
+    # Add to list, to create whole_kg later.
+    train_dfs += [train_df]
+    test_dfs += [test_df]
+    valid_dfs += [valid_df]
 
+    # Clean up directory
+    if remove_intermediate_files:
+        os.remove(edges_file)
+        os.remove(nodes_file)
 
-
+# Concatenate
+whole_train_df = pd.concat(train_dfs)
+whole_train_df.to_csv(os.path.join(directory,'whole_kg_train.txt'),index=False,header=False,sep='\t')
+whole_test_df = pd.concat(test_dfs)
+whole_test_df.to_csv(os.path.join(directory,'whole_kg_test.txt'),index=False,header=False,sep='\t')
+whole_valid_df = pd.concat(valid_dfs)
+whole_valid_df.to_csv(os.path.join(directory,'whole_kg_valid.txt'),index=False,header=False,sep='\t')
 
