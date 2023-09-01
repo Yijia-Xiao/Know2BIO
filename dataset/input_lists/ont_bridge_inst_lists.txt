@@ -17,7 +17,7 @@ Gene_(Entrez)_2_Pathway_(KEGG).csv
 Gene_(Entrez)_2_Pathway_(Reactome).csv
 Compound_(DrugBank)_to_DrugClass_(ATC).csv
 Compound_(DrugBank)_compound_participates_in_Pathway_(KEGG).csv
-Compound_(DrugBank)_drug_participates_in_Pathway_(KEGG).csv   
+Compound_(DrugBank)_drug_participates_in_Pathway_(KEGG).csv
 Compound_(DrugBank)_to_Pathway_(Reactome).csv
 Compound_(MeSH)_compound_participates_in_Pathway_(KEGG).csv
 Compound_(MeSH)_drug_participates_in_Pathway_(KEGG).csv
@@ -50,7 +50,4 @@ Protein_(UniProt)_targets_Gene_(Entrez).csv
 Protein_(UniProt)_2_Protein_(UniProt).csv
 Protein_(UniProt)_2_Reaction_(Reactome).csv
 Reaction_(Reactome)_to_Reaction_(Reactome).csv
-
-
-
 
