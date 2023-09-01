@@ -1,4 +1,5 @@
 # Message to NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
+Message to NeurIPS reviewers: We mistakenly submitted our latest revision to the "supplemental materials" instead of the main "pdf" location. 
 
 # Know2BIO Dataset
 
