@@ -732,6 +732,23 @@ def align_kegg_drugs_and_compounds():
     json.dump(switch_dictset_to_dictlist(keggcompound2keggdrug), open('output/compound2compound/keggcompound2keggdrug.json','w'))
     
     
+
+def merge_oldttd2newttd(procs=cpu_count()):
+    '''
+    FUNCTION:
+    - Merge the output files for old TTD -is- new TTD
+      alignments
+    '''
+    oldttd2newttd = dict()
+    
+    for b_id in range(procs):
+        outpath = 'output/compound2compound/temp_newTTDfound_'+str(b_id)+'.json'
+        temp = json.load(open(outpath))
+        oldttd2newttd = merge_two_dictionaries_setvalues(oldttd2newttd, temp)
+        os.remove(outpath)
+    
+    return oldttd2newttd    
+
             
 def getOld2NewTTDdrug(b_id, old_ttd_list):
     '''
@@ -748,7 +765,8 @@ def getOld2NewTTDdrug(b_id, old_ttd_list):
     
     # Find drug's updated TTD ID
     for i, old_ttd in enumerate(old_ttd_list):
-        old_ttd = old_ttd[0]
+        if type(old_ttd) == list:
+            old_ttd = old_ttd[0]
         
         # Print progress
         if b_id == 1 or int(b_id) > 999:
@@ -756,8 +774,10 @@ def getOld2NewTTDdrug(b_id, old_ttd_list):
         
         try:
             res = requests.get('http://db.idrblab.net/web/drug/'+old_ttd)
-            new_ttd = res.url.split('/')[-1].upper()
-            old_ttd2newttd.setdefault(old_ttd, set()).add(new_ttd)
+            split_on = 'https://db.idrblab.net/web/drug/'
+            split_on_again = '\"'
+            new_ttd = res.text.split(split_on)[1].split(split_on_again)[0].upper()
+            old_ttd_to_new_ttd.setdefault(old_ttd, []).append(new_ttd)
         except:
             no_newttd.add(old_ttd)
             continue
@@ -771,6 +791,7 @@ def getOld2NewTTDdrug(b_id, old_ttd_list):
     no_newttd = list(no_newttd)
     fout2 = open('output/compound2compound/temp_no_newTTDfound_'+str(b_id)+'.json','w')
     json.dump(no_newttd, fout2)
+    
 
 
 def align_drugbank_to_ttd():
@@ -821,10 +842,10 @@ def align_drugbank_to_ttd():
 
     ''' Align OldTTD -is- NewTTD via DrugBank '''
     #NOTE: Fix this part
-    multiprocess_a_dict_of_lists_values(db2oldttd, getOld2NewTTDdrug)
+    multiprocess_a_dict_of_lists_values(db2oldttd, getOld2NewTTDdrug, procs=1)
 
     # Merge temp files
-    oldttd2newttd = switch_dictset_to_dictlist(merge_oldttd2newttd())
+    oldttd2newttd = switch_dictset_to_dictlist(merge_oldttd2newttd(procs=1))
     json.dump(oldttd2newttd, open('output/compound2compound/oldTTD2newTTD.json','w'))
     print(len(oldttd2newttd))
     # ------------------------------------
@@ -846,21 +867,7 @@ def align_drugbank_to_ttd():
     json.dump(ttd2db, open('output/compound2compound/ttd2db.json','w'))
     
     
-    
-    ''' Align DrugBank -is- New TTD '''
-    ttd2db = dict()
-    for db, oldttd in db2oldttd.items():
-        try:
-            newttd = oldttd2newttd[oldttd[0]][0]
-            ttd2db.setdefault(newttd,set()).add(db)
-        except:
-            continue
-    ttd2db = switch_dictset_to_dictlist(ttd2db)
 
-
-    print('New TTD IDs mapping to multiple DrugBank IDs')
-    print_if_len_value_greater_than_1(ttd2db)
-    
     
 def output_final_db_to_mesh_edges():
     db2mesh = json.load(open(os.path.join('output/compound2compound/db2mesh.json')))
