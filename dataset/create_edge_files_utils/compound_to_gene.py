@@ -273,12 +273,12 @@ def map_gene_to_compound_via_kegg():
                                '-associated_with->',
                                 'MeSH_Compound:',
                                 'Entrez:',
-                                edges_to_use_folder=False)
+                                #edges_to_use_folder=False) # original source has MeSH IDs
     
 def export_all_merged_gene_to_compound_relationships():
     gene2comp_df1 = pd.read_csv('output/edges/edges_gene2compound.csv')
     gene2comp_df1.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(MeSH).csv',
-                         index=False)
+                         index=False) # original source has MeSH IDs 
     gene2comp_df2 = pd.read_csv('output/edges/edges_gene2compound.csv')
     gene2comp_df2.to_csv('output/edges_to_use/Gene_(Entrez)_2_Compound_(DrugBank).csv', 
                          index=False)
@@ -286,7 +286,7 @@ def export_all_merged_gene_to_compound_relationships():
     comp2gene_df1 = pd.read_csv('output/edges/edges_compound2gene.csv')
     comp2gene_df2 = pd.read_csv('output/compound2gene/edges_meshcompound2gene_kegg.csv')
     comp2gene_df = pd.concat([comp2gene_df2, comp2gene_df1]).drop_duplicates()
-    comp2gene_df.to_csv('output/edges_to_use/Compound_(MeSH)_2_Gene_(Entrez).csv', index=False)
+    #comp2gene_df.to_csv('output/edges_to_use/Compound_(MeSH)_2_Gene_(Entrez).csv', index=False)
     
 if __name__ == '__main__':    
     download_ctd_compound_to_gene()

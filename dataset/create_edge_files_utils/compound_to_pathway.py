@@ -164,7 +164,7 @@ def export_compound_to_reactome_pathway():
 
     mesh2reactomepw_df = pd.read_csv('output/compound2pathway/edges_meshCompound-participates_in->reactomePathway.csv')
     mesh2reactomepw_df.to_csv('output/edges/edges_meshCompound-participates_in->reactomePathway.csv', index=False)
-    mesh2reactomepw_df.to_csv('output/edges_to_use/Compound_(MeSH)_to_Pathway_(Reactome).csv', index=False)
+  #mesh2reactomepw_df.to_csv('output/edges_to_use/Compound_(MeSH)_to_Pathway_(Reactome).csv', index=False)
     print(len(set(mesh2reactomepw_df['Compound (MeSH)'])), 'MeSH Compounds')
     print(len(set(mesh2reactomepw_df['Pathway (Reactome)'])), 'Reactome Pathways')
     print(len(mesh2reactomepw_df), 'Edges')
@@ -244,7 +244,7 @@ def map_compounds_to_smpdb_pathway(root):
     #smpdb_pws_mesh
     df = pd.read_csv('output/compound2pathway/edges_MeSHCompound-participates_in-smpdbPathway.csv').drop_duplicates()
     df.to_csv('output/edges/edges_MeSHCompound-participates_in-smpdbPathway.csv', index=False)
-    df.to_csv('output/edges_to_use/Compound_(MeSH)_to_Pathway_(SMPDB).csv', index=False)
+    #df.to_csv('output/edges_to_use/Compound_(MeSH)_to_Pathway_(SMPDB).csv', index=False)
     json.dump(smpdb_pws,open("output/compound2pathway/compound_to_pathway.json","w"))
     
     
@@ -289,11 +289,10 @@ def map_compound_to_kegg_pathway():
         dictionary = meshcompound2keggpathway,
         rel = '-compound_participates_in->',
         prefix_col1='MeSH_Compound:',
-        prefix_col2='KEGG_Pathway:'
+        prefix_col2='KEGG_Pathway:',
+        edges_to_use_folder=False,
     )
     df = pd.read_csv(outpath)
-    df.to_csv(os.path.join('output/edges',file),index=False)
-    df.to_csv(os.path.join('output/edges_to_use/',file),index=False)
     
     
     ''' DrugBank Compound-Pathway (Non-drug)'''
@@ -331,11 +330,8 @@ def map_compound_to_kegg_pathway():
         dictionary = dbcompound2keggpathway,
         rel = '-compound_participates_in->',
         prefix_col1='DrugBank_Compound:',
-        prefix_col2='KEGG_Pathway:'
+        prefix_col2='KEGG_Pathway:',
     )
-    df = pd.read_csv(outpath)
-    df.to_csv(os.path.join('output/edges',file),index=False)
-    df.to_csv(os.path.join('output/edges_to_use/',file),index=False)
     
     
 def map_drug_to_kegg_pathway():
@@ -375,11 +371,10 @@ def map_drug_to_kegg_pathway():
         dictionary = meshdrug2keggpathway,
         rel = '-drug_participates_in->',
         prefix_col1='MeSH_Compound:',
-        prefix_col2='KEGG_Pathway:'
+        prefix_col2='KEGG_Pathway:',
+        edges_to_use_folder=False,
     )
     df = pd.read_csv(outpath)
-    df.to_csv(os.path.join('output/edges',file),index=False)
-    df.to_csv(os.path.join('output/edges_to_use/',file),index=False)
     
     
     # DrugBank

@@ -50,7 +50,7 @@ def output_edgefile_onerel_noweight(outpath, columns, dictionary, rel, prefix_co
                 
     
 
-def multiprocess_a_dict_of_lists_values(thedict, the_function):
+def multiprocess_a_dict_of_lists_values(thedict, the_function, procs=cpu_count()):
     '''
     FUNCTION:
     - This takes a dictionary whose keys are strings and 
@@ -65,9 +65,6 @@ def multiprocess_a_dict_of_lists_values(thedict, the_function):
       as input for multiprocessing
     '''
     
-    # How many processors can be used
-    procs = cpu_count()
-
     # List of batches for multiprocessing
     batches = [[] for i in range(procs)]   
 
@@ -539,25 +536,6 @@ def merge_no_newttd():
         no_newttd += batch_no_newttd
         
     return no_newttd
-
-
-
-def merge_oldttd2newttd():
-    '''
-    FUNCTION:
-    - Merge the output files for old TTD -is- new TTD
-      alignments
-    '''
-    oldttd2newttd = dict()
-    procs = cpu_count()
-    
-    for b_id in range(procs):
-        outpath = 'output/compound2compound/temp_newTTDfound_'+str(b_id)+'.json'
-        temp = json.load(open(outpath))
-        oldttd2newttd = merge_two_dictionaries_setvalues(oldttd2newttd, temp)
-        #os.remove(outpath)
-    
-    return oldttd2newttd
 
 
 

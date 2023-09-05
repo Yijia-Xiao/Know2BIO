@@ -138,7 +138,7 @@ def export_drug_to_side_effect():
 
     file = 'Compound_(DrugBank)_sideeffect_Disease_(MeSH).csv'
     df = pd.read_csv('output/edges/edge_meshcompound2sideeffect.csv')
-    df.to_csv(os.path.join('output/edges_to_use', file), index=False)
+    #df.to_csv(os.path.join('output/edges_to_use', file), index=False)
 
     
 if __name__ == '__main__':

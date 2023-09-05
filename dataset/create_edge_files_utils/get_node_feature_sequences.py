@@ -88,7 +88,7 @@ def map_gene_id_to_dna_sequence():
                 continue
             dna_sequence = entry['seq']
 
-            entrez_id_to_dna_sequence[entrez_id] = dna_sequence
+            entrez_id_to_dna_sequence[entrez_id] = [dna_sequence]
     # Export 
     with open('output/node_features/sequences/gene_id_to_dna_sequences.json','w') as fout:
         json.dump(entrez_id_to_dna_sequence, fout)
@@ -111,7 +111,7 @@ def batch_map_protein_id_to_sequence(protein_ids):
         response = requests.post(url)
         data = ''.join(response.text)
         sequence = extract_amino_acid_sequence(data)
-        protein_id_to_sequence[protein_id] = sequence
+        protein_id_to_sequence['UniProt:'+protein_id] = [sequence]
     return protein_id_to_sequence
 
 
@@ -171,19 +171,21 @@ def map_protein_id_to_sequence_via_uniprot_human_proteome_download():
     for result in results:
         protein_id = result['primaryAccession']
         sequence = result['sequence']['value']
-        protein_id_to_sequence[protein_id] = sequence
+        protein_id_to_sequence['UniProt:'+protein_id] = [sequence]
         
     return protein_id_to_sequence
 
 
 def map_protein_id_to_amino_acid_sequence():
+    print('inside the protein id function')
+    
     # Get protein sequences from UniProt
     protein_id_to_sequence_uniprot = (
         map_protein_id_to_sequence_via_uniprot_human_proteome_download())
 
     # Get protein sequences from EBI that were missing from UniProt
     all_ids = json.load(open('output/otherMappings/all_ids.json'))
-    all_protein_ids = list({id_.split(':')[1] for id_ in all_ids if id_.startswith('UniProt')})
+    all_protein_ids = list({id_ for id_ in all_ids if id_.startswith('UniProt')})
     proteins_without_sequences = list(set(all_protein_ids).difference(protein_id_to_sequence_uniprot))
     BATCHES = cpu_count()
     protein_batches = split_a_list_into_batches(proteins_without_sequences, BATCHES)
@@ -199,12 +201,12 @@ def map_protein_id_to_amino_acid_sequence():
     
     protein_to_sequence = remove_ids_not_in_all_ids(protein_to_sequence, all_protein_ids)
     print(f'Mapped {len(protein_to_sequence)}/{len(all_protein_ids)} proteins to sequences')
-
     
     # Export results                                           
     with open('output/node_features/sequences/protein_id_to_sequences.json','w') as fout:
         json.dump(protein_to_sequence, fout)                                        
 
+    print('exported results')
         
 def map_compound_ids_to_chemical_smiles_sequence():
     all_ids = json.load(open('output/otherMappings/all_ids.json'))
@@ -214,21 +216,30 @@ def map_compound_ids_to_chemical_smiles_sequence():
     drugbank_to_sequence = {'DrugBank_Compound:'+drugbank_id:sequence for drugbank_id, sequence in drugbank_to_smiles.items()}
     all_drugbank_ids = list({id_ for id_ in all_ids if id_.startswith('DrugBank_Compound:')})
     print(len(drugbank_to_sequence), 'DrugBank compounds before filtering by compounds in the KG')
-    drugbank_to_sequence = remove_ids_not_in_all_ids(drugbank_to_sequence, all_ids)
+    drugbank_to_sequence = remove_ids_not_in_all_ids(drugbank_to_sequence, all_drugbank_ids)
     print(f'Mapped {len(drugbank_to_sequence)}/{len(all_drugbank_ids)} DrugBank compounds to sequences')
-    with open('output/node_features/sequences/drugbank_compounds_to_chemical_sequence.json','w') as fout:
-        json.dump(drugbank_to_sequence, fout)
+    #with open('output/node_features/sequences/drugbank_compounds_to_chemical_sequence.json','w') as fout:
+    #    json.dump(drugbank_to_sequence, fout)
 
     # MeSH Compounds
     mesh_to_smiles = json.load(open('output/compound2compound/mesh2smiles.json'))
     mesh_to_sequence = {'MeSH_Compound:'+mesh_id:sequence for mesh_id, sequence in mesh_to_smiles.items()}
     all_mesh_ids = list({id_ for id_ in all_ids if id_.startswith('MeSH_Compound:')})
-    mesh_to_sequence = remove_ids_not_in_all_ids(mesh_to_sequence, all_ids)
+    mesh_to_sequence = remove_ids_not_in_all_ids(mesh_to_sequence, all_mesh_ids)
     print(len(mesh_to_sequence), 'MeSH compounds before filtering by compounds in the KG')
     print(f'Mapped {len(mesh_to_sequence)}/{len(all_mesh_ids)} MeSH Compounds to sequences')
-    with open('output/node_features/sequences/mesh_compounds_to_chemical_sequence.json','w') as fout:
-        json.dump(mesh_to_sequence, fout)
+    #with open('output/node_features/sequences/mesh_compounds_to_chemical_sequence.json','w') as fout:
+    #    json.dump(mesh_to_sequence, fout)
 
+    compound_to_sequence = {}
+    compound_to_sequence.update(mesh_to_sequence)
+    compound_to_sequence.update(drugbank_to_sequence)
+    with open('output/node_features/sequences/compounds_to_chemical_sequence.json','w') as fout:
+        json.dump(compound_to_sequence, fout)
+    
+    #sequence_to_compound_id = ...
+    
+    
     mesh_sequences = set([seq[0] for seq in mesh_to_sequence.values()])
     drugbank_sequences = set([seq[0] for seq in drugbank_to_sequence.values()])
 
@@ -239,6 +250,7 @@ def map_compound_ids_to_chemical_smiles_sequence():
 
 if __name__ == '__main__':
     #map_gene_id_to_dna_sequence()
+    print('outside of the protein function')
     map_protein_id_to_amino_acid_sequence()
-    map_compound_ids_to_chemical_smiles_sequence()  # Compound sequences obtained through compound_to_compound_alignment
+    #map_compound_ids_to_chemical_smiles_sequence()  # Compound sequences obtained through compound_to_compound_alignment
     

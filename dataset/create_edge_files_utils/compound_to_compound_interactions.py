@@ -45,7 +45,9 @@ def map_interacting_drugbank_compounds(root):
                                    drug2interacting_drugs,
                                     '-interacts_with->',
                                    'DrugBank_Compound:',
-                                   'DrugBank_Compound:')
+                                   'DrugBank_Compound:',
+                                   edges_to_use_folder=False)
+    
     drugbank_outfile = 'output/edges_to_use/Compound_(DrugBank)_2_Compound_(DrugBank).csv'
     output_edgefile_onerel_noweight(drugbank_outfile,
                                    ['Compound (DrugBank)', 'Compound (DrugBank)', 'Relationship'],
@@ -84,14 +86,16 @@ def map_interacting_mesh_compounds_via_drugbank(root, drug2interacting_drugs):
                                    meshdrug2interacting_drugs,
                                     '-interacts_with->',
                                    'MeSH_Compound:',
-                                   'MeSH_Compound:')
+                                   'MeSH_Compound:',
+                                   edges_to_use_folder=False)
     mesh_outfile = 'output/edges_to_use/Compound_(MeSH)_2_Compound_(MeSH).csv'
     output_edgefile_onerel_noweight(mesh_outfile,
                                    ['Compound (MeSH)', 'Compound (MeSH)', 'Relationship'],
                                    meshdrug2interacting_drugs,
                                     '-interacts_with->',
                                    'MeSH_Compound:',
-                                   'MeSH_Compound:')
+                                   'MeSH_Compound:',
+                                   edges_to_use_folder=False)
 
 if __name__ == '__main__':
     extract_drugbank_xml()

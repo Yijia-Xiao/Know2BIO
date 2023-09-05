@@ -122,9 +122,6 @@ def map_compound_to_reaction():
                                     '-participates_in->',
                                    'DrugBank_Compound:',
                                    'Reactome_Reaction:')
-    df = pd.read_csv(os.path.join('output/compound2reaction',file)).drop_duplicates()
-    df.to_csv(os.path.join('output/edges',file), index=False)
-    df.to_csv(os.path.join('output/edges_to_use',file), index=False)
     
     file = 'Compound_(MeSH)_2_Reaction_(Reactome).csv'
     outpath = os.path.join('output/compound2reaction',file)
@@ -133,10 +130,9 @@ def map_compound_to_reaction():
                                    mesh_compound2reactome_reaction,
                                     '-participates_in->',
                                    'MeSH_Compound:',
-                                   'Reactome_Reaction:')
-    df = pd.read_csv(os.path.join('output/compound2reaction',file)).drop_duplicates()
-    df.to_csv(os.path.join('output/edges',file), index=False)
-    df.to_csv(os.path.join('output/edges_to_use',file), index=False)
+                                   'Reactome_Reaction:',
+                                   edges_to_use_folder=False,
+)
     
     
 if __name__ == '__main__':

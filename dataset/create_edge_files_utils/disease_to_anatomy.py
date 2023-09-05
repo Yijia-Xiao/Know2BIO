@@ -41,7 +41,7 @@ def retrieve_topic_studying_pmids(terms, outpath):
             response = pa.extract(f'{term}[MeSH Terms]')
             time.sleep(1)
         except:
-            print('Error with response for', term, 'Trying normal API')
+            print('Error with response for', term)#, 'Trying normal API')
             continue
             #try:
             #    response = call_eutils_api(term)

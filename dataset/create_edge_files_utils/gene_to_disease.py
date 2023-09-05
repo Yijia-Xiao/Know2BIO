@@ -305,7 +305,9 @@ def map_clinvar_gene_disease():
                                     entrez_gene2mesh_disease,
                                     '-associated_with-',
                                    'Entrez:',
-                                   'MeSH_Disease:')
+                                   'MeSH_Disease:',
+                                   edges_to_use_folder=False,
+                                   )
 
 
     gene2protein = json.load(open('output/protein2gene/all_entrez2uniprot.json'))

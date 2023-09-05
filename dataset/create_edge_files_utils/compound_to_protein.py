@@ -221,9 +221,9 @@ def map_ttd_drug_to_ttd_target():
             all_ttdtargets.add(ttd_target)
             if status == 'Patented' or status == 'Approved' or status == 'Phase 3':
                 ttd2ttdtarget.setdefault(drug,[]).append(ttd_target)
-
-    return ttd2ttdtarget
-    #len(all_ttdtargets)
+                
+    with open('output/compound2compound/ttd_to_ttd_target.json','w') as fout:
+        json.dump(ttd2ttdtarget, fout)
     
     
 # Read through TTD-provided file
@@ -334,7 +334,7 @@ def align_uniprot_name_to_uniprot_id():
 def align_ttd_target_id_to_uniprot_target_id():
     ttdtarg2up_id = dict()
     up_name2ttdtarg = json.load(open('output/protein2protein/up_name2ttdtarg.json'))
-
+    merged_name2up_id = json.load(open('output/protein2protein/uniprotname2uniprotid_from_ttd.json'))
     for up_name, ttdtargs in up_name2ttdtarg.items():
         for ttdtarg in ttdtargs:
             try:
@@ -356,6 +356,7 @@ def drugbank_id_targets_uniprot_id():
     db2up = dict()
     ttd2db = json.load(open('output/compound2compound/ttd2db.json'))
     ttdtarg2up_id = json.load(open('output/compound2compound/ttdtarg2up_id.json'))
+    ttd2ttdtarget = json.load(open('output/compound2compound/ttd_to_ttd_target.json'))
     for ttddrug, ttdtargets in ttd2ttdtarget.items():
 
         # DrugBank Drugs -are- TTD Drug
@@ -460,6 +461,31 @@ def display_and_save_relationship_details():
     d2p.to_csv('output/compound2protein/edges_drugbank-alltargetmoa->protein.csv', index=False)
     d2p.to_csv('output/edges/edges_drugbank-alltargetmoa->protein.csv', index=False)
     d2p.to_csv('output/edges_to_use/Compound_(DrugBank)_2_Protein_(UniProt).csv', index=False)
+    
+    
+def map_mesh_compound_to_protein_final():
+    db_to_prot = pd.read_csv('output/edges_to_use/Compound_(DrugBank)_2_Protein_(UniProt).csv')
+    db2mesh = json.load(open('output/compound2compound/db2mesh.json'))
+    rows = []
+
+    for idx in range(len(db_to_prot)):
+        db_comp = db_to_prot['Compound (DrugBank)'].iloc[idx]
+        prot = db_to_prot['Protein (UniProt)'].iloc[idx]
+        rel = db_to_prot['Relationship'].iloc[idx]
+
+        try:
+            mesh_comps = db2mesh[db_comp.split(':')[1]]
+            for mesh_comp in mesh_comps:
+                rows.append(['MeSH_Compound:'+mesh_comp, prot, rel])
+        except:
+            pass
+
+    mesh_to_prot = pd.DataFrame(rows, columns=['Compound (MeSH)','Protein (UniProt)','Relationship'])
+    #mesh_to_prot.to_csv('output/edges_to_use/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
+    mesh_to_prot.to_csv('output/compound2protein/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
+    mesh_to_prot.to_csv('output/edges/Compound_(MeSH)_2_Protein_(UniProt).csv', index=False)
+    
+    
 
 if __name__ == '__main__':
     try:
@@ -471,7 +497,7 @@ if __name__ == '__main__':
     map_compounds_to_targets(root)
     align_ttd_target_id_to_uniprot_target_name()
     align_ttd_target_id_to_uniprot_target_id()
-    ttd2ttdtarget = map_ttd_drug_to_ttd_target()
+    map_ttd_drug_to_ttd_target()
     #align_ttd_target_to_uniprot_target()
     align_uniprot_name_to_uniprot_id()
     align_ttd_target_id_to_uniprot_target_id()
@@ -479,3 +505,4 @@ if __name__ == '__main__':
     print('alignable_targ2comp_df', len(target_to_compound))
     export_drug_to_protein_from_ttd(target_to_compound)
     display_and_save_relationship_details()
+    map_mesh_compound_to_protein_final()

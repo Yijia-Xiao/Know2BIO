@@ -102,6 +102,7 @@ def download_uberon_anatomy():
     dest = 'input/uberon.obo'
     urllib.request.urlretrieve(url, dest);
     
+    
 def align_uberon_to_mesh_anatomy(dest='input/uberon.obo'):
     # Parse Uberon obo, align to MeSH
     obo_file = dest
