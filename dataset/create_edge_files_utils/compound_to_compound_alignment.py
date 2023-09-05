@@ -759,7 +759,7 @@ def getOld2NewTTDdrug(b_id, old_ttd_list):
     - b_id: batch ID from the multiprocess process
     - old_ttd_list: list of deprecated TTD IDs / old naming scheme
     '''
-    old_ttd2newttd = dict() 
+    old_ttd_to_new_ttd = dict() 
     no_newttd = set()
     tot = str(len(old_ttd_list))
     
