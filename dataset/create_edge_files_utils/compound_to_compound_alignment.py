@@ -783,9 +783,9 @@ def getOld2NewTTDdrug(b_id, old_ttd_list):
             continue
      
     # Export Old TTD -is- New TTD
-    old_ttd2newttd = switch_dictset_to_dictlist(old_ttd2newttd)
+    old_ttd_to_new_ttd = switch_dictset_to_dictlist(old_ttd_to_new_ttd)
     fout1 = open('output/compound2compound/temp_newTTDfound_'+str(b_id)+'.json', 'w')
-    json.dump(old_ttd2newttd, fout1)
+    json.dump(old_ttd_to_new_ttd, fout1)
     
     # Export Old TTD without New TTD alignments
     no_newttd = list(no_newttd)
