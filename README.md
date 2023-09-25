@@ -8,14 +8,6 @@
 
 Know2BIO is a comprehensive biomedical knowledge graph benchmark harmonizing heterogeneous database sources.
 
-```
-To NeurIPS reviewers:
-
-We mistakenly submitted our final rebuttal revision to the "supplemental materials" instead of the main "pdf". Please check the version in the supplemental.
-
-Sorry about any inconvenience caused. Thanks.
-```
-
 ## Getting Started
 ### Environment Setup
 We recommend using Anaconda3 to manage the environment.
