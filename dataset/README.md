@@ -110,10 +110,11 @@ Knowledge Graph Benchmark of Biomedical Instances and Ontologies (Know2Bio) is a
 Know2Bio was created as a general-purpose biomedical knowledge graph. It is intended to be used as a real-world benchmark dataset for knowledge graph representtion learning models.
 
 ### Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
-Know2Bio was created by a team of researchers at the labs of Professor Peipei Ping and Wei Wang at the Scalable Analytics (ScAi) Laboratory at University of California Los Angeles (UCLA), the team who also executed the benchmarking along with consultation from a researcher at Tsinghua University.
+Due to review policy, author information will be released shortly.
+
 
 ### Who funded the creation of the dataset?
-This work was supported by National Science Foundation (NSF) 1829071, 2031187, 2106859, 2119643, 2200274, 2211557 to W.W., Research Awards from Amazon and NEC to W.W., National Institutes of Health (NIH) R35 HL135772 to P.P., NIH T32 HL13945 to A.R.P. and D.S., NIH T32 EB016640 to A.R.P., NSF Research Traineeship (NRT) 1829071 to A.R.P. and D.S., and the TC Laubisch Endowment to P.P. at UCLA.
+Due to review policy, funding details will be disclosed shortly.
 
 
 ## Composition
@@ -185,7 +186,7 @@ See above. Manual human inspection of API result was performed to detect errors 
 ### If the dataset is a sample from a larger set, what was the sampling strategy (e.g., deterministic, probabilistic with specific sampling probabilities)?
 
 ### Who was involved in the data collection process (e.g., students, crowdworkers, contractors) and how were they compensated (e.g., how much were crowdworkers paid)?
-Data collection was performed by graduate students at UCLA.
+Due to review policy, author information will be released shortly.
 
 ### Over what timeframe was the data collected?
 Creation of the data collection pipeline took place over a year and a half from publication and release; new dataset was generated a few months before release and will be periodically updated. 
@@ -261,10 +262,10 @@ No.
 ## Maintenance
 
 ### Who is supporting/hosting/maintaining the dataset?
-Our research group at the University of California, Los Angeles will support and maintain the dataset.
+Due to review policy, institute information will be released shortly.
 
 ### How can the owner/curator/manager of the dataset be contacted (e.g., email address)?
-Please contact Prof. Wei Wang (weiwang@cs.ucla.edu)
+Due to review policy, author information will be released shortly.
 
 ### Is there an erratum?
 Not currently.

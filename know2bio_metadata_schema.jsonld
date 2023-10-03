@@ -27,18 +27,18 @@
           "license" : "https://opensource.org/license/mit/",
           "creator":{
              "@type":"Organization",
-             "name": "University of California, Los Angeles Scalable Analytics Institute"
+             "name": "Due to review policy, institute information will be released shortly."
           }
         }
       ],
       "creator":{
          "@type":"Organization",
-         "url": "https://scai.cs.ucla.edu/",
-         "name":"University of California, Los Angeles Scalable Analytics Institute",
+         "url": "Due to review policy, institute information will be released shortly.",
+         "name":"Due to review policy, institute information will be released shortly.",
          "contactPoint":{
             "@type":"ContactPoint",
             "contactType": "Principle Investigator",
-            "email":"weiwang@cs.ucla.edu"
+            "email":"Due to review policy, contact information will be released shortly."
          }
       },
       "funder":{
