@@ -75,15 +75,3 @@ Code and README for the benchmarking Know2BIO can be found in [**benchmark**](./
 ### Usage and Datasheet
 Code and README for the construction of Know2BIO can be found in [**dataset**](./dataset).
 
-## Citation
-If you find our repository helpful or used it, please cite our [paper](https://arxiv.org/abs/2310.03221).
-```
-@misc{xiao2023know2bio,
-      title={Know2BIO: A Comprehensive Dual-View Benchmark for Evolving Biomedical Knowledge Graphs}, 
-      author={Yijia Xiao and Dylan Steinecke and Alexander Russell Pelletier and Yushi Bai and Peipei Ping and Wei Wang},
-      year={2023},
-      eprint={2310.03221},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
