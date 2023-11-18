@@ -8,6 +8,8 @@ Steps:
 5. Start up Neo4j Browser from the Desktop client and enter Cypher query. Refer to Neo4j tutorial for more help: https://neo4j.com/developer/get-started/
 
 An example of a Neo4j query, once the knowledge graph is loaded.
+
+
 <p align="center">
-  <img src="./example_query.png">
+  <img src="./query_example.png">
 </p>
