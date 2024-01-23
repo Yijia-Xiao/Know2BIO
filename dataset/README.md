@@ -107,7 +107,7 @@ python ./prepare_kgs/prepare_multimodal_data.py
 Knowledge Graph Benchmark of Biomedical Instances and Ontologies (Know2Bio) is a comprehensive and evolving general-purpose heterogeneous knowledge graph encompassessing data from 29 diverse sources, representing 11 biomedical categories and capturing intricate relationships. The current version of Know2BIO consists of 216,000 nodes and 6,500,000 edges, and it can be automatically updated to ensure its relevance and currency. 
 
 ### For what purpose was the dataset created?
-Know2Bio was created as a general-purpose biomedical knowledge graph. It is intended to be used as a real-world benchmark dataset for knowledge graph representtion learning models.
+Know2Bio was created as a general-purpose biomedical knowledge graph. It is intended to be used as a resource for biomedical discovery and a real-world benchmark dataset for knowledge graph representtion learning models.
 
 ### Who created the dataset (e.g., which team, research group) and on behalf of which entity (e.g., company, institution, organization)?
 Due to review policy, author information will be released shortly.
