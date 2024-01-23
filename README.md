@@ -27,7 +27,7 @@ We recommend using Anaconda3 to manage the environment.
 ### Experiments
 - To run the experiments, please execute `main.py` script. Arguments are listed below.
 ```
-usage: run.py [-h] [--dataset {ontology,instance,whole,FB15K,WN,WN18RR,FB237,YAGO3-10}]
+usage: main.py [-h] [--dataset {ontology,instance,whole,FB15K,WN,WN18RR,FB237,YAGO3-10}]
               [--model {TransE,TransR,DistMult,CP,MurE,RotE,RefE,AttE,RotH,RefH,AttH,ComplEx,RotatE}] [--regularizer {N3,F2}] [--reg REG]
               [--optimizer {Adagrad,Adam,SparseAdam}] [--max_epochs MAX_EPOCHS] [--patience PATIENCE] [--valid VALID] [--rank RANK] [--batch_size BATCH_SIZE] [--neg_sample_size NEG_SAMPLE_SIZE]
               [--init_size INIT_SIZE] [--learning_rate LEARNING_RATE]
