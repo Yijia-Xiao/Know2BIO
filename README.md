@@ -6,7 +6,7 @@
 
 # Know2BIO
 
-Know2BIO is a comprehensive biomedical knowledge graph benchmark harmonizing heterogeneous database sources.
+Know2BIO is a comprehensive biomedical knowledge graph harmonizing heterogeneous database sources.
 
 ## Getting Started
 ### Environment Setup
